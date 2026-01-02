@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0f172a;
+  --primary-light: #1e293b;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --text-dark: #0f172a;
+  --text-body: #475569;
+  --text-muted: #64748b;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --section-alt: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 2px solid white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--primary);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 120px 0;
+  }
+}
