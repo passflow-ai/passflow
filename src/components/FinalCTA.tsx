@@ -42,19 +42,19 @@ const FinalCTA = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-[#f8fafc]">
+    <section id="contact" className="py-16 md:py-20 bg-gradient-to-br from-[#0f172a] to-[#1e293b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Let&apos;s grow your revenue — not your fraud.
           </h2>
         </div>
 
         <div className="max-w-md mx-auto">
           {status === "success" ? (
-            <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+            <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center">
               <svg
-                className="w-12 h-12 text-green-500 mx-auto mb-4"
+                className="w-12 h-12 text-green-400 mx-auto mb-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -66,23 +66,27 @@ const FinalCTA = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <h3 className="text-xl font-semibold text-[#0f172a] mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 Thanks for reaching out!
               </h3>
-              <p className="text-[#475569]">
+              <p className="text-white/70">
                 We&apos;ll get back to you within 24 hours.
               </p>
             </div>
           ) : (
             <>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <button onClick={scrollToHowItWorks} className="btn-primary text-lg">
+              {/* CTA buttons with clear hierarchy */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <button
+                  onClick={scrollToHowItWorks}
+                  className="px-8 py-3.5 border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
                   See how it works
                 </button>
               </div>
 
               <div className="text-center mb-6">
-                <p className="text-[#64748b] text-sm mb-4">Or talk to our team directly:</p>
+                <p className="text-white/50 text-sm">Or talk to our team directly:</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -95,7 +99,7 @@ const FinalCTA = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -107,7 +111,7 @@ const FinalCTA = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -119,24 +123,24 @@ const FinalCTA = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, company: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-lg border border-[#e2e8f0] focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full bg-[#0f172a] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1e293b] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[#3b82f6] text-white py-3.5 px-6 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {status === "loading" ? "Sending..." : "Talk to our team"}
                 </button>
                 {status === "error" && (
-                  <p className="text-red-500 text-sm text-center">
+                  <p className="text-red-400 text-sm text-center">
                     Something went wrong. Please try again.
                   </p>
                 )}
               </form>
 
-              <p className="text-center text-[#64748b] text-sm mt-6">
+              <p className="text-center text-white/40 text-sm mt-6">
                 Built for growth teams. Not paperwork.
               </p>
             </>

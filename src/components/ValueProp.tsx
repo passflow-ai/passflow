@@ -5,15 +5,21 @@ const ValueProp = () => {
     "Fewer manual reviews slowing growth",
   ];
 
+  const metrics = [
+    { value: "↓ 60%", label: "Fraud" },
+    { value: "↑ 20-40%", label: "Conversion" },
+    { value: "↓ 40-70%", label: "Manual reviews" },
+  ];
+
   return (
-    <section className="section-padding bg-[#f8fafc]">
+    <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-10">
             What teams see after deploying Passflow
           </h3>
 
-          <ul className="space-y-4 text-left max-w-md mx-auto mb-10">
+          <ul className="space-y-4 text-left max-w-md mx-auto mb-12">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-center gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
@@ -35,11 +41,28 @@ const ValueProp = () => {
               </li>
             ))}
           </ul>
-
-          <p className="text-[#64748b] text-sm">
-            Typical impact: ↓ fraud up to 60%, ↑ onboarding conversion 20–40%, ↓ manual reviews 40–70%
-          </p>
         </div>
+
+        {/* Metric cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {metrics.map((metric, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-8 text-center shadow-md border border-[#e2e8f0] hover:shadow-lg transition-shadow"
+            >
+              <div className="text-3xl md:text-4xl font-bold text-[#3b82f6] mb-2">
+                {metric.value}
+              </div>
+              <div className="text-[#64748b] text-sm font-medium uppercase tracking-wide">
+                {metric.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-center text-[#64748b] text-sm mt-8">
+          Typical impact based on customer results
+        </p>
       </div>
     </section>
   );

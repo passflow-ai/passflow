@@ -22,17 +22,11 @@ const Header = () => {
             Passflow<span className="text-[#3b82f6]">.ai</span>
           </Link>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Desktop CTA - Single primary action */}
+          <div className="hidden md:block">
             <button
               onClick={scrollToContact}
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              See a Demo
-            </button>
-            <button
-              onClick={scrollToContact}
-              className="btn-primary text-sm py-2 px-6"
+              className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors"
             >
               Talk to Sales
             </button>
@@ -72,20 +66,12 @@ const Header = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/10">
-            <div className="flex flex-col gap-4">
-              <button
-                onClick={scrollToContact}
-                className="text-white/80 hover:text-white transition-colors text-left"
-              >
-                See a Demo
-              </button>
-              <button
-                onClick={scrollToContact}
-                className="btn-primary text-sm py-2 px-6 w-fit"
-              >
-                Talk to Sales
-              </button>
-            </div>
+            <button
+              onClick={scrollToContact}
+              className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors w-full"
+            >
+              Talk to Sales
+            </button>
           </div>
         )}
       </div>

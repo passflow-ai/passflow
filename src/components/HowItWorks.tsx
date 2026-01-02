@@ -17,33 +17,56 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="section-padding bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-16">
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a]">
             How Passflow works
           </h3>
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <div className="space-y-6">
+        {/* Desktop stepper - horizontal */}
+        <div className="hidden md:block max-w-4xl mx-auto">
+          <div className="flex items-center justify-between relative">
+            {/* Connector line */}
+            <div className="absolute top-5 left-[10%] right-[10%] h-0.5 bg-[#e2e8f0]" />
+            <div className="absolute top-5 left-[10%] w-[40%] h-0.5 bg-[#3b82f6]" />
+
             {steps.map((step, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-6 p-6 bg-white rounded-xl shadow-sm border border-[#e2e8f0]"
-              >
-                <div className="flex-shrink-0 w-12 h-12 bg-[#3b82f6] rounded-full flex items-center justify-center text-white text-xl font-bold">
+              <div key={index} className="relative flex flex-col items-center w-1/3">
+                <div className="w-10 h-10 bg-[#3b82f6] rounded-full flex items-center justify-center text-white text-lg font-bold z-10">
                   {step.number}
                 </div>
-                <p className="text-lg md:text-xl text-[#0f172a] font-medium">
+                <p className="text-center text-[#0f172a] font-medium mt-4 px-4">
                   {step.title}
                 </p>
               </div>
             ))}
           </div>
-
-          <p className="text-center text-lg text-[#475569] mt-10">
-            No friction. No delays. No manual bottlenecks.
-          </p>
         </div>
+
+        {/* Mobile stepper - vertical */}
+        <div className="md:hidden max-w-sm mx-auto">
+          <div className="relative">
+            {/* Vertical connector line */}
+            <div className="absolute left-5 top-5 bottom-5 w-0.5 bg-[#e2e8f0]" />
+
+            <div className="space-y-8">
+              {steps.map((step, index) => (
+                <div key={index} className="relative flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#3b82f6] rounded-full flex items-center justify-center text-white text-lg font-bold z-10 flex-shrink-0">
+                    {step.number}
+                  </div>
+                  <p className="text-[#0f172a] font-medium pt-2">
+                    {step.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <p className="text-center text-lg text-[#475569] mt-12">
+          No friction. No delays. No manual bottlenecks.
+        </p>
       </div>
     </section>
   );

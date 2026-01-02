@@ -1,20 +1,39 @@
 const Urgency = () => {
   return (
-    <section className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
-            Fraud is growing faster than your team.
-          </h3>
-          <p className="text-lg text-[#475569] mb-6">
-            Synthetic identity fraud keeps rising while onboarding drop-offs quietly kill revenue.
-          </p>
-          <p className="text-lg text-[#475569] mb-8">
-            Most teams don&apos;t notice the damage until growth slows down.
-          </p>
-          <p className="text-xl font-semibold text-[#0f172a]">
-            Passflow stops fraud without slowing real users down.
-          </p>
+    <section className="py-12 md:py-16 bg-gradient-to-r from-[#fef2f2] to-[#fff7ed]">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-start gap-6">
+          {/* Alert icon */}
+          <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+            <svg
+              className="w-6 h-6 text-red-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">
+              Fraud is growing faster than your team.
+            </h2>
+            <p className="text-[#475569] mb-3">
+              Synthetic identity fraud keeps rising while onboarding drop-offs quietly kill revenue.
+            </p>
+            <p className="text-[#475569] mb-4">
+              Most teams don&apos;t notice the damage until growth slows down.
+            </p>
+            <p className="text-lg font-semibold text-[#0f172a]">
+              Passflow stops fraud without slowing real users down.
+            </p>
+          </div>
         </div>
       </div>
     </section>
