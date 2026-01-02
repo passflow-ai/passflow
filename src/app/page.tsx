@@ -6,6 +6,7 @@ import Differentiation from "@/components/Differentiation";
 import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
 import WhoItsFor from "@/components/WhoItsFor";
+import Trust from "@/components/Trust";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <HowItWorks />
         <UseCases />
         <WhoItsFor />
+        <Trust />
         <FinalCTA />
       </main>
       <Footer />

@@ -46,7 +46,7 @@ const FinalCTA = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
-            Stop fraud. Increase conversion. Move faster.
+            Let&apos;s grow your revenue — not your fraud.
           </h2>
         </div>
 

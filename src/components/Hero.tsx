@@ -29,7 +29,7 @@ const Hero = () => {
             Turn onboarding into revenue. Not fraud.
           </h1>
           <p className="text-xl md:text-2xl text-white/70 mb-10 max-w-2xl">
-            Real-time identity verification for fintechs and marketplaces that care about growth.
+            Real-time identity verification built for growth teams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <button onClick={scrollToHowItWorks} className="btn-primary text-lg">
