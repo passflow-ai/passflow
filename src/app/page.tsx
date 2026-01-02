@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
+import Urgency from "@/components/Urgency";
 import ValueProp from "@/components/ValueProp";
+import Differentiation from "@/components/Differentiation";
 import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
-import WhyPassflow from "@/components/WhyPassflow";
-import Trust from "@/components/Trust";
+import WhoItsFor from "@/components/WhoItsFor";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -15,12 +15,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Problem />
+        <Urgency />
         <ValueProp />
+        <Differentiation />
         <HowItWorks />
         <UseCases />
-        <WhyPassflow />
-        <Trust />
+        <WhoItsFor />
         <FinalCTA />
       </main>
       <Footer />

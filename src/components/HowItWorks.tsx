@@ -6,7 +6,7 @@ const HowItWorks = () => {
     },
     {
       number: "2",
-      title: "Identity is verified in real time",
+      title: "Identity verified in real time",
     },
     {
       number: "3",
@@ -15,12 +15,12 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section id="how-it-works" className="section-padding bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a]">
             How Passflow works
-          </h2>
+          </h3>
         </div>
 
         <div className="max-w-2xl mx-auto">
@@ -28,7 +28,7 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="flex items-center gap-6 p-6 bg-[#f8fafc] rounded-xl"
+                className="flex items-center gap-6 p-6 bg-white rounded-xl shadow-sm border border-[#e2e8f0]"
               >
                 <div className="flex-shrink-0 w-12 h-12 bg-[#3b82f6] rounded-full flex items-center justify-center text-white text-xl font-bold">
                   {step.number}
@@ -40,8 +40,8 @@ const HowItWorks = () => {
             ))}
           </div>
 
-          <p className="text-center text-2xl font-semibold text-[#0f172a] mt-10">
-            That&apos;s it.
+          <p className="text-center text-lg text-[#475569] mt-10">
+            No friction. No delays. No manual bottlenecks.
           </p>
         </div>
       </div>
