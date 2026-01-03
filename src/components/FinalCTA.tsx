@@ -7,6 +7,8 @@ const FinalCTA = () => {
     name: "",
     email: "",
     company: "",
+    volume: "",
+    timeline: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -25,19 +27,12 @@ const FinalCTA = () => {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", company: "" });
+        setFormData({ name: "", email: "", company: "", volume: "", timeline: "" });
       } else {
         setStatus("error");
       }
     } catch {
       setStatus("error");
-    }
-  };
-
-  const scrollToHowItWorks = () => {
-    const element = document.getElementById("how-it-works");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -48,9 +43,12 @@ const FinalCTA = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Let&apos;s grow your revenue — not your fraud.
           </h2>
+          <p className="text-white/60">
+            Get a personalized demo and pricing quote for your business.
+          </p>
         </div>
 
-        <div className="max-w-md mx-auto">
+        <div className="max-w-lg mx-auto">
           {status === "success" ? (
             <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center">
               <svg
@@ -70,26 +68,12 @@ const FinalCTA = () => {
                 Thanks for reaching out!
               </h3>
               <p className="text-white/70">
-                We&apos;ll get back to you within 24 hours.
+                We&apos;ll get back to you within 24 hours with a personalized demo.
               </p>
             </div>
           ) : (
-            <>
-              {/* CTA buttons with clear hierarchy */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <button
-                  onClick={scrollToHowItWorks}
-                  className="px-8 py-3.5 border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  See how it works
-                </button>
-              </div>
-
-              <div className="text-center mb-6">
-                <p className="text-white/50 text-sm">Or talk to our team directly:</p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <input
                     type="text"
@@ -114,37 +98,69 @@ const FinalCTA = () => {
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
                   />
                 </div>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Company"
+                  required
+                  value={formData.company}
+                  onChange={(e) =>
+                    setFormData({ ...formData, company: e.target.value })
+                  }
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
+                />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <input
-                    type="text"
-                    placeholder="Company"
-                    required
-                    value={formData.company}
+                  <select
+                    value={formData.volume}
                     onChange={(e) =>
-                      setFormData({ ...formData, company: e.target.value })
+                      setFormData({ ...formData, volume: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
-                  />
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors appearance-none cursor-pointer"
+                  >
+                    <option value="" className="bg-[#1e293b]">Monthly volume</option>
+                    <option value="<10k" className="bg-[#1e293b]">&lt; 10K verifications</option>
+                    <option value="10k-50k" className="bg-[#1e293b]">10K - 50K verifications</option>
+                    <option value="50k-100k" className="bg-[#1e293b]">50K - 100K verifications</option>
+                    <option value="100k+" className="bg-[#1e293b]">100K+ verifications</option>
+                  </select>
                 </div>
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="w-full bg-[#3b82f6] text-white py-3.5 px-6 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {status === "loading" ? "Sending..." : "Talk to our team"}
-                </button>
-                {status === "error" && (
-                  <p className="text-red-400 text-sm text-center">
-                    Something went wrong. Please try again.
-                  </p>
-                )}
-              </form>
-
-              <p className="text-center text-white/40 text-sm mt-6">
-                Built for growth teams. Not paperwork.
-              </p>
-            </>
+                <div>
+                  <select
+                    value={formData.timeline}
+                    onChange={(e) =>
+                      setFormData({ ...formData, timeline: e.target.value })
+                    }
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors appearance-none cursor-pointer"
+                  >
+                    <option value="" className="bg-[#1e293b]">Timeline</option>
+                    <option value="asap" className="bg-[#1e293b]">ASAP</option>
+                    <option value="1-3months" className="bg-[#1e293b]">1-3 months</option>
+                    <option value="3-6months" className="bg-[#1e293b]">3-6 months</option>
+                    <option value="exploring" className="bg-[#1e293b]">Just exploring</option>
+                  </select>
+                </div>
+              </div>
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="w-full bg-[#3b82f6] text-white py-3.5 px-6 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {status === "loading" ? "Sending..." : "Get a Demo"}
+              </button>
+              {status === "error" && (
+                <p className="text-red-400 text-sm text-center">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+            </form>
           )}
+
+          <p className="text-center text-white/40 text-sm mt-6">
+            Built for growth teams. Not paperwork.
+          </p>
         </div>
       </div>
     </section>

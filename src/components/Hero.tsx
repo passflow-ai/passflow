@@ -43,17 +43,11 @@ const Hero = () => {
             No long sales cycles. No heavy integrations.
           </p>
 
-          {/* Social proof */}
+          {/* Social proof - text only */}
           <div className="pt-8 border-t border-white/10">
-            <p className="text-white/40 text-sm mb-4">
-              Trusted by growth teams processing $50M+ monthly
+            <p className="text-white/50 text-sm">
+              Trusted by growth teams at high-volume fintechs and marketplaces
             </p>
-            <div className="flex items-center gap-6 justify-center md:justify-start opacity-60">
-              {/* Placeholder logos - grayscale */}
-              <div className="h-6 w-20 bg-white/20 rounded" />
-              <div className="h-6 w-16 bg-white/20 rounded" />
-              <div className="h-6 w-24 bg-white/20 rounded" />
-            </div>
           </div>
         </div>
       </div>

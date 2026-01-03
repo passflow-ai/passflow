@@ -5,6 +5,8 @@ import ValueProp from "@/components/ValueProp";
 import Differentiation from "@/components/Differentiation";
 import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
+import Pricing from "@/components/Pricing";
+import TechResources from "@/components/TechResources";
 import WhoItsFor from "@/components/WhoItsFor";
 import Trust from "@/components/Trust";
 import FinalCTA from "@/components/FinalCTA";
@@ -21,6 +23,8 @@ export default function Home() {
         <Differentiation />
         <HowItWorks />
         <UseCases />
+        <Pricing />
+        <TechResources />
         <WhoItsFor />
         <Trust />
         <FinalCTA />

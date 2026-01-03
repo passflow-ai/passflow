@@ -6,13 +6,19 @@ import Link from "next/link";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
+
+  const navLinks = [
+    { label: "How it works", id: "how-it-works" },
+    { label: "Pricing", id: "pricing" },
+    { label: "Security", id: "trust" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/95 backdrop-blur-sm border-b border-white/10">
@@ -22,10 +28,23 @@ const Header = () => {
             Passflow<span className="text-[#3b82f6]">.ai</span>
           </Link>
 
-          {/* Desktop CTA - Single primary action */}
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-white/70 hover:text-white transition-colors text-sm"
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+
+          {/* Desktop CTA */}
           <div className="hidden md:block">
             <button
-              onClick={scrollToContact}
+              onClick={() => scrollToSection("contact")}
               className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors"
             >
               Talk to Sales
@@ -66,12 +85,23 @@ const Header = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/10">
-            <button
-              onClick={scrollToContact}
-              className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors w-full"
-            >
-              Talk to Sales
-            </button>
+            <div className="flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-white/70 hover:text-white transition-colors text-left"
+                >
+                  {link.label}
+                </button>
+              ))}
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors w-full mt-2"
+              >
+                Talk to Sales
+              </button>
+            </div>
           </div>
         )}
       </div>
