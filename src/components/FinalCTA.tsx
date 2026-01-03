@@ -7,6 +7,7 @@ const FinalCTA = () => {
     name: "",
     email: "",
     company: "",
+    industry: "",
     volume: "",
     timeline: "",
   });
@@ -27,7 +28,7 @@ const FinalCTA = () => {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", company: "", volume: "", timeline: "" });
+        setFormData({ name: "", email: "", company: "", industry: "", volume: "", timeline: "" });
       } else {
         setStatus("error");
       }
@@ -99,17 +100,37 @@ const FinalCTA = () => {
                   />
                 </div>
               </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Company"
-                  required
-                  value={formData.company}
-                  onChange={(e) =>
-                    setFormData({ ...formData, company: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Company"
+                    required
+                    value={formData.company}
+                    onChange={(e) =>
+                      setFormData({ ...formData, company: e.target.value })
+                    }
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors"
+                  />
+                </div>
+                <div>
+                  <select
+                    value={formData.industry}
+                    onChange={(e) =>
+                      setFormData({ ...formData, industry: e.target.value })
+                    }
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors appearance-none cursor-pointer"
+                  >
+                    <option value="" className="bg-[#1e293b]">Industry</option>
+                    <option value="fintech" className="bg-[#1e293b]">Fintech</option>
+                    <option value="lending" className="bg-[#1e293b]">Lending</option>
+                    <option value="marketplace" className="bg-[#1e293b]">Marketplace</option>
+                    <option value="crypto" className="bg-[#1e293b]">Crypto / Web3</option>
+                    <option value="gaming" className="bg-[#1e293b]">Gaming / iGaming</option>
+                    <option value="insurance" className="bg-[#1e293b]">Insurance</option>
+                    <option value="other" className="bg-[#1e293b]">Other</option>
+                  </select>
+                </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -158,7 +179,7 @@ const FinalCTA = () => {
             </form>
           )}
 
-          <p className="text-center text-white/40 text-sm mt-6">
+          <p className="text-center text-white/50 text-lg md:text-xl font-medium mt-8">
             Built for growth teams. Not paperwork.
           </p>
         </div>

@@ -43,13 +43,10 @@ const WhoItsFor = () => {
             </ul>
           </div>
 
-          {/* Who it's not for - filter */}
+          {/* Note */}
           <div className="bg-[#f9fafb] rounded-xl p-6 md:p-8 border border-[#e5e7eb]">
-            <h4 className="text-lg font-semibold text-[#64748b] mb-2 text-center">
-              Who it&apos;s not for
-            </h4>
             <p className="text-[#64748b] text-sm text-center">
-              If you&apos;re only checking compliance boxes, Passflow is probably not for you.
+              Best for teams that prioritize both <span className="font-medium text-[#475569]">revenue growth</span> and <span className="font-medium text-[#475569]">compliance</span>.
             </p>
           </div>
         </div>

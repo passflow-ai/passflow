@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 export async function POST(request: Request) {
   try {
-    const { name, email, company, volume, timeline } = await request.json();
+    const { name, email, company, industry, volume, timeline } = await request.json();
 
     if (!name || !email || !company) {
       return NextResponse.json(
@@ -22,6 +22,7 @@ export async function POST(request: Request) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Company:</strong> ${company}</p>
+        <p><strong>Industry:</strong> ${industry || "Not specified"}</p>
         <p><strong>Monthly Volume:</strong> ${volume || "Not specified"}</p>
         <p><strong>Timeline:</strong> ${timeline || "Not specified"}</p>
       `,
