@@ -39,9 +39,16 @@ const Hero = () => {
               Talk to our team
             </button>
           </div>
-          <p className="text-white/50 text-sm">
+          <p className="text-white/50 text-sm mb-10">
             No long sales cycles. No heavy integrations.
           </p>
+
+          {/* Social proof */}
+          <div className="pt-8 border-t border-white/10">
+            <p className="text-white/60 text-lg md:text-xl font-medium">
+              Trusted by growth teams at high-volume fintechs and marketplaces
+            </p>
+          </div>
         </div>
       </div>
     </section>
