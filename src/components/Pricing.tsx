@@ -8,43 +8,33 @@ const Pricing = () => {
     }
   };
 
-  const tiers = [
+  const factors = [
     {
-      name: "Starter",
-      description: "For early-stage fintechs and marketplaces",
-      price: "$0.85 – $1.50",
-      unit: "per verification",
-      features: [
-        "Up to 10K verifications/month",
-        "Standard support",
-        "Basic SLA",
-        "API access",
-      ],
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
+      title: "Monthly volume",
+      description: "Based on your verification needs",
     },
     {
-      name: "Growth",
-      description: "For scaling platforms with growing volume",
-      price: "$0.65 – $0.95",
-      unit: "per verification",
-      features: [
-        "10K – 100K verifications/month",
-        "Priority support",
-        "Assisted integration",
-        "Monthly analytics",
-      ],
-      highlighted: true,
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+      title: "Deployment",
+      description: "Cloud, on-premise, or hybrid",
     },
     {
-      name: "Enterprise",
-      description: "For high-volume operations with custom needs",
-      price: "$0.45 – $0.75",
-      unit: "per verification",
-      features: [
-        "100K+ verifications/month",
-        "Dedicated support + 24/7 SLA",
-        "Custom implementation",
-        "Business reviews",
-      ],
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      ),
+      title: "Support level",
+      description: "Standard to dedicated 24/7",
     },
   ];
 
@@ -53,91 +43,50 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
-            Transparent, usage-based pricing
+            Pricing
           </h3>
-          <p className="text-lg text-[#475569]">
-            Pricing tailored to your verification volume and business needs.
+          <p className="text-lg text-[#475569] mb-4">
+            Passflow uses a usage-based pricing model designed to scale with your onboarding volume and operational needs.
+          </p>
+          <p className="text-[#64748b]">
+            Our team will help you define the right plan based on your use case and growth stage.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-          {tiers.map((tier, index) => (
-            <div
-              key={index}
-              className={`rounded-2xl p-8 ${
-                tier.highlighted
-                  ? "bg-[#0f172a] text-white ring-2 ring-[#3b82f6] scale-105"
-                  : "bg-[#f8fafc] text-[#0f172a] border border-[#e2e8f0]"
-              }`}
-            >
-              {tier.highlighted && (
-                <span className="inline-block bg-[#3b82f6] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                  Most Popular
-                </span>
-              )}
-              <h4 className="text-xl font-bold mb-2">{tier.name}</h4>
-              <p
-                className={`text-sm mb-6 ${
-                  tier.highlighted ? "text-white/70" : "text-[#64748b]"
-                }`}
+        <div className="max-w-3xl mx-auto mb-12">
+          <p className="text-center text-[#475569] mb-8">
+            Pricing depends on:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {factors.map((factor, index) => (
+              <div
+                key={index}
+                className="bg-[#f8fafc] rounded-xl p-6 text-center border border-[#e2e8f0]"
               >
-                {tier.description}
-              </p>
-              <div className="mb-6">
-                <span className="text-3xl font-bold">{tier.price}</span>
-                <span
-                  className={`text-sm ml-2 ${
-                    tier.highlighted ? "text-white/70" : "text-[#64748b]"
-                  }`}
-                >
-                  {tier.unit}
-                </span>
+                <div className="w-12 h-12 bg-[#3b82f6]/10 rounded-lg flex items-center justify-center text-[#3b82f6] mx-auto mb-4">
+                  {factor.icon}
+                </div>
+                <h4 className="text-[#0f172a] font-semibold mb-1">{factor.title}</h4>
+                <p className="text-sm text-[#64748b]">{factor.description}</p>
               </div>
-              <ul className="space-y-3 mb-8">
-                {tier.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-2">
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                        tier.highlighted ? "text-[#3b82f6]" : "text-green-500"
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span
-                      className={`text-sm ${
-                        tier.highlighted ? "text-white/90" : "text-[#475569]"
-                      }`}
-                    >
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <button
-                onClick={scrollToContact}
-                className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                  tier.highlighted
-                    ? "bg-[#3b82f6] text-white hover:bg-[#2563eb]"
-                    : "bg-[#0f172a] text-white hover:bg-[#1e293b]"
-                }`}
-              >
-                Get a Quote
-              </button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <p className="text-center text-[#64748b] text-sm">
-          Actual pricing provided via personalized quote based on your specific requirements.
-        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onClick={scrollToContact}
+            className="bg-[#3b82f6] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors"
+          >
+            Talk to our team
+          </button>
+          <button
+            onClick={scrollToContact}
+            className="border-2 border-[#0f172a] text-[#0f172a] px-8 py-3 rounded-lg font-semibold hover:bg-[#0f172a] hover:text-white transition-colors"
+          >
+            Request pricing
+          </button>
+        </div>
       </div>
     </section>
   );
