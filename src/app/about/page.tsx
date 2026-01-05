@@ -67,6 +67,27 @@ export default function About() {
             <p className="text-white/70 mb-6">
               Ready to learn more about how Passflow can help your team grow? We&apos;d love to hear from you.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h3 className="text-white font-semibold mb-2">PassFlow, Inc</h3>
+                <p className="text-white/60 text-sm">
+                  3723 Greenville Ave STE 57075<br />
+                  Dallas, TX 75206
+                </p>
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Contact</h3>
+                <p className="text-white/60 text-sm">
+                  <a href="tel:+14692493858" className="hover:text-white transition-colors">
+                    (469) 249-3858
+                  </a>
+                  <br />
+                  <a href="mailto:hello@passflow.ai" className="hover:text-white transition-colors">
+                    hello@passflow.ai
+                  </a>
+                </p>
+              </div>
+            </div>
             <a
               href="mailto:hello@passflow.ai"
               className="inline-block bg-[#3b82f6] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors"
