@@ -15,9 +15,9 @@ const ValueProp = () => {
     <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-10">
             What teams see after deploying Passflow
-          </h3>
+          </h2>
 
           <ul className="space-y-4 text-left max-w-md mx-auto mb-12">
             {benefits.map((benefit, index) => (

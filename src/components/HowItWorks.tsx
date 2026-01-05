@@ -18,9 +18,9 @@ const HowItWorks = () => {
     <section id="how-it-works" className="section-padding bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a]">
             How Passflow works
-          </h3>
+          </h2>
         </div>
 
         {/* Desktop stepper - horizontal */}

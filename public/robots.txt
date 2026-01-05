@@ -1,0 +1,9 @@
+# Robots.txt for Passflow.ai
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://passflow.ai/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/

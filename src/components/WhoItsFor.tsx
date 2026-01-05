@@ -11,9 +11,9 @@ const WhoItsFor = () => {
         <div className="max-w-4xl mx-auto">
           {/* Who it's for - positive */}
           <div className="bg-[#f0fdf4] rounded-2xl p-8 md:p-12 mb-6">
-            <h3 className="text-3xl md:text-4xl font-bold text-[#0f172a] mb-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] mb-6 text-center">
               Who Passflow is for
-            </h3>
+            </h2>
 
             <p className="text-lg text-[#475569] mb-6 text-center">
               Passflow is built for teams that:

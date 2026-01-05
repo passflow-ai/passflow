@@ -1,5 +1,18 @@
+import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Security & Compliance",
+  description: "Passflow.ai security certifications and compliance: ISO 27001, ISO 9001, iBeta Level 1, NIST compliant. Enterprise-grade security for identity verification.",
+  openGraph: {
+    title: "Security & Compliance - Passflow.ai",
+    description: "Enterprise-grade security built into every layer of our identity verification platform.",
+  },
+  alternates: {
+    canonical: "https://passflow.ai/security",
+  },
+};
 
 export default function Security() {
   const certifications = [
@@ -12,7 +25,7 @@ export default function Security() {
       description: "Quality Management System certification ensuring consistent, high-quality service delivery.",
     },
     {
-      title: "iBeta Level 2",
+      title: "iBeta Level 1",
       description: "Biometric Presentation Attack Detection (PAD) testing certification, validating our liveness detection capabilities.",
     },
     {

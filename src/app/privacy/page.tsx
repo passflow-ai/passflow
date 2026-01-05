@@ -1,5 +1,18 @@
+import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Passflow.ai Privacy Policy - Learn how we collect, use, and protect your data. ISO 27001 certified identity verification.",
+  openGraph: {
+    title: "Privacy Policy - Passflow.ai",
+    description: "Learn how Passflow.ai protects your data and privacy.",
+  },
+  alternates: {
+    canonical: "https://passflow.ai/privacy",
+  },
+};
 
 export default function Privacy() {
   return (

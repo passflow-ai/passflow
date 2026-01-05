@@ -46,9 +46,9 @@ const UseCases = () => {
     <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
             Designed for high-growth platforms
-          </h3>
+          </h2>
         </div>
 
         {/* Industry pills */}

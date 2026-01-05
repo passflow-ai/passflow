@@ -1,5 +1,18 @@
+import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about PassFlow, Inc - the company behind Passflow.ai. We build real-time identity verification for growth-focused fintech, lending, and marketplace teams.",
+  openGraph: {
+    title: "About PassFlow, Inc",
+    description: "Building the future of identity verification for growth-focused teams.",
+  },
+  alternates: {
+    canonical: "https://passflow.ai/about",
+  },
+};
 
 export default function About() {
   return (
@@ -26,7 +39,7 @@ export default function About() {
             </p>
             <ul className="list-disc list-inside text-white/70 space-y-2">
               <li>Real-time document verification across 190+ countries</li>
-              <li>iBeta Level 2 certified liveness detection</li>
+              <li>iBeta Level 1 certified liveness detection</li>
               <li>Biometric matching with 99.9% accuracy</li>
               <li>Flexible deployment options (cloud, on-premise, hybrid)</li>
             </ul>

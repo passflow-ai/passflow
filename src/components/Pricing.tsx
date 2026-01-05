@@ -63,9 +63,9 @@ const Pricing = () => {
     <section id="pricing" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6">
             Simple, transparent pricing
-          </h3>
+          </h2>
           <p className="text-lg text-[#475569]">
             Pay only for successful verifications. No setup fees, no hidden costs.
           </p>
