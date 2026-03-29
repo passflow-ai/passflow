@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   const navLinks = [
-    { label: "How it works", id: "how-it-works" },
+    { label: "Product", id: "how-it-works" },
     { label: "Pricing", id: "pricing" },
     { label: "Security", id: "trust" },
   ];
@@ -50,12 +50,12 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <button
-              onClick={() => scrollToSection("contact")}
+            <a
+              href="https://app.passflow.ai/login?mode=register"
               className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors"
             >
-              Talk to Sales
-            </button>
+              Start Free
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -102,12 +102,12 @@ const Header = () => {
                   {link.label}
                 </button>
               ))}
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors w-full mt-2"
+              <a
+                href="https://app.passflow.ai/login?mode=register"
+                className="bg-[#3b82f6] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors w-full mt-2 text-center block"
               >
-                Talk to Sales
-              </button>
+                Start Free
+              </a>
             </div>
           </div>
         )}

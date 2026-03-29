@@ -8,13 +8,6 @@ const Hero = () => {
     }
   };
 
-  const scrollToHowItWorks = () => {
-    const element = document.getElementById("how-it-works");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center gradient-bg overflow-hidden pt-16">
       {/* Background decoration */}
@@ -26,27 +19,27 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl mx-auto text-center md:text-left md:mx-0">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Turn onboarding into revenue. Not fraud.
+            Automate any workflow. Deploy AI agents in minutes.
           </h1>
           <p className="text-xl md:text-2xl text-white/70 mb-10 max-w-2xl">
-            Real-time identity verification built for growth teams.
+            Build, deploy, and manage AI agents that work 24/7. No code required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-4 justify-center md:justify-start">
-            <button onClick={scrollToHowItWorks} className="btn-primary text-lg">
-              See how it works
-            </button>
+            <a href="https://app.passflow.ai/login?mode=register" className="btn-primary text-lg">
+              Start Free
+            </a>
             <button onClick={scrollToContact} className="btn-secondary text-lg">
-              Talk to our team
+              Book a Demo
             </button>
           </div>
           <p className="text-white/50 text-sm mb-10">
-            No long sales cycles. No heavy integrations.
+            Free plan available. No credit card required.
           </p>
 
           {/* Social proof */}
           <div className="pt-8 border-t border-white/10">
             <p className="text-white/60 text-lg md:text-xl font-medium">
-              Trusted by growth teams at high-volume fintechs and marketplaces
+              Trusted by ops teams at fast-growing companies
             </p>
           </div>
         </div>
