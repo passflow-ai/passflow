@@ -37,16 +37,37 @@ const FinalCTA = () => {
     }
   };
 
+  const handleStartFree = () => {
+    window.location.href = 'https://app.passflow.ai/login?mode=register';
+  };
+
   return (
     <section id="contact" className="py-16 md:py-20 bg-gradient-to-br from-[#0f172a] to-[#1e293b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Let&apos;s grow your revenue — not your fraud.
+            Start automating your workflows today
           </h2>
           <p className="text-white/60">
-            Get a personalized demo and pricing quote for your business.
+            Deploy your first AI agent in minutes. Free to start.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <button
+              onClick={handleStartFree}
+              className="bg-[#3b82f6] text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors"
+            >
+              Start Free
+            </button>
+            <button
+              onClick={() => {
+                const form = document.querySelector('#contact form');
+                if (form) form.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="bg-white/10 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white/20"
+            >
+              Book a Demo
+            </button>
+          </div>
         </div>
 
         <div className="max-w-lg mx-auto">
@@ -122,12 +143,11 @@ const FinalCTA = () => {
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors appearance-none cursor-pointer"
                   >
                     <option value="" className="bg-[#1e293b]">Industry</option>
+                    <option value="saas" className="bg-[#1e293b]">SaaS</option>
                     <option value="fintech" className="bg-[#1e293b]">Fintech</option>
-                    <option value="lending" className="bg-[#1e293b]">Lending</option>
-                    <option value="marketplace" className="bg-[#1e293b]">Marketplace</option>
-                    <option value="crypto" className="bg-[#1e293b]">Crypto / Web3</option>
-                    <option value="gaming" className="bg-[#1e293b]">Gaming / iGaming</option>
-                    <option value="insurance" className="bg-[#1e293b]">Insurance</option>
+                    <option value="ecommerce" className="bg-[#1e293b]">E-commerce</option>
+                    <option value="healthcare" className="bg-[#1e293b]">Healthcare</option>
+                    <option value="agency" className="bg-[#1e293b]">Agency</option>
                     <option value="other" className="bg-[#1e293b]">Other</option>
                   </select>
                 </div>
@@ -141,11 +161,11 @@ const FinalCTA = () => {
                     }
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 outline-none transition-colors appearance-none cursor-pointer"
                   >
-                    <option value="" className="bg-[#1e293b]">Monthly volume</option>
-                    <option value="<10k" className="bg-[#1e293b]">&lt; 10K verifications</option>
-                    <option value="10k-50k" className="bg-[#1e293b]">10K - 50K verifications</option>
-                    <option value="50k-100k" className="bg-[#1e293b]">50K - 100K verifications</option>
-                    <option value="100k+" className="bg-[#1e293b]">100K+ verifications</option>
+                    <option value="" className="bg-[#1e293b]">Number of agents</option>
+                    <option value="1-5" className="bg-[#1e293b]">1-5 agents</option>
+                    <option value="5-15" className="bg-[#1e293b]">5-15 agents</option>
+                    <option value="15-50" className="bg-[#1e293b]">15-50 agents</option>
+                    <option value="50+" className="bg-[#1e293b]">50+ agents</option>
                   </select>
                 </div>
                 <div>
@@ -169,7 +189,7 @@ const FinalCTA = () => {
                 disabled={status === "loading"}
                 className="w-full bg-[#3b82f6] text-white py-3.5 px-6 rounded-lg font-semibold hover:bg-[#2563eb] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {status === "loading" ? "Sending..." : "Get a Demo"}
+                {status === "loading" ? "Sending..." : "Book a Demo"}
               </button>
               {status === "error" && (
                 <p className="text-red-400 text-sm text-center">
@@ -178,10 +198,6 @@ const FinalCTA = () => {
               )}
             </form>
           )}
-
-          <p className="text-center text-white/50 text-lg md:text-xl font-medium mt-8">
-            Built for growth teams. Not paperwork.
-          </p>
         </div>
       </div>
     </section>
