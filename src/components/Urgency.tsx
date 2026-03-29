@@ -22,16 +22,13 @@ const Urgency = () => {
 
           <div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">
-              Fraud is growing faster than your team.
+              Your team is spending hours on tasks AI can handle in seconds.
             </h2>
             <p className="text-[#475569] mb-3">
-              Synthetic identity fraud keeps rising while onboarding drop-offs quietly kill revenue.
-            </p>
-            <p className="text-[#475569] mb-4">
-              Most teams don&apos;t notice the damage until growth slows down.
+              Manual data entry, report generation, ticket routing, follow-up emails — repetitive work piles up and slows down the teams that should be driving growth.
             </p>
             <p className="text-lg font-semibold text-[#0f172a]">
-              Passflow stops fraud without slowing real users down.
+              Passflow deploys AI agents that handle it automatically, 24/7.
             </p>
           </div>
         </div>

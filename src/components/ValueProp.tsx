@@ -1,14 +1,14 @@
 const ValueProp = () => {
   const benefits = [
-    "Less fraud hitting your funnel",
-    "More real users completing onboarding",
-    "Fewer manual reviews slowing growth",
+    "Less time on repetitive manual tasks",
+    "Faster operations across your team",
+    "Always-on automation that never sleeps",
   ];
 
   const metrics = [
-    { value: "↓ 60%", label: "Fraud" },
-    { value: "↑ 20-40%", label: "Conversion" },
-    { value: "↓ 40-70%", label: "Manual reviews" },
+    { value: "↓ 80%", label: "Manual work" },
+    { value: "10x", label: "Faster execution" },
+    { value: "24/7", label: "Uptime" },
   ];
 
   return (
