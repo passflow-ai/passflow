@@ -2,15 +2,15 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "1",
-      title: "User starts onboarding",
+      title: "Design your workflow visually",
     },
     {
       number: "2",
-      title: "Identity verified in real time",
+      title: "Connect your tools and LLMs",
     },
     {
       number: "3",
-      title: "Real users pass. Fraud doesn't.",
+      title: "Deploy and let agents work 24/7",
     },
   ];
 
@@ -65,7 +65,7 @@ const HowItWorks = () => {
         </div>
 
         <p className="text-center text-lg text-[#475569] mt-12">
-          No friction. No delays. No manual bottlenecks.
+          No code. No complex integrations. No DevOps required.
         </p>
       </div>
     </section>
