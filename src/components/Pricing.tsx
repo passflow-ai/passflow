@@ -8,54 +8,81 @@ const Pricing = () => {
     }
   };
 
+  const handleSignUp = () => {
+    window.location.href = 'https://app.passflow.ai/login?mode=register';
+  };
+
   const tiers = [
     {
-      name: "Starter",
-      price: "$0.85 - $1.50",
-      unit: "per verification",
-      description: "For teams getting started with identity verification",
+      name: "Free",
+      price: "$0",
+      unit: "/month",
+      description: "For individuals getting started with AI agents",
       features: [
-        "Up to 10K verifications/month",
-        "Document + Selfie verification",
-        "Standard API access",
+        "Up to 3 agents",
+        "500K tokens/month",
+        "1 workspace",
+        "Basic templates",
+        "Community support",
+      ],
+      cta: "Start Free",
+      highlighted: false,
+      action: handleSignUp,
+    },
+    {
+      name: "Starter",
+      price: "$99",
+      unit: "/month",
+      description: "For small teams automating key workflows",
+      features: [
+        "Up to 5 agents",
+        "5M tokens/month",
+        "1 workspace",
+        "All templates",
+        "BYOK (30% off)",
         "Email support",
-        "99.5% uptime SLA",
+        "Audit log",
       ],
       cta: "Get Started",
       highlighted: false,
+      action: handleSignUp,
     },
     {
       name: "Growth",
-      price: "$0.65 - $0.95",
-      unit: "per verification",
-      description: "For scaling teams with higher volumes",
+      price: "$299",
+      unit: "/month",
+      description: "For scaling teams with multiple workflows",
       features: [
-        "10K - 100K verifications/month",
+        "Up to 15 agents",
+        "15M tokens/month",
+        "3 workspaces",
         "All Starter features",
-        "Advanced liveness detection",
-        "Webhooks & custom flows",
+        "Advanced analytics",
         "Priority support",
-        "99.9% uptime SLA",
+        "Webhooks & custom flows",
       ],
-      cta: "Get a Quote",
+      cta: "Get Started",
       highlighted: true,
+      action: handleSignUp,
     },
     {
-      name: "Enterprise",
-      price: "$0.45 - $0.75",
-      unit: "per verification",
-      description: "For high-volume operations with custom needs",
+      name: "Business",
+      price: "$799",
+      unit: "/month",
+      description: "For organizations with high-volume automation needs",
       features: [
-        "100K+ verifications/month",
+        "Unlimited agents",
+        "40M tokens/month",
+        "10 workspaces",
         "All Growth features",
-        "On-premise deployment option",
+        "SSO/SAML",
+        "SLA 99.99%",
+        "Dedicated support",
         "Custom integrations",
-        "Dedicated success manager",
-        "24/7 phone support",
-        "99.99% uptime SLA",
       ],
       cta: "Contact Sales",
       highlighted: false,
+      action: scrollToContact,
     },
   ];
 
@@ -67,11 +94,11 @@ const Pricing = () => {
             Simple, transparent pricing
           </h2>
           <p className="text-lg text-[#475569]">
-            Pay only for successful verifications. No setup fees, no hidden costs.
+            Start free. Scale as you grow. No hidden costs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
           {tiers.map((tier, index) => (
             <div
               key={index}
@@ -145,7 +172,7 @@ const Pricing = () => {
                 ))}
               </ul>
               <button
-                onClick={scrollToContact}
+                onClick={tier.action}
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   tier.highlighted
                     ? "bg-[#3b82f6] text-white hover:bg-[#2563eb]"
@@ -159,7 +186,7 @@ const Pricing = () => {
         </div>
 
         <p className="text-center text-[#64748b] text-sm">
-          All plans include document verification for 190+ countries. Volume discounts available.
+          All plans include multi-LLM support. BYOK available on paid plans for 30% off.
         </p>
       </div>
     </section>
