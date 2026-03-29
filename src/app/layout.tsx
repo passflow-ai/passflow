@@ -13,7 +13,7 @@ const jsonLd = {
       name: "PassFlow, Inc",
       url: "https://passflow.ai",
       logo: "https://passflow.ai/logo.png",
-      description: "Real-time identity verification for fintech, lending, and marketplaces.",
+      description: "AI agent orchestration platform. Build, deploy, and manage autonomous AI agents.",
       address: {
         "@type": "PostalAddress",
         streetAddress: "3723 Greenville Ave STE 57075",
@@ -36,25 +36,25 @@ const jsonLd = {
     {
       "@type": "SoftwareApplication",
       "@id": "https://passflow.ai/#product",
-      name: "Passflow Identity Verification",
+      name: "Passflow AI Agent Platform",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      description: "AI-powered identity verification with document verification, biometric matching, and liveness detection.",
+      description: "AI-powered agent orchestration platform for workflow automation with multiple LLM providers.",
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "USD",
-        lowPrice: "0.45",
-        highPrice: "1.50",
-        offerCount: "3"
+        lowPrice: "0",
+        highPrice: "799",
+        offerCount: "4"
       },
       provider: { "@id": "https://passflow.ai/#organization" },
       featureList: [
-        "Document verification for 190+ countries",
-        "iBeta Level 1 certified liveness detection",
-        "Biometric matching with 99.9% accuracy",
-        "Real-time verification in under 10 seconds",
-        "ISO 27001 and ISO 9001 certified",
-        "NIST compliant"
+        "Visual workflow builder for AI agents",
+        "Multi-LLM support (Anthropic, OpenAI, Gemini, Azure)",
+        "MCP integrations and custom tools",
+        "Automated triggers (cron, Slack, email, webhooks)",
+        "BYOK - Bring Your Own API Key",
+        "Real-time execution monitoring and analytics"
       ]
     }
   ]
@@ -73,23 +73,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://passflow.ai"),
   title: {
-    default: "Passflow.ai - Identity Verification that Accelerates Revenue",
+    default: "Passflow.ai - AI Agent Orchestration Platform",
     template: "%s | Passflow.ai",
   },
-  description: "Real-time identity verification for fintech, lending, and marketplaces. Up to 60% reduction in fraud. 20-40% increase in onboarding conversion. ISO 27001 certified.",
+  description: "Build, deploy, and manage AI agents that automate your workflows 24/7. No code required. Free to start. Connect Anthropic, OpenAI, and more.",
   keywords: [
-    "identity verification",
-    "KYC solution",
-    "fraud prevention",
-    "document verification",
-    "biometric verification",
-    "liveness detection",
-    "fintech onboarding",
-    "AML compliance",
-    "synthetic identity fraud",
-    "real-time verification",
-    "eKYC",
-    "identity proofing"
+    "AI agents",
+    "workflow automation",
+    "AI orchestration",
+    "LLM automation",
+    "agent builder",
+    "no-code AI",
+    "MCP protocol",
+    "AI workflow",
+    "autonomous agents",
+    "business automation",
+    "AI platform",
+    "BYOK AI"
   ],
   authors: [{ name: "PassFlow, Inc" }],
   creator: "PassFlow, Inc",
@@ -110,21 +110,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://passflow.ai",
     siteName: "Passflow.ai",
-    title: "Passflow.ai - Identity Verification that Accelerates Revenue",
-    description: "Real-time identity verification for fintech, lending, and marketplaces. Reduce fraud by 60% while increasing conversion by 20-40%.",
+    title: "Passflow.ai - AI Agent Orchestration Platform",
+    description: "Build, deploy, and manage AI agents that automate your workflows 24/7. No code required. Free to start. Connect Anthropic, OpenAI, and more.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Passflow.ai - Identity Verification",
+        alt: "Passflow.ai - AI Agent Orchestration Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Passflow.ai - Identity Verification that Accelerates Revenue",
-    description: "Real-time identity verification for fintech, lending, and marketplaces. Reduce fraud by 60%.",
+    title: "Passflow.ai - AI Agent Orchestration Platform",
+    description: "Build, deploy, and manage AI agents that automate your workflows 24/7. No code required. Free to start. Connect Anthropic, OpenAI, and more.",
     images: ["/og-image.png"],
   },
   alternates: {
