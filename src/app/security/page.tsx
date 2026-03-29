@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Security & Compliance",
-  description: "Passflow.ai security certifications and compliance: ISO 27001, ISO 9001, iBeta Level 1, NIST compliant. Enterprise-grade security for identity verification.",
+  description: "Passflow.ai security: End-to-end encryption, SOC 2 ready, RBAC, audit logging. Enterprise-grade security for AI agent orchestration.",
   openGraph: {
     title: "Security & Compliance - Passflow.ai",
-    description: "Enterprise-grade security built into every layer of our identity verification platform.",
+    description: "Enterprise-grade security built into every layer of our AI agent platform.",
   },
   alternates: {
     canonical: "https://passflow.ai/security",
@@ -15,45 +15,34 @@ export const metadata: Metadata = {
 };
 
 export default function Security() {
-  const certifications = [
-    {
-      title: "ISO 27001",
-      description: "Information Security Management System certification demonstrating our commitment to protecting sensitive data.",
-    },
-    {
-      title: "ISO 9001",
-      description: "Quality Management System certification ensuring consistent, high-quality service delivery.",
-    },
-    {
-      title: "iBeta Level 1",
-      description: "Biometric Presentation Attack Detection (PAD) testing certification, validating our liveness detection capabilities.",
-    },
-    {
-      title: "NIST Compliant",
-      description: "Adherence to National Institute of Standards and Technology guidelines for identity verification.",
-    },
-  ];
-
   const securityFeatures = [
     {
       title: "End-to-End Encryption",
       description: "All data is encrypted in transit using TLS 1.3 and at rest using AES-256 encryption.",
     },
     {
+      title: "SOC 2 Type II Ready",
+      description: "Security controls designed to meet SOC 2 requirements for enterprise customers.",
+    },
+    {
+      title: "Role-Based Access Control",
+      description: "Granular permissions per workspace with customizable roles for team members.",
+    },
+    {
+      title: "Audit Logging",
+      description: "Full activity tracking across all agent executions, configuration changes, and user actions for compliance.",
+    },
+    {
+      title: "Self-Host Option",
+      description: "Deploy Passflow on your own infrastructure for complete control over your data and security.",
+    },
+    {
       title: "US & EU Data Residency",
       description: "Choose where your data is processed and stored to meet regional compliance requirements.",
     },
     {
-      title: "Zero Data Retention Option",
-      description: "Process verifications without storing biometric data beyond the session.",
-    },
-    {
       title: "Regular Penetration Testing",
       description: "Third-party security assessments conducted quarterly to identify and address vulnerabilities.",
-    },
-    {
-      title: "SOC 2 Type II Ready",
-      description: "Security controls designed to meet SOC 2 requirements for enterprise customers.",
     },
     {
       title: "GDPR & CCPA Compliant",
@@ -72,9 +61,9 @@ export default function Security() {
           </p>
 
           <section className="mb-16">
-            <h2 className="text-2xl font-semibold text-white mb-6">Certifications</h2>
+            <h2 className="text-2xl font-semibold text-white mb-6">Security Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {certifications.map((cert, index) => (
+              {securityFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="bg-white/5 border border-white/10 rounded-xl p-6"
@@ -95,23 +84,8 @@ export default function Security() {
                         />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-semibold text-white">{cert.title}</h3>
+                    <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
                   </div>
-                  <p className="text-white/60">{cert.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="mb-16">
-            <h2 className="text-2xl font-semibold text-white mb-6">Security Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {securityFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 border border-white/10 rounded-xl p-6"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-white/60">{feature.description}</p>
                 </div>
               ))}

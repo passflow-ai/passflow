@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about PassFlow, Inc - the company behind Passflow.ai. We build real-time identity verification for growth-focused fintech, lending, and marketplace teams.",
+  description: "Learn about PassFlow, Inc - the company behind Passflow.ai. We build AI agent orchestration for teams that want to automate workflows without writing code.",
   openGraph: {
     title: "About PassFlow, Inc",
-    description: "Building the future of identity verification for growth-focused teams.",
+    description: "Building the future of workflow automation with AI agents.",
   },
   alternates: {
     canonical: "https://passflow.ai/about",
@@ -22,26 +22,26 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h1 className="text-4xl font-bold text-white mb-4">About Passflow</h1>
           <p className="text-xl text-white/70 mb-12">
-            Building the future of identity verification for growth-focused teams.
+            Building the future of workflow automation with AI agents.
           </p>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-white mb-4">Our Mission</h2>
             <p className="text-white/70 text-lg">
-              We believe identity verification should accelerate growth, not slow it down. Passflow was built to help fintechs, marketplaces, and digital platforms verify users in real-time without sacrificing conversion rates or creating friction in the onboarding experience.
+              We believe AI should handle the repetitive work so teams can focus on what matters. Passflow was built to help companies of any size deploy autonomous AI agents without writing code.
             </p>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold text-white mb-4">What We Do</h2>
             <p className="text-white/70 text-lg mb-4">
-              Passflow provides AI-powered identity verification that combines document verification, biometric matching, and liveness detection into a seamless experience. Our technology processes verifications in under 10 seconds while maintaining the highest accuracy standards.
+              Passflow provides a visual platform for building AI agents that connect to your tools, process data, and execute workflows autonomously. Our platform supports multiple LLM providers and integrates with 25+ services.
             </p>
             <ul className="list-disc list-inside text-white/70 space-y-2">
-              <li>Real-time document verification across 190+ countries</li>
-              <li>iBeta Level 1 certified liveness detection</li>
-              <li>Biometric matching with 99.9% accuracy</li>
-              <li>Flexible deployment options (cloud, on-premise, hybrid)</li>
+              <li>Visual agent builder with drag-and-drop workflows</li>
+              <li>Multi-LLM support (OpenAI, Anthropic, Google, Azure, and more)</li>
+              <li>25+ integrations with popular tools and services</li>
+              <li>Flexible deployment options (cloud, self-host, hybrid)</li>
             </ul>
           </section>
 
@@ -49,27 +49,27 @@ export default function About() {
             <h2 className="text-2xl font-semibold text-white mb-4">Why Teams Choose Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-2">Speed to Market</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Speed to Value</h3>
                 <p className="text-white/60">
-                  Get up and running in days, not months. Our APIs are designed for quick integration with minimal engineering overhead.
+                  Deploy your first AI agent in minutes. Our visual builder and pre-built templates eliminate the need for custom development.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-2">Conversion Focused</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">No Code Required</h3>
                 <p className="text-white/60">
-                  We optimize for user experience without compromising security. Higher conversion rates mean more revenue.
+                  Build powerful automations without writing a single line of code. Designed for ops teams, founders, and non-technical users.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-white mb-2">Enterprise Ready</h3>
                 <p className="text-white/60">
-                  ISO 27001, ISO 9001, iBeta, and NIST compliant. Built for teams with serious security requirements.
+                  SOC 2 ready, end-to-end encryption, role-based access control, and audit logging. Built for teams with serious security requirements.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-2">Global Coverage</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Multi-LLM Flexibility</h3>
                 <p className="text-white/60">
-                  Verify identity documents from over 190 countries with data residency options in the US and EU.
+                  Choose the best model for each task. Bring your own keys for 30% off, or use our managed tokens with data residency options in the US and EU.
                 </p>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function About() {
           <section className="bg-white/5 border border-white/10 rounded-xl p-8">
             <h2 className="text-2xl font-semibold text-white mb-4">Get in Touch</h2>
             <p className="text-white/70 mb-6">
-              Ready to learn more about how Passflow can help your team grow? We&apos;d love to hear from you.
+              Ready to learn more about how Passflow can help your team automate? We&apos;d love to hear from you.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>

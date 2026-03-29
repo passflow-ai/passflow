@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Passflow.ai Privacy Policy - Learn how we collect, use, and protect your data. ISO 27001 certified identity verification.",
+  description: "Passflow.ai Privacy Policy - Learn how we collect, use, and protect your data. Enterprise-grade security for AI agent orchestration.",
   openGraph: {
     title: "Privacy Policy - Passflow.ai",
     description: "Learn how Passflow.ai protects your data and privacy.",
@@ -30,7 +30,7 @@ export default function Privacy() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">1. Introduction</h2>
               <p className="text-white/70">
-                Passflow.ai (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our identity verification services.
+                Passflow.ai (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI agent orchestration platform.
               </p>
             </section>
 
@@ -40,7 +40,7 @@ export default function Privacy() {
                 We collect information that you provide directly to us, including:
               </p>
               <ul className="list-disc list-inside text-white/70 space-y-2">
-                <li>Identity documents and biometric data for verification purposes</li>
+                <li>Workflow configurations, agent execution logs, and integration credentials for platform operation</li>
                 <li>Contact information (name, email, company)</li>
                 <li>Usage data and analytics</li>
               </ul>
@@ -52,8 +52,8 @@ export default function Privacy() {
                 We use the information we collect to:
               </p>
               <ul className="list-disc list-inside text-white/70 space-y-2">
-                <li>Provide and maintain our identity verification services</li>
-                <li>Process and complete verification requests</li>
+                <li>Provide and maintain our AI agent orchestration platform</li>
+                <li>Process and execute agent workflows</li>
                 <li>Communicate with you about our services</li>
                 <li>Comply with legal obligations</li>
               </ul>
@@ -62,21 +62,21 @@ export default function Privacy() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">4. Data Retention</h2>
               <p className="text-white/70">
-                We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, or as required by law. Biometric data is processed in real-time and not stored beyond the verification session unless required by our clients for compliance purposes.
+                We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, or as required by law. Agent execution data is retained according to your plan&apos;s retention policy and can be deleted on request.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">5. Data Security</h2>
               <p className="text-white/70">
-                We implement industry-standard security measures including end-to-end encryption, secure data centers, and regular security audits. We are ISO 27001 and ISO 9001 certified.
+                We implement industry-standard security measures including end-to-end encryption (TLS 1.3 in transit, AES-256 at rest), secure data centers, and regular security audits. We maintain SOC 2 ready security controls.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">6. Your Rights</h2>
               <p className="text-white/70">
-                Depending on your location, you may have rights regarding your personal data, including the right to access, correct, delete, or port your data. Contact us at privacy@passflow.ai to exercise these rights.
+                Depending on your location, you may have rights regarding your personal data, including the right to access, correct, delete, or port your data. We comply with GDPR and CCPA requirements. Contact us at privacy@passflow.ai to exercise these rights.
               </p>
             </section>
 
