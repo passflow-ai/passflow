@@ -1,8 +1,8 @@
 const WhoItsFor = () => {
   const forTeams = [
-    "Care about conversion, not vanity metrics",
-    "Are losing revenue to fake users",
-    "Want results in weeks, not quarters",
+    "Want to automate without hiring more engineers",
+    "Need AI agents running 24/7 on repetitive tasks",
+    "Want results in days, not months",
   ];
 
   return (
@@ -46,7 +46,7 @@ const WhoItsFor = () => {
           {/* Note */}
           <div className="bg-[#f9fafb] rounded-xl p-6 md:p-8 border border-[#e5e7eb]">
             <p className="text-[#64748b] text-sm text-center">
-              Best for teams that prioritize both <span className="font-medium text-[#475569]">revenue growth</span> and <span className="font-medium text-[#475569]">compliance</span>.
+              Best for <span className="font-medium text-[#475569]">ops teams</span>, <span className="font-medium text-[#475569]">founders</span>, <span className="font-medium text-[#475569]">developers</span>, and <span className="font-medium text-[#475569]">support leads</span>.
             </p>
           </div>
         </div>
