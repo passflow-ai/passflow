@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { createWebhookHeaders } from "@/lib/webhook-signature";
 
 export async function POST(request: Request) {
   try {
@@ -12,6 +13,33 @@ export async function POST(request: Request) {
       );
     }
 
+    // Send to CRM webhook
+    const crmWebhookUrl = process.env.CRM_WEBHOOK_URL;
+    const crmWebhookSecret = process.env.CRM_WEBHOOK_SECRET;
+
+    if (crmWebhookUrl && crmWebhookSecret) {
+      try {
+        const payload = JSON.stringify({
+          name,
+          email,
+          company,
+          service_interest: "kyc", // PassFlow is an identity verification product
+          message: `Industry: ${industry || "Not specified"}\nMonthly Volume: ${volume || "Not specified"}\nTimeline: ${timeline || "Not specified"}`,
+        });
+
+        // Uses HMAC signature for security
+        await fetch(`${crmWebhookUrl}/passflow/contact`, {
+          method: "POST",
+          headers: createWebhookHeaders(crmWebhookSecret, payload),
+          body: payload,
+        });
+      } catch (crmError) {
+        console.error("CRM webhook error:", crmError);
+        // Don't fail the request if CRM fails
+      }
+    }
+
+    // Send email notification
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: "Passflow <noreply@passflow.ai>",
