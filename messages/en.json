@@ -6,7 +6,7 @@
       "pricing": "Pricing",
       "docs": "Docs"
     },
-    "cta": "Start free",
+    "cta": "Request access",
     "mobileMenu": {
       "open": "Menu",
       "close": "Close"
@@ -22,7 +22,7 @@
       "primary": "Watch technical demo",
       "secondary": "Read documentation"
     },
-    "microcopy": "Free plan available. No credit card required.",
+    "microcopy": "Access granted on a first-come, first-served basis based on system capacity.",
     "metrics": {
       "coldStart": {
         "value": "< 100ms",
@@ -318,8 +318,8 @@
           "Basic templates",
           "Community support"
         ],
-        "cta": "Start free",
-        "ctaSubtext": "No credit card. Always free."
+        "cta": "Request access",
+        "ctaSubtext": "Access granted first-come, first-served based on capacity."
       },
       "starter": {
         "name": "Starter",
@@ -334,7 +334,7 @@
           "Email support",
           "Audit log"
         ],
-        "cta": "Get started"
+        "cta": "Request access"
       },
       "growth": {
         "name": "Growth",
@@ -349,7 +349,7 @@
           "Priority support",
           "Custom webhooks and flows"
         ],
-        "cta": "Get started",
+        "cta": "Request access",
         "ctaSubtext": "The most chosen plan by teams of 5-15 people.",
         "badge": "Recommended"
       },
@@ -402,10 +402,10 @@
       }
     },
     "cta": {
-      "primary": "Create free account",
+      "primary": "Request access",
       "secondary": "Watch technical demo"
     },
-    "microcopy": "No credit card. Free plan forever.",
+    "microcopy": "Access granted on a first-come, first-served basis based on system capacity.",
     "trustBadges": {
       "encryption": "AES-256 encryption",
       "soc2": "SOC 2 ready",
@@ -525,9 +525,9 @@
       "title": "Quick Start",
       "description": "Deploy your first agent in less than an hour.",
       "step1": {
-        "title": "Create your account",
-        "description": "Sign up for free. No credit card required.",
-        "cta": "Create account"
+        "title": "Request access",
+        "description": "Request access to the platform. Access granted first-come, first-served.",
+        "cta": "Request access"
       },
       "step2": {
         "title": "Create a workspace",

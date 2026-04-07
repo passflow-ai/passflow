@@ -6,7 +6,7 @@
       "pricing": "Pricing",
       "docs": "Docs"
     },
-    "cta": "Comenzar gratis",
+    "cta": "Solicitar acceso",
     "mobileMenu": {
       "open": "Menu",
       "close": "Cerrar"
@@ -22,7 +22,7 @@
       "primary": "Ver demo tecnica",
       "secondary": "Leer documentacion"
     },
-    "microcopy": "Plan gratuito disponible. Sin tarjeta de credito.",
+    "microcopy": "Acceso por orden de llegada segun capacidad del sistema.",
     "metrics": {
       "coldStart": {
         "value": "< 100ms",
@@ -318,8 +318,8 @@
           "Templates basicos",
           "Soporte por comunidad"
         ],
-        "cta": "Empezar gratis",
-        "ctaSubtext": "Sin tarjeta de credito. Siempre gratis."
+        "cta": "Solicitar acceso",
+        "ctaSubtext": "Acceso por orden de llegada segun capacidad."
       },
       "starter": {
         "name": "Starter",
@@ -334,7 +334,7 @@
           "Soporte por email",
           "Audit log"
         ],
-        "cta": "Comenzar"
+        "cta": "Solicitar acceso"
       },
       "growth": {
         "name": "Growth",
@@ -349,7 +349,7 @@
           "Soporte prioritario",
           "Webhooks y flujos custom"
         ],
-        "cta": "Comenzar",
+        "cta": "Solicitar acceso",
         "ctaSubtext": "El plan mas elegido por equipos de 5-15 personas.",
         "badge": "Recomendado"
       },
@@ -402,10 +402,10 @@
       }
     },
     "cta": {
-      "primary": "Crear cuenta gratuita",
+      "primary": "Solicitar acceso",
       "secondary": "Ver demo tecnica"
     },
-    "microcopy": "Sin tarjeta de credito. Plan gratuito para siempre.",
+    "microcopy": "Acceso por estricto orden de llegada segun capacidad del sistema.",
     "trustBadges": {
       "encryption": "AES-256 encryption",
       "soc2": "SOC 2 ready",
@@ -525,9 +525,9 @@
       "title": "Inicio rapido",
       "description": "Despliega tu primer agente en menos de una hora.",
       "step1": {
-        "title": "Crea tu cuenta",
-        "description": "Registrate gratis. No necesitas tarjeta de credito.",
-        "cta": "Crear cuenta"
+        "title": "Solicita acceso",
+        "description": "Solicita acceso a la plataforma. Acceso por orden de llegada.",
+        "cta": "Solicitar acceso"
       },
       "step2": {
         "title": "Crea un workspace",
