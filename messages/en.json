@@ -409,7 +409,7 @@
     "trustBadges": {
       "encryption": "AES-256 encryption",
       "soc2": "SOC 2 ready",
-      "dataResidency": "Data residency LATAM"
+      "dataResidency": "Data Residency US"
     }
   },
   "Footer": {
@@ -457,7 +457,7 @@
     "trustBadges": {
       "aes256": "AES-256",
       "soc2": "SOC 2 Ready",
-      "dataResidency": "Data Residency LATAM"
+      "dataResidency": "Data Residency US"
     },
     "status": {
       "operational": "All systems operational",
@@ -486,5 +486,196 @@
     "redisStreams": "Durable message queue that guarantees delivery, enables replay, and decouples triggers from executions.",
     "humanInTheLoop": "Approval system that pauses execution until a human authorizes the action via Slack, email, or dashboard.",
     "coldStart": "Time from receiving the trigger until the agent pod is executing code."
+  },
+  "Docs": {
+    "nav": {
+      "title": "Documentation",
+      "introduction": "Introduction",
+      "quickstart": "Quick Start",
+      "agents": "Agents",
+      "workflows": "Workflows",
+      "triggers": "Triggers",
+      "tools": "Tools",
+      "api": "API",
+      "security": "Security"
+    },
+    "introduction": {
+      "title": "Passflow Documentation",
+      "description": "Passflow is an AI agent orchestration platform. Create autonomous agents that reason, use tools, and execute complex tasks on your infrastructure.",
+      "features": {
+        "react": {
+          "title": "ReAct Loop",
+          "description": "Agents that reason and act in iterative cycles until the task is complete."
+        },
+        "isolation": {
+          "title": "Complete Isolation",
+          "description": "Each execution runs in its own K8s pod with dedicated resources."
+        },
+        "multiProvider": {
+          "title": "Multi-provider LLM",
+          "description": "Anthropic, OpenAI, Gemini, Bedrock, Azure with automatic fallback."
+        },
+        "triggers": {
+          "title": "Event-driven",
+          "description": "Trigger agents via cron, Slack, email, webhooks, or manually."
+        }
+      }
+    },
+    "quickstart": {
+      "title": "Quick Start",
+      "description": "Deploy your first agent in less than an hour.",
+      "step1": {
+        "title": "Create your account",
+        "description": "Sign up for free. No credit card required.",
+        "cta": "Create account"
+      },
+      "step2": {
+        "title": "Create a workspace",
+        "description": "Workspaces isolate your agents, credentials, and executions."
+      },
+      "step3": {
+        "title": "Configure your first agent",
+        "description": "Define the persona, model, and available tools."
+      },
+      "step4": {
+        "title": "Execute and observe",
+        "description": "Launch your agent and observe every decision in real time."
+      }
+    },
+    "agents": {
+      "title": "Agents",
+      "description": "Agents are autonomous entities that execute tasks using the ReAct pattern (Reasoning + Acting). Each agent has a persona, instructions, and access to tools.",
+      "config": {
+        "title": "Agent configuration"
+      },
+      "models": {
+        "title": "Available models",
+        "headers": {
+          "provider": "Provider",
+          "models": "Models",
+          "useCase": "Use case"
+        },
+        "anthropic": "Complex reasoning, code, analysis",
+        "openai": "General purpose, vision, functions",
+        "google": "Long context, multimodal",
+        "bedrock": "AWS compliance, data residency",
+        "azure": "Microsoft integration, compliance"
+      }
+    },
+    "workflows": {
+      "title": "Workflows",
+      "description": "Workflows chain multiple agents and actions into complex flows with conditions, approvals, and parallel execution.",
+      "nodes": {
+        "title": "Node types",
+        "agent": {
+          "title": "Agent",
+          "description": "Executes an agent with its full configuration."
+        },
+        "condition": {
+          "title": "Condition",
+          "description": "Evaluates an expression and branches the flow."
+        },
+        "action": {
+          "title": "Action",
+          "description": "Executes a simple action (HTTP, notification, etc)."
+        },
+        "approval": {
+          "title": "Approval",
+          "description": "Pauses the workflow until human approval."
+        }
+      }
+    },
+    "triggers": {
+      "title": "Triggers",
+      "description": "Triggers automatically fire agents when events occur. We support cron, Slack, email IMAP, and webhooks.",
+      "types": {
+        "cron": {
+          "title": "Cron",
+          "description": "Execute agents on scheduled times using standard cron expressions."
+        },
+        "slack": {
+          "title": "Slack",
+          "description": "Trigger agents when messages are received in channels or specific mentions."
+        },
+        "email": {
+          "title": "Email (IMAP)",
+          "description": "Process incoming emails and trigger agents based on sender, subject, or content."
+        },
+        "webhook": {
+          "title": "Webhook",
+          "description": "Receive HTTP events from external systems and trigger agents."
+        }
+      },
+      "cel": {
+        "title": "CEL Filtering",
+        "description": "Use Common Expression Language to filter events before triggering the agent."
+      }
+    },
+    "tools": {
+      "title": "Tools",
+      "description": "Agents can use tools to interact with external systems. Passflow includes native tools and supports MCP for extensibility.",
+      "builtin": {
+        "title": "Built-in tools",
+        "headers": {
+          "category": "Category",
+          "tools": "Tools"
+        }
+      },
+      "mcp": {
+        "title": "MCP Tools",
+        "description": "Extend your agents' capabilities by connecting custom MCP servers."
+      }
+    },
+    "api": {
+      "title": "API Reference",
+      "description": "Interact with Passflow programmatically using our REST API.",
+      "auth": {
+        "title": "Authentication",
+        "description": "All requests require an API key and workspace ID."
+      },
+      "endpoints": {
+        "title": "Main endpoints",
+        "headers": {
+          "method": "Method",
+          "endpoint": "Endpoint",
+          "description": "Description"
+        },
+        "listAgents": "List all agents in the workspace",
+        "createAgent": "Create a new agent",
+        "executeAgent": "Execute an agent",
+        "listExecutions": "List executions",
+        "getExecution": "Get execution details",
+        "listWorkflows": "List workflows",
+        "executeWorkflow": "Execute a workflow"
+      }
+    },
+    "security": {
+      "title": "Security",
+      "description": "Passflow was designed with enterprise security from the start.",
+      "features": {
+        "encryption": {
+          "title": "AES-256 Encryption",
+          "description": "All credentials are encrypted at rest with AES-256-GCM and unique keys per workspace."
+        },
+        "isolation": {
+          "title": "Per-execution isolation",
+          "description": "Each agent runs in an ephemeral K8s pod with dedicated resources and network isolation."
+        },
+        "audit": {
+          "title": "Complete audit trail",
+          "description": "Every action, agent decision, and tool call is recorded with precise timestamps."
+        },
+        "compliance": {
+          "title": "SOC 2 Ready",
+          "description": "Controls designed to comply with SOC 2 Type II and LATAM financial regulations."
+        }
+      }
+    },
+    "help": {
+      "title": "Need help?",
+      "description": "Our team is available to help you configure your first agents.",
+      "dashboard": "Go to dashboard",
+      "contact": "Contact support"
+    }
   }
 }

@@ -486,5 +486,196 @@
     "redisStreams": "Cola de mensajes durable que garantiza entrega, permite replay, y desacopla triggers de ejecuciones.",
     "humanInTheLoop": "Sistema de aprobaciones que pausa la ejecucion hasta que un humano autoriza la accion via Slack, email, o dashboard.",
     "coldStart": "Tiempo desde que se recibe el trigger hasta que el pod del agente esta ejecutando codigo."
+  },
+  "Docs": {
+    "nav": {
+      "title": "Documentacion",
+      "introduction": "Introduccion",
+      "quickstart": "Inicio rapido",
+      "agents": "Agentes",
+      "workflows": "Workflows",
+      "triggers": "Triggers",
+      "tools": "Herramientas",
+      "api": "API",
+      "security": "Seguridad"
+    },
+    "introduction": {
+      "title": "Documentacion de Passflow",
+      "description": "Passflow es una plataforma de orquestacion de agentes de IA. Crea agentes autonomos que razonan, usan herramientas, y ejecutan tareas complejas en tu infraestructura.",
+      "features": {
+        "react": {
+          "title": "ReAct Loop",
+          "description": "Agentes que razonan y actuan en ciclos iterativos hasta completar la tarea."
+        },
+        "isolation": {
+          "title": "Aislamiento total",
+          "description": "Cada ejecucion corre en su propio pod K8s con recursos dedicados."
+        },
+        "multiProvider": {
+          "title": "Multi-provider LLM",
+          "description": "Anthropic, OpenAI, Gemini, Bedrock, Azure con fallback automatico."
+        },
+        "triggers": {
+          "title": "Event-driven",
+          "description": "Dispara agentes por cron, Slack, email, webhooks o manualmente."
+        }
+      }
+    },
+    "quickstart": {
+      "title": "Inicio rapido",
+      "description": "Despliega tu primer agente en menos de una hora.",
+      "step1": {
+        "title": "Crea tu cuenta",
+        "description": "Registrate gratis. No necesitas tarjeta de credito.",
+        "cta": "Crear cuenta"
+      },
+      "step2": {
+        "title": "Crea un workspace",
+        "description": "Los workspaces aislan tus agentes, credenciales y ejecuciones."
+      },
+      "step3": {
+        "title": "Configura tu primer agente",
+        "description": "Define la persona, el modelo, y las herramientas disponibles."
+      },
+      "step4": {
+        "title": "Ejecuta y observa",
+        "description": "Lanza tu agente y observa cada decision en tiempo real."
+      }
+    },
+    "agents": {
+      "title": "Agentes",
+      "description": "Los agentes son entidades autonomas que ejecutan tareas usando el patron ReAct (Reasoning + Acting). Cada agente tiene una persona, instrucciones, y acceso a herramientas.",
+      "config": {
+        "title": "Configuracion de agente"
+      },
+      "models": {
+        "title": "Modelos disponibles",
+        "headers": {
+          "provider": "Provider",
+          "models": "Modelos",
+          "useCase": "Caso de uso"
+        },
+        "anthropic": "Razonamiento complejo, codigo, analisis",
+        "openai": "Proposito general, vision, funciones",
+        "google": "Contexto largo, multimodal",
+        "bedrock": "Compliance AWS, data residency",
+        "azure": "Integracion Microsoft, compliance"
+      }
+    },
+    "workflows": {
+      "title": "Workflows",
+      "description": "Los workflows encadenan multiples agentes y acciones en flujos complejos con condiciones, aprobaciones y ejecucion paralela.",
+      "nodes": {
+        "title": "Tipos de nodos",
+        "agent": {
+          "title": "Agent",
+          "description": "Ejecuta un agente con su configuracion completa."
+        },
+        "condition": {
+          "title": "Condition",
+          "description": "Evalua una expresion y bifurca el flujo."
+        },
+        "action": {
+          "title": "Action",
+          "description": "Ejecuta una accion simple (HTTP, notificacion, etc)."
+        },
+        "approval": {
+          "title": "Approval",
+          "description": "Pausa el workflow hasta aprobacion humana."
+        }
+      }
+    },
+    "triggers": {
+      "title": "Triggers",
+      "description": "Los triggers disparan agentes automaticamente cuando ocurren eventos. Soportamos cron, Slack, email IMAP, y webhooks.",
+      "types": {
+        "cron": {
+          "title": "Cron",
+          "description": "Ejecuta agentes en horarios programados usando expresiones cron estandar."
+        },
+        "slack": {
+          "title": "Slack",
+          "description": "Dispara agentes cuando se reciben mensajes en canales o menciones especificas."
+        },
+        "email": {
+          "title": "Email (IMAP)",
+          "description": "Procesa emails entrantes y dispara agentes basado en remitente, asunto o contenido."
+        },
+        "webhook": {
+          "title": "Webhook",
+          "description": "Recibe eventos HTTP de sistemas externos y dispara agentes."
+        }
+      },
+      "cel": {
+        "title": "Filtrado con CEL",
+        "description": "Usa Common Expression Language para filtrar eventos antes de disparar el agente."
+      }
+    },
+    "tools": {
+      "title": "Herramientas",
+      "description": "Los agentes pueden usar herramientas para interactuar con sistemas externos. Passflow incluye herramientas nativas y soporta MCP para extensibilidad.",
+      "builtin": {
+        "title": "Herramientas integradas",
+        "headers": {
+          "category": "Categoria",
+          "tools": "Herramientas"
+        }
+      },
+      "mcp": {
+        "title": "Herramientas MCP",
+        "description": "Extiende las capacidades de tus agentes conectando servidores MCP personalizados."
+      }
+    },
+    "api": {
+      "title": "API Reference",
+      "description": "Interactua con Passflow programaticamente usando nuestra API REST.",
+      "auth": {
+        "title": "Autenticacion",
+        "description": "Todas las requests requieren un API key y workspace ID."
+      },
+      "endpoints": {
+        "title": "Endpoints principales",
+        "headers": {
+          "method": "Metodo",
+          "endpoint": "Endpoint",
+          "description": "Descripcion"
+        },
+        "listAgents": "Lista todos los agentes del workspace",
+        "createAgent": "Crea un nuevo agente",
+        "executeAgent": "Ejecuta un agente",
+        "listExecutions": "Lista ejecuciones",
+        "getExecution": "Obtiene detalles de una ejecucion",
+        "listWorkflows": "Lista workflows",
+        "executeWorkflow": "Ejecuta un workflow"
+      }
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Passflow fue disenado con seguridad enterprise desde el inicio.",
+      "features": {
+        "encryption": {
+          "title": "Cifrado AES-256",
+          "description": "Todas las credenciales se cifran en reposo con AES-256-GCM y claves unicas por workspace."
+        },
+        "isolation": {
+          "title": "Aislamiento por ejecucion",
+          "description": "Cada agente corre en un pod K8s efimero con recursos dedicados y aislamiento de red."
+        },
+        "audit": {
+          "title": "Audit trail completo",
+          "description": "Cada accion, decision de agente, y tool call queda registrada con timestamps precisos."
+        },
+        "compliance": {
+          "title": "SOC 2 Ready",
+          "description": "Controles disenados para cumplir con SOC 2 Type II y regulaciones financieras LATAM."
+        }
+      }
+    },
+    "help": {
+      "title": "Necesitas ayuda?",
+      "description": "Nuestro equipo esta disponible para ayudarte a configurar tus primeros agentes.",
+      "dashboard": "Ir al dashboard",
+      "contact": "Contactar soporte"
+    }
   }
 }
