@@ -1,0 +1,490 @@
+{
+  "Header": {
+    "nav": {
+      "product": "Producto",
+      "useCases": "Casos de uso",
+      "pricing": "Pricing",
+      "docs": "Docs"
+    },
+    "cta": "Comenzar gratis",
+    "mobileMenu": {
+      "open": "Menu",
+      "close": "Cerrar"
+    }
+  },
+  "Hero": {
+    "headline": {
+      "part1": "Agentes que actuan.",
+      "part2": "Infraestructura que se gobierna sola."
+    },
+    "subheadline": "Despliega agentes de IA que razonan sobre tu stack, ejecutan acciones reales y se destruyen al terminar. Pods efimeros, resultados permanentes.",
+    "cta": {
+      "primary": "Ver demo tecnica",
+      "secondary": "Leer documentacion"
+    },
+    "microcopy": "Plan gratuito disponible. Sin tarjeta de credito.",
+    "metrics": {
+      "coldStart": {
+        "value": "< 100ms",
+        "label": "cold start",
+        "tooltip": "Tiempo desde trigger hasta pod en ejecucion"
+      },
+      "llmProviders": {
+        "value": "6",
+        "label": "LLM providers",
+        "tooltip": "Anthropic, OpenAI, Bedrock, Gemini, Azure, OCI con circuit breaker automatico"
+      },
+      "mcpTools": {
+        "value": "27",
+        "label": "MCP tools",
+        "tooltip": "Controla la plataforma completa desde Claude Code o Cursor"
+      },
+      "isolation": {
+        "value": "100%",
+        "label": "aislamiento",
+        "tooltip": "Cada job corre en su propio pod K8s con recursos configurables"
+      }
+    }
+  },
+  "Urgency": {
+    "headline": "Tu equipo de 4 ingenieros no puede ser un equipo de 40.",
+    "subheadline": "Los equipos de ingenieria en LatAm operan con recursos limitados y responsabilidades ilimitadas. Tres escenarios que reconoceras.",
+    "columns": {
+      "infrastructure": {
+        "badge": "Infraestructura",
+        "title": "Respuesta a incidentes",
+        "narrative": "3:17 AM. Alerta de Prometheus. Un pod en CrashLoopBackOff. Tu ingeniero de guardia abre la laptop, revisa logs, identifica el problema, escala el deployment. 45 minutos. El mismo incidente, la misma solucion, la tercera vez este mes.",
+        "stat": "Tipico: 30-60 min por incidente repetitivo",
+        "label": "Lo que un agente resuelve en < 2 min"
+      },
+      "operations": {
+        "badge": "Operaciones",
+        "title": "Onboarding y compliance",
+        "narrative": "El onboarding tarda 3 dias. Deberia tardar 3 horas. Verificar documentos, cruzar listas de riesgo, generar reportes, notificar al equipo legal. Tu equipo de ops hace copy-paste entre 6 herramientas.",
+        "stat": "Tipico: 2-4 dias de ciclo completo de onboarding",
+        "label": "Reducible a horas con agentes orquestados"
+      },
+      "sales": {
+        "badge": "Ventas",
+        "title": "Prospeccion que no escala",
+        "narrative": "Tienes 500 prospectos en el CRM. Nadie los trabaja. Tu equipo comercial dedica el 70% de su tiempo a tareas de datos en lugar de conversar con clientes. Enriquecer, clasificar, priorizar, enviar seguimiento. Todo manual.",
+        "stat": "Tipico: < 20% del tiempo comercial dedicado a vender",
+        "label": "Automatizable de punta a punta"
+      }
+    }
+  },
+  "HowItWorks": {
+    "headline": "Arquitectura disenada para produccion desde el dia uno.",
+    "subheadline": "Cada ejecucion sigue un flujo determinista con aislamiento completo. Sin servidores persistentes, sin estado compartido, sin sorpresas.",
+    "flowSteps": {
+      "trigger": {
+        "label": "TRIGGER",
+        "description": "Cron, Slack, email IMAP, webhook, o invocacion manual"
+      },
+      "channels": {
+        "label": "channels-service",
+        "description": "Evalua reglas CEL para determinar si el evento califica"
+      },
+      "redis": {
+        "label": "Redis Stream",
+        "description": "Cola durable que garantiza entrega y permite replay"
+      },
+      "k8s": {
+        "label": "K8s Pod",
+        "description": "Pod efimero con CPU/memoria configurables, creado on-demand"
+      },
+      "react": {
+        "label": "ReAct Loop",
+        "description": "Reasoning + Acting con iteraciones configurables y tool calling"
+      },
+      "result": {
+        "label": "Result",
+        "description": "Output almacenado, notificaciones enviadas, metricas registradas"
+      },
+      "cleanup": {
+        "label": "Cleanup",
+        "description": "Pod destruido. Cero residuo, cero costo idle"
+      }
+    },
+    "tooltips": {
+      "reactLoop": "Reasoning + Acting: el agente razona sobre el contexto, elige una herramienta, observa el resultado y decide el siguiente paso",
+      "celRules": "Common Expression Language: evalua condiciones sobre el evento antes de encolarlo",
+      "ephemeralPod": "Contenedor K8s creado para esta ejecucion y destruido al terminar. Sin costo idle."
+    },
+    "tabs": {
+      "k8s": {
+        "shortTitle": "K8s Self-Healing",
+        "title": "Recuperacion automatica de pods",
+        "narrative": "Un agente monitorea Prometheus, detecta anomalias y ejecuta acciones correctivas. Restart de pods, escalado horizontal, rollback de deployments. Todo sin despertar a nadie."
+      },
+      "outbound": {
+        "shortTitle": "Outbound Automation",
+        "title": "Prospeccion B2B automatizada",
+        "narrative": "Un agente enriquece prospectos desde el CRM, clasifica por ICP, genera mensajes personalizados y agenda seguimientos. El equipo comercial solo interviene cuando hay interes real."
+      },
+      "gitops": {
+        "shortTitle": "GitOps Reconciliation",
+        "title": "Reconciliacion inteligente de GitOps",
+        "narrative": "Un agente compara el estado deseado en Git contra el estado real del cluster. Detecta drift, genera el diff, y puede aplicar la correccion o solicitar aprobacion humana antes de actuar."
+      }
+    },
+    "emptyStates": {
+      "noAgents": "Todavia no tienes agentes configurados. Crea tu primero en menos de 5 minutos.",
+      "noExecutions": "Este agente no ha ejecutado aun. Lanza una ejecucion manual o configura un trigger."
+    }
+  },
+  "UseCases": {
+    "headline": "Tres problemas que los equipos de ingenieria resuelven con Passflow.",
+    "subheadline": "No son demos. Son patrones de produccion que equipos de 4-20 ingenieros ya implementan.",
+    "toolsLabel": "Herramientas",
+    "resultLabel": "Resultado tipico",
+    "cards": {
+      "k8sOps": {
+        "badge": "Infraestructura",
+        "title": "Operaciones de Kubernetes autonomas",
+        "summary": "Agentes que monitorean, diagnostican y reparan tu cluster sin intervencion humana. De alerta a resolucion en menos de 2 minutos.",
+        "detail": "Conecta Prometheus Alertmanager como trigger. El agente recibe la alerta, consulta el estado del cluster via kubectl, analiza logs del pod afectado, y ejecuta la accion correctiva: restart, scale, o rollback. Si el problema requiere intervencion humana, escala a Slack con el diagnostico completo.",
+        "tools": ["kubectl", "Prometheus API", "Slack", "PagerDuty"],
+        "result": "Reduccion del 60-80% en tiempo de respuesta a incidentes repetitivos"
+      },
+      "outboundB2B": {
+        "badge": "Ventas",
+        "title": "Prospeccion B2B inteligente",
+        "summary": "Enriquecimiento automatico, clasificacion por ICP, y secuencias personalizadas. Tu equipo comercial habla solo con prospectos calificados.",
+        "detail": "El agente toma prospectos nuevos del CRM, enriquece datos con APIs externas (LinkedIn, Clearbit, datos publicos), clasifica segun tu Ideal Customer Profile usando un LLM local via Ollama, genera mensajes personalizados por vertical, y programa la secuencia de seguimiento. Cuando un prospecto responde, notifica al vendedor asignado.",
+        "tools": ["CRM API", "Enrichment APIs", "Ollama (clasificacion)", "Email SMTP", "Slack"],
+        "result": "3-5x mas prospectos contactados por vendedor por semana"
+      },
+      "gitops": {
+        "badge": "DevOps",
+        "title": "GitOps con reconciliacion inteligente",
+        "summary": "Detecta drift entre Git y tu cluster, genera diffs legibles, y aplica correcciones con aprobacion humana opcional.",
+        "detail": "Cada 15 minutos, un agente compara los manifests en tu repositorio contra el estado actual del cluster. Si detecta drift, genera un reporte con el diff exacto, clasifica la severidad, y decide si aplicar automaticamente (bajo riesgo) o solicitar aprobacion via Slack (alto riesgo). Mantiene un registro completo de cada reconciliacion.",
+        "tools": ["Git API", "kubectl", "diff tools", "Slack (human-in-the-loop)"],
+        "result": "Reduccion del 90% en drift no detectado entre ambientes"
+      }
+    }
+  },
+  "Differentiation": {
+    "headline": "Lo que los demas no te dicen que no tienen.",
+    "subheadline": "La mayoria de herramientas de automatizacion fueron disenadas para no-code. Passflow fue disenado para equipos de ingenieria que necesitan control, aislamiento y observabilidad.",
+    "table": {
+      "headers": {
+        "capability": "Capacidad",
+        "passflow": "Passflow",
+        "n8n": "n8n",
+        "make": "Make",
+        "zapier": "Zapier"
+      },
+      "rows": {
+        "isolation": {
+          "capability": "Aislamiento por ejecucion",
+          "passflow": "Pods K8s efimeros con recursos dedicados",
+          "n8n": "Proceso compartido",
+          "make": "Proceso compartido",
+          "zapier": "Proceso compartido"
+        },
+        "llmRouting": {
+          "capability": "LLM Routing inteligente",
+          "passflow": "6 providers + clasificacion local Ollama + circuit breaker",
+          "n8n": "Plugin OpenAI",
+          "make": "Modulo OpenAI",
+          "zapier": "App OpenAI"
+        },
+        "reactLoop": {
+          "capability": "ReAct Loop nativo",
+          "tooltip": "Reasoning + Acting: el agente razona, elige una herramienta, observa el resultado, y decide el siguiente paso. Iteraciones configurables.",
+          "passflow": "checkmark",
+          "n8n": "No",
+          "make": "No",
+          "zapier": "No"
+        },
+        "humanInTheLoop": {
+          "capability": "Human-in-the-loop",
+          "tooltip": "Sistema de aprobaciones que pausa la ejecucion hasta que un humano autoriza la accion via Slack, email, o dashboard.",
+          "passflow": "Sistema de aprobaciones nativo con timeout configurable",
+          "n8n": "Via webhooks manuales",
+          "make": "No nativo",
+          "zapier": "No nativo"
+        },
+        "mcpNative": {
+          "capability": "MCP nativo",
+          "tooltip": "Model Context Protocol: estandar abierto de Anthropic para que LLMs interactuen con herramientas externas.",
+          "passflow": "27 tools para Claude Code / Cursor",
+          "n8n": "No",
+          "make": "No",
+          "zapier": "No"
+        },
+        "eventDriven": {
+          "capability": "Event-driven (CEL rules)",
+          "tooltip": "Common Expression Language: lenguaje para definir condiciones sobre eventos antes de ejecutar un agente.",
+          "passflow": "Redis Streams + CEL + cron + IMAP + webhooks",
+          "n8n": "Triggers basicos",
+          "make": "Triggers basicos",
+          "zapier": "Triggers basicos"
+        },
+        "multiTenancy": {
+          "capability": "Multi-tenancy empresarial",
+          "passflow": "Workspaces con credenciales AES + RBAC granular",
+          "n8n": "Basico",
+          "make": "No",
+          "zapier": "Limitado"
+        },
+        "selfHost": {
+          "capability": "Self-host / Data residency",
+          "passflow": "OKE, EKS, GKE, on-prem",
+          "n8n": "Docker Compose",
+          "make": "No",
+          "zapier": "No"
+        },
+        "agentLanguage": {
+          "capability": "Lenguaje de agentes",
+          "passflow": "YAML declarativo + Go runtime",
+          "n8n": "Node.js visual",
+          "make": "Visual",
+          "zapier": "Visual"
+        },
+        "coldStart": {
+          "capability": "Cold start",
+          "tooltip": "Tiempo desde que se recibe el trigger hasta que el pod del agente esta ejecutando codigo.",
+          "passflow": "< 100ms",
+          "n8n": "N/A (siempre encendido)",
+          "make": "N/A",
+          "zapier": "N/A"
+        }
+      }
+    },
+    "footnote": "Datos basados en documentacion publica de cada plataforma a abril 2026.",
+    "glossary": {
+      "title": "Glosario",
+      "circuitBreaker": {
+        "term": "Circuit breaker",
+        "definition": "Si un provider LLM falla, Passflow redirige automaticamente al siguiente sin perder la ejecucion"
+      },
+      "cel": {
+        "term": "CEL rules",
+        "definition": "Common Expression Language: filtra eventos con expresiones logicas antes de ejecutar el agente"
+      },
+      "rbac": {
+        "term": "RBAC granular",
+        "definition": "Controla quien puede ver, editar y ejecutar cada agente y workspace"
+      }
+    }
+  },
+  "Trust": {
+    "headline": "Construido para pasar auditorias, no para esquivarlas.",
+    "subheadline": "Cada componente fue disenado pensando en regulacion financiera latinoamericana. SOC 2 readiness, datos bajo tu control, y trazabilidad completa.",
+    "features": {
+      "dataResidency": {
+        "title": "Residencia de datos",
+        "description": "Elige donde viven tus datos. Despliega en OKE (Oracle Cloud Mexico), AWS LatAm, o tu propia infraestructura. Los datos nunca salen de la region que configures.",
+        "technical": "Compatible con OKE, EKS, GKE, y clusters on-premise. Cada workspace puede tener su propia configuracion de region."
+      },
+      "encryptedCredentials": {
+        "title": "Credenciales cifradas",
+        "description": "Cada workspace almacena sus credenciales con AES-256 y claves unicas por tenant. Ni siquiera el equipo de Passflow puede acceder a tus secrets.",
+        "technical": "Encryption at rest con AES-256-GCM. Claves derivadas por workspace. Rotacion de claves programable. TLS 1.3 en transito."
+      },
+      "auditTrail": {
+        "title": "Trazabilidad completa",
+        "description": "Cada ejecucion, cada decision del agente, cada tool call queda registrada. Exportable, consultable, y lista para auditorias.",
+        "technical": "Logs estructurados con contexto de ejecucion, decision del ReAct loop, inputs/outputs de cada herramienta, y timestamps precisos. Retencion configurable."
+      },
+      "rbacApprovals": {
+        "title": "Control de acceso y aprobaciones",
+        "description": "Roles granulares por workspace y agente. Sistema de aprobaciones nativo para acciones de alto riesgo. Nadie ejecuta lo que no debe.",
+        "technical": "RBAC con roles personalizables (viewer, editor, operator, admin). Human-in-the-loop con aprobacion via Slack, email, o dashboard. Timeout configurable con fallback."
+      }
+    }
+  },
+  "Pricing": {
+    "headline": "Precios que escalan con tu uso, no con tu equipo.",
+    "subheadline": "Todos los planes incluyen acceso completo a la plataforma. La diferencia es capacidad, no funcionalidad.",
+    "billing": {
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "annualBadge": "2 meses gratis"
+    },
+    "perMonth": "/mes",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "description": "Para explorar la plataforma y prototipar agentes.",
+        "features": [
+          "Hasta 3 agentes",
+          "500K tokens/mes",
+          "1 workspace",
+          "Templates basicos",
+          "Soporte por comunidad"
+        ],
+        "cta": "Empezar gratis",
+        "ctaSubtext": "Sin tarjeta de credito. Siempre gratis."
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "$99",
+        "description": "Para equipos pequenos que automatizan flujos clave.",
+        "features": [
+          "Hasta 5 agentes",
+          "5M tokens/mes",
+          "1 workspace",
+          "Todos los templates",
+          "BYOK con 30% de descuento en tokens",
+          "Soporte por email",
+          "Audit log"
+        ],
+        "cta": "Comenzar"
+      },
+      "growth": {
+        "name": "Growth",
+        "price": "$299",
+        "description": "Para equipos en crecimiento con multiples flujos de trabajo.",
+        "features": [
+          "Hasta 15 agentes",
+          "15M tokens/mes",
+          "3 workspaces",
+          "Todo lo de Starter",
+          "Analiticas avanzadas",
+          "Soporte prioritario",
+          "Webhooks y flujos custom"
+        ],
+        "cta": "Comenzar",
+        "ctaSubtext": "El plan mas elegido por equipos de 5-15 personas.",
+        "badge": "Recomendado"
+      },
+      "business": {
+        "name": "Business",
+        "price": "$799",
+        "description": "Para organizaciones con necesidades de alto volumen y compliance.",
+        "features": [
+          "Agentes ilimitados",
+          "40M tokens/mes",
+          "10 workspaces",
+          "Todo lo de Growth",
+          "SSO / SAML",
+          "SLA 99.99%",
+          "Soporte dedicado",
+          "Integraciones custom"
+        ],
+        "cta": "Contactar ventas"
+      }
+    },
+    "tooltips": {
+      "byok": "Bring Your Own Key: usa tus propias API keys de LLM providers y paga solo el costo del provider con 30% de descuento en tokens de Passflow",
+      "tokens": "Tokens de LLM consumidos por las ejecuciones de tus agentes. El consumo varia segun la complejidad del agente y el modelo utilizado."
+    },
+    "footnote": "Todos los precios en USD. Facturacion mensual o anual (2 meses gratis).",
+    "faq": {
+      "exceedTokens": "Las ejecuciones se pausan hasta el siguiente ciclo. No hay cobros sorpresa. Puedes subir de plan en cualquier momento.",
+      "downgrade": "Si, en cualquier momento. El cambio aplica en tu siguiente ciclo de facturacion.",
+      "enterprise": "Si. Contacta a ventas para volumen custom, SLAs dedicados, y despliegue on-premise."
+    }
+  },
+  "FinalCTA": {
+    "headline": "Tu primer agente en produccion en menos de una hora.",
+    "subheadline": "Tres pasos. Sin llamadas de ventas, sin contratos, sin configuraciones de semanas.",
+    "steps": {
+      "connect": {
+        "time": "10 min",
+        "title": "Conecta tus herramientas",
+        "description": "Agrega las credenciales de tus servicios: Kubernetes, CRM, Slack, GitHub. Todo cifrado con AES-256 desde el primer minuto."
+      },
+      "configure": {
+        "time": "20 min",
+        "title": "Configura tu agente",
+        "description": "Define el trigger, las herramientas disponibles, y las reglas del ReAct loop. Usa un template o empieza desde cero con YAML."
+      },
+      "deploy": {
+        "time": "5 min",
+        "title": "Despliega y observa",
+        "description": "Tu agente corre en un pod aislado. Ve cada decision en tiempo real. Ajusta iteraciones, tools, y recursos sobre la marcha."
+      }
+    },
+    "cta": {
+      "primary": "Crear cuenta gratuita",
+      "secondary": "Ver demo tecnica"
+    },
+    "microcopy": "Sin tarjeta de credito. Plan gratuito para siempre.",
+    "trustBadges": {
+      "encryption": "AES-256 encryption",
+      "soc2": "SOC 2 ready",
+      "dataResidency": "Data residency LATAM"
+    }
+  },
+  "Footer": {
+    "tagline": "Orquestacion de agentes de IA para equipos de ingenieria.",
+    "newsletter": {
+      "title": "Recibe actualizaciones tecnicas. Sin spam, lo prometemos.",
+      "placeholder": "tu@empresa.com",
+      "button": "Suscribirse"
+    },
+    "columns": {
+      "product": {
+        "title": "Producto",
+        "links": {
+          "pricing": "Pricing",
+          "changelog": "Changelog",
+          "status": "Status"
+        }
+      },
+      "resources": {
+        "title": "Recursos",
+        "links": {
+          "docs": "Documentacion",
+          "blog": "Blog",
+          "apiReference": "API Reference"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "privacy": "Privacidad",
+          "terms": "Terminos",
+          "security": "Seguridad"
+        }
+      },
+      "company": {
+        "title": "Empresa",
+        "links": {
+          "about": "Acerca de",
+          "contact": "Contacto",
+          "careers": "Carreras"
+        }
+      }
+    },
+    "copyright": "2025 PassFlow, Inc. Todos los derechos reservados.",
+    "trustBadges": {
+      "aes256": "AES-256",
+      "soc2": "SOC 2 Ready",
+      "dataResidency": "Data Residency LATAM"
+    },
+    "status": {
+      "operational": "Todos los sistemas operativos",
+      "incident": "Incidente en curso. Ver detalles."
+    }
+  },
+  "GlobalStates": {
+    "loadingAgents": "Cargando tus agentes...",
+    "loadingExecutions": "Cargando historial de ejecuciones...",
+    "errorGeneric": "Algo salio mal. Intenta de nuevo o contacta soporte.",
+    "errorNetwork": "Sin conexion. Verifica tu red e intenta de nuevo.",
+    "successSave": "Cambios guardados.",
+    "successDeploy": "Agente desplegado correctamente.",
+    "confirmDelete": "Estas seguro? Esta accion no se puede deshacer.",
+    "noResults": "No encontramos resultados para esa busqueda.",
+    "sessionExpired": "Tu sesion expiro. Inicia sesion de nuevo."
+  },
+  "Tooltips": {
+    "reactLoop": "Reasoning + Acting: el agente razona, elige una herramienta, observa el resultado, y decide el siguiente paso. Iteraciones configurables.",
+    "mcp": "Model Context Protocol: estandar abierto de Anthropic para que LLMs interactuen con herramientas externas.",
+    "ephemeralPod": "Contenedor Kubernetes creado exclusivamente para esta ejecucion. Se destruye al terminar. Cero costo idle.",
+    "circuitBreaker": "Patron de resiliencia: si un LLM provider falla, el sistema redirige automaticamente al siguiente sin perder la ejecucion.",
+    "cel": "Common Expression Language: lenguaje para definir condiciones sobre eventos antes de ejecutar un agente.",
+    "byok": "Bring Your Own Key: usa tus propias API keys de LLM providers para mayor control y ahorro.",
+    "rbac": "Role-Based Access Control: define quien puede ver, editar, y ejecutar cada recurso.",
+    "redisStreams": "Cola de mensajes durable que garantiza entrega, permite replay, y desacopla triggers de ejecuciones.",
+    "humanInTheLoop": "Sistema de aprobaciones que pausa la ejecucion hasta que un humano autoriza la accion via Slack, email, o dashboard.",
+    "coldStart": "Tiempo desde que se recibe el trigger hasta que el pod del agente esta ejecutando codigo."
+  }
+}

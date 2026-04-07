@@ -1,36 +1,100 @@
-const Urgency = () => {
-  return (
-    <section className="py-12 md:py-16 bg-gradient-to-r from-[#fef2f2] to-[#fff7ed]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-start gap-6">
-          {/* Alert icon */}
-          <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-            <svg
-              className="w-6 h-6 text-red-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-              />
-            </svg>
-          </div>
+'use client';
 
-          <div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">
-              Your team is spending hours on tasks AI can handle in seconds.
-            </h2>
-            <p className="text-[#475569] mb-3">
-              Manual data entry, report generation, ticket routing, follow-up emails — repetitive work piles up and slows down the teams that should be driving growth.
-            </p>
-            <p className="text-lg font-semibold text-[#0f172a]">
-              Passflow deploys AI agents that handle it automatically, 24/7.
-            </p>
-          </div>
+import { useTranslations } from 'next-intl';
+
+const columnConfig = [
+  { key: 'infrastructure', badgeColor: 'badge-green' },
+  { key: 'operations', badgeColor: 'badge-blue' },
+  { key: 'sales', badgeColor: 'badge-neutral' },
+];
+
+const Urgency = () => {
+  const t = useTranslations('Urgency');
+
+  return (
+    <section className="section" style={{ background: 'var(--bg-primary)' }}>
+      <div className="container">
+        {/* Header */}
+        <div className="text-center" style={{ marginBottom: 'var(--space-16)' }}>
+          <h2 className="heading-2" style={{ marginBottom: 'var(--space-6)' }}>
+            {t('headline')}
+          </h2>
+          <p
+            className="body-text"
+            style={{ maxWidth: 'var(--max-width-narrow)', margin: '0 auto' }}
+          >
+            {t('subheadline')}
+          </p>
+        </div>
+
+        {/* 3 Column Grid */}
+        <div className="grid-3">
+          {columnConfig.map((column) => (
+            <article
+              key={column.key}
+              className="card"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+              }}
+            >
+              {/* Badge */}
+              <span
+                className={`badge ${column.badgeColor}`}
+                style={{ alignSelf: 'flex-start', marginBottom: 'var(--space-4)' }}
+              >
+                {t(`columns.${column.key}.badge`)}
+              </span>
+
+              {/* Title */}
+              <h3 className="heading-4" style={{ marginBottom: 'var(--space-4)' }}>
+                {t(`columns.${column.key}.title`)}
+              </h3>
+
+              {/* Narrative */}
+              <p
+                className="body-text-sm"
+                style={{
+                  marginBottom: 'var(--space-6)',
+                  flex: 1,
+                }}
+              >
+                {t(`columns.${column.key}.narrative`)}
+              </p>
+
+              {/* Stat */}
+              <div
+                style={{
+                  padding: 'var(--space-4)',
+                  background: 'var(--bg-surface)',
+                  borderRadius: 'var(--radius-md)',
+                  marginBottom: 'var(--space-3)',
+                }}
+              >
+                <p
+                  className="code-text"
+                  style={{
+                    color: 'var(--color-warning)',
+                    marginBottom: 0,
+                  }}
+                >
+                  {t(`columns.${column.key}.stat`)}
+                </p>
+              </div>
+
+              {/* Label */}
+              <p
+                className="label"
+                style={{
+                  color: 'var(--accent-primary)',
+                  marginBottom: 0,
+                }}
+              >
+                {t(`columns.${column.key}.label`)}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

@@ -1,14 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Urgency from "@/components/Urgency";
-import ValueProp from "@/components/ValueProp";
-import Differentiation from "@/components/Differentiation";
 import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
-import Pricing from "@/components/Pricing";
-import TechResources from "@/components/TechResources";
-import WhoItsFor from "@/components/WhoItsFor";
+import Differentiation from "@/components/Differentiation";
 import Trust from "@/components/Trust";
+import Pricing from "@/components/Pricing";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -19,15 +16,12 @@ export default function Home() {
       <main>
         <Hero />
         <Urgency />
-        <ValueProp />
-        <Differentiation />
         <HowItWorks />
         <UseCases />
-        <Pricing />
-        <TechResources />
-        <WhoItsFor />
+        <Differentiation />
         <Trust />
         <FinalCTA />
+        <Pricing />
       </main>
       <Footer />
     </>
