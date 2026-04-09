@@ -1,0 +1,27 @@
+# ============================================
+# CI Configuration
+# Leído por: .github/workflows/ci.yml
+# Docs: https://github.com/jaak-ai/jaak-actions
+# ============================================
+
+# --- Semantic Versioning ---
+semver:
+  enabled: true
+  branches:
+    release:
+      - main
+      - master
+    prerelease:
+      staging: beta        # vX.Y.Z-beta.N
+      qa: alpha            # vX.Y.Z-alpha.N
+      development: dev     # vX.Y.Z-dev.N
+
+# --- Scan Config ---
+scan_config:
+  enabled: false
+  mode: code               # code | all
+
+# --- Volo ---
+volo:
+  enabled: false
+  url: https://volo.api.jaak.ai

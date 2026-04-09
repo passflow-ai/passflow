@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  passflow-executor:
+    build:
+      context: .
+      dockerfile: cmd/passflow-executor/Dockerfile
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - PASSFLOW_API_URL=http://host.docker.internal:8080
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - redis
+
+  passflow-channels:
+    build:
+      context: .
+      dockerfile: cmd/passflow-channels/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - PASSFLOW_API_URL=http://host.docker.internal:8080
+      - PASSFLOW_SERVICE_TOKEN=${PASSFLOW_SERVICE_TOKEN}
+    depends_on:
+      - redis
+
+  passflow-mcp-gateway:
+    build:
+      context: .
+      dockerfile: cmd/passflow-mcp-gateway/Dockerfile
+    ports:
+      - "8084:8084"
+    environment:
+      - MCP_GATEWAY_TOKEN=${MCP_GATEWAY_TOKEN}
+      - PASSFLOW_API_URL=http://host.docker.internal:8080
+
+volumes:
+  redis_data:

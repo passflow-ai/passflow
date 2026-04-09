@@ -1,0 +1,53 @@
+# ============================================
+# CD Configuration
+# Leído por: .github/workflows/cd.yml
+# Docs: https://github.com/jaak-ai/jaak-actions
+# ============================================
+
+# --- Build ---
+build:
+  enabled: true
+  type: docker                       # Método de construcción: docker
+  image_name: passflow-channels      # Nombre de la imagen
+  dockerfile: ./Dockerfile           # Ruta al Dockerfile
+  runner: cpu-runners                # cpu-runners | cpu-runners-oke | gpu-runners-oke
+  # extra_build_args:                # Args adicionales para docker build
+  #   - BUILD_CONFIGURATION=release
+  #
+  # --- Multi-imagen (opcional) ---
+  # Para repos con múltiples imágenes, reemplazar image_name/dockerfile por:
+  # images:
+  #   - name: my-service-api
+  #     dockerfile: ./Dockerfile.api
+  #   - name: my-service-web
+  #     dockerfile: ./Dockerfile.web
+  #     runner: cpu-runners-oke      # Runner específico (hereda build.runner si no se indica)
+
+# --- GitOps Promote ---
+gitops:
+  enabled: false
+  manifest_repo: jaak-ai/jaak-odin-manifest
+  service_name: passflow-channels    # Nombre del archivo YAML en odin-manifest
+  container_name: passflow-channels  # Nombre del container en el deployment
+  registry:
+    type: gar                        # gar (Google Artifact Registry) | oci (Oracle Container Registry)
+    host: us-docker.pkg.dev          # GAR: us-docker.pkg.dev | OCI: mx-monterrey-1.ocir.io
+    project: jaak-platform           # GAR: GCP project ID | OCI: tenancy namespace (e.g., axqlqkfdtaa0)
+    repository: dev-prerelease       # dev-prerelease | private | production
+  environments:
+    dev:
+      path: environments/jaak-dev/deployments
+      auto_merge: true
+    alpha:
+      path: environments/jaak-qa/deployments
+      auto_merge: false
+    beta:
+      path: environments/jaak-sandbox/deployments
+      auto_merge: false
+    release:
+      path: environments/jaak-pro/deployments
+      auto_merge: false
+
+# --- Notificaciones ---
+notifications:
+  google_chat: false                 # Requiere secret GOOGLE_CHAT_WEBHOOK

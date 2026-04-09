@@ -1,0 +1,95 @@
+version: 2
+
+project_name: passflow
+
+builds:
+  - id: passflow-cli
+    main: ./cmd/passflow-cli
+    binary: passflow
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+
+  - id: passflow-executor
+    main: ./cmd/passflow-executor
+    binary: passflow-executor
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+
+  - id: passflow-channels
+    main: ./cmd/passflow-channels
+    binary: passflow-channels
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+
+  - id: passflow-mcp-gateway
+    main: ./cmd/passflow-mcp-gateway
+    binary: passflow-mcp-gateway
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+
+archives:
+  - id: cli
+    builds:
+      - passflow-cli
+    name_template: "passflow_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+
+  - id: server
+    builds:
+      - passflow-executor
+      - passflow-channels
+      - passflow-mcp-gateway
+    name_template: "passflow-server_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: 'checksums.txt'
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^chore:'
+
+brews:
+  - name: passflow
+    ids:
+      - cli
+    repository:
+      owner: passflow-ai
+      name: homebrew-tap
+    homepage: https://github.com/passflow-ai/passflow
+    description: CLI for Passflow AI agent orchestration
+    license: Apache-2.0
+    install: |
+      bin.install "passflow"
+    test: |
+      system "#{bin}/passflow", "version"
