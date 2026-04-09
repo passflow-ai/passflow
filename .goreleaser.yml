@@ -79,17 +79,18 @@ changelog:
       - '^test:'
       - '^chore:'
 
-brews:
-  - name: passflow
-    ids:
-      - cli
-    repository:
-      owner: passflow-ai
-      name: homebrew-tap
-    homepage: https://github.com/passflow-ai/passflow
-    description: CLI for Passflow AI agent orchestration
-    license: Apache-2.0
-    install: |
-      bin.install "passflow"
-    test: |
-      system "#{bin}/passflow", "version"
+# Homebrew tap disabled until PAT with repo access is configured
+# brews:
+#   - name: passflow
+#     ids:
+#       - cli
+#     repository:
+#       owner: passflow-ai
+#       name: homebrew-tap
+#     homepage: https://github.com/passflow-ai/passflow
+#     description: CLI for Passflow AI agent orchestration
+#     license: Apache-2.0
+#     install: |
+#       bin.install "passflow"
+#     test: |
+#       system "#{bin}/passflow", "version"
