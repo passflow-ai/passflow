@@ -297,75 +297,113 @@
       }
     }
   },
+  "OpenSource": {
+    "badge": "Open Source",
+    "headline": "Codigo abierto. Poder en la nube.",
+    "subheadline": "El motor de agentes es open source y gratis para siempre. Despliega en tu infraestructura o dejanos manejarlo.",
+    "openSource": {
+      "title": "Open Source",
+      "description": "Self-host el motor completo de agentes en tu infraestructura. Control total, cero vendor lock-in.",
+      "price": "Gratis para siempre",
+      "features": {
+        "engineCore": "Motor completo de ejecucion de agentes",
+        "palCompiler": "Parser y compilador PAL",
+        "basicTools": "20+ integraciones incluidas",
+        "cli": "CLI para workflows GitOps",
+        "selfHost": "Despliega en K8s, Docker o bare metal",
+        "communitySupport": "Soporte comunitario via GitHub"
+      },
+      "cta": "Ver en GitHub"
+    },
+    "cloud": {
+      "title": "Passflow Cloud",
+      "description": "Hosting gestionado con features enterprise. Enfocate en construir agentes, no en infraestructura.",
+      "price": "Desde $99/mes",
+      "features": {
+        "managedHosting": "Hosting totalmente gestionado (SLA 99.99%)",
+        "advancedUI": "Builder visual de workflows y monitoreo",
+        "ssoRbac": "SSO / SAML + RBAC granular",
+        "auditCompliance": "Audit logs y reportes de compliance",
+        "prioritySupport": "Soporte prioritario (< 4h respuesta)",
+        "premiumIntegrations": "Integraciones premium (Salesforce, SAP, etc.)",
+        "sla": "SLAs custom y residencia de datos",
+        "dedicatedSuccess": "Customer success manager dedicado"
+      },
+      "cta": "Iniciar prueba gratis"
+    },
+    "note": "La version open source incluye todo lo necesario para correr agentes en produccion. Cloud agrega conveniencia y features enterprise."
+  },
   "Pricing": {
-    "headline": "Precios que escalan con tu uso, no con tu equipo.",
-    "subheadline": "Todos los planes incluyen acceso completo a la plataforma. La diferencia es capacidad, no funcionalidad.",
+    "headline": "Precios simples. Sin sorpresas.",
+    "subheadline": "Empieza gratis con open source, o dejanos manejar la infraestructura. Paga solo por lo que uses.",
     "billing": {
       "monthly": "Mensual",
       "annual": "Anual",
       "annualBadge": "2 meses gratis"
     },
     "perMonth": "/mes",
+    "customPrice": "Personalizado",
     "plans": {
-      "free": {
-        "name": "Free",
+      "community": {
+        "name": "Community",
         "price": "$0",
-        "description": "Para explorar la plataforma y prototipar agentes.",
+        "description": "Self-hosted open source. Motor completo, tu infraestructura.",
         "features": [
-          "Hasta 3 agentes",
-          "500K tokens/mes",
-          "1 workspace",
-          "Templates basicos",
-          "Soporte por comunidad"
+          "Agentes ilimitados",
+          "Ejecuciones ilimitadas",
+          "Compilador PAL y CLI",
+          "20+ integraciones",
+          "Self-host en cualquier lugar",
+          "Soporte comunitario"
         ],
-        "cta": "Solicitar acceso",
-        "ctaSubtext": "Acceso por orden de llegada segun capacidad."
+        "cta": "Comenzar",
+        "ctaSubtext": "Despliega en tu K8s, Docker, o bare metal."
       },
-      "starter": {
-        "name": "Starter",
+      "pro": {
+        "name": "Pro",
         "price": "$99",
-        "description": "Para equipos pequenos que automatizan flujos clave.",
+        "description": "Cloud gestionado para equipos pequenos.",
         "features": [
-          "Hasta 5 agentes",
+          "Hasta 10 agentes",
           "5M tokens/mes",
-          "1 workspace",
-          "Todos los templates",
-          "BYOK con 30% de descuento en tokens",
+          "Builder visual de workflows",
+          "Dashboard de ejecuciones",
+          "BYOK (30% descuento en tokens)",
           "Soporte por email",
-          "Audit log"
+          "Retencion de logs 7 dias"
         ],
-        "cta": "Solicitar acceso"
-      },
-      "growth": {
-        "name": "Growth",
-        "price": "$299",
-        "description": "Para equipos en crecimiento con multiples flujos de trabajo.",
-        "features": [
-          "Hasta 15 agentes",
-          "15M tokens/mes",
-          "3 workspaces",
-          "Todo lo de Starter",
-          "Analiticas avanzadas",
-          "Soporte prioritario",
-          "Webhooks y flujos custom"
-        ],
-        "cta": "Solicitar acceso",
-        "ctaSubtext": "El plan mas elegido por equipos de 5-15 personas.",
-        "badge": "Recomendado"
+        "cta": "Iniciar prueba gratis"
       },
       "business": {
         "name": "Business",
-        "price": "$799",
-        "description": "Para organizaciones con necesidades de alto volumen y compliance.",
+        "price": "$299",
+        "description": "Para equipos que necesitan mas capacidad y control.",
+        "features": [
+          "Hasta 50 agentes",
+          "20M tokens/mes",
+          "5 workspaces",
+          "Analiticas avanzadas",
+          "Soporte prioritario",
+          "Retencion de logs 30 dias",
+          "Webhooks custom"
+        ],
+        "cta": "Iniciar prueba gratis",
+        "ctaSubtext": "Prueba gratis 14 dias. Sin tarjeta de credito.",
+        "badge": "Mas Popular"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "Para organizaciones con requisitos de compliance y escala.",
         "features": [
           "Agentes ilimitados",
-          "40M tokens/mes",
-          "10 workspaces",
-          "Todo lo de Growth",
+          "Volumen de tokens custom",
           "SSO / SAML",
           "SLA 99.99%",
-          "Soporte dedicado",
-          "Integraciones custom"
+          "Opciones de residencia de datos",
+          "Customer success manager dedicado",
+          "Integraciones custom",
+          "Despliegue on-premise"
         ],
         "cta": "Contactar ventas"
       }

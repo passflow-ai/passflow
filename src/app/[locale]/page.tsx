@@ -5,6 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
 import Differentiation from "@/components/Differentiation";
 import Trust from "@/components/Trust";
+import OpenSource from "@/components/OpenSource";
 import Pricing from "@/components/Pricing";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -20,8 +21,9 @@ export default function Home() {
         <UseCases />
         <Differentiation />
         <Trust />
-        <FinalCTA />
+        <OpenSource />
         <Pricing />
+        <FinalCTA />
       </main>
       <Footer />
     </>

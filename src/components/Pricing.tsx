@@ -19,41 +19,42 @@ const Pricing = () => {
     window.location.href = "https://app.passflow.ai/login?mode=register";
   };
 
-  const planKeys = ["free", "starter", "growth", "business"] as const;
+  const planKeys = ["community", "pro", "business", "enterprise"] as const;
 
   const planConfigs: Record<
     (typeof planKeys)[number],
     {
-      price: number;
+      price: number | "custom";
       highlighted: boolean;
       action: () => void;
       featuresWithTooltips?: number[];
     }
   > = {
-    free: {
+    community: {
       price: 0,
       highlighted: false,
       action: handleSignUp,
     },
-    starter: {
+    pro: {
       price: 99,
       highlighted: false,
       action: handleSignUp,
       featuresWithTooltips: [4], // BYOK feature index
     },
-    growth: {
+    business: {
       price: 299,
       highlighted: true,
       action: handleSignUp,
     },
-    business: {
-      price: 799,
+    enterprise: {
+      price: "custom",
       highlighted: false,
       action: scrollToContact,
     },
   };
 
-  const formatPrice = (price: number) => {
+  const formatPrice = (price: number | "custom") => {
+    if (price === "custom") return t("customPrice");
     if (price === 0) return "$0";
     const finalPrice = isAnnual ? Math.round((price * 10) / 12) : price;
     return `$${finalPrice}`;
@@ -156,8 +157,10 @@ const Pricing = () => {
                   >
                     {formatPrice(config.price)}
                   </span>
-                  <span className="body-text-sm">{t("perMonth")}</span>
-                  {isAnnual && config.price > 0 && (
+                  {config.price !== "custom" && (
+                    <span className="body-text-sm">{t("perMonth")}</span>
+                  )}
+                  {isAnnual && typeof config.price === "number" && config.price > 0 && (
                     <Tooltip content={t("tooltips.tokens")} />
                   )}
                 </div>

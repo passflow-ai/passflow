@@ -297,75 +297,113 @@
       }
     }
   },
+  "OpenSource": {
+    "badge": "Open Source",
+    "headline": "Open core. Cloud power.",
+    "subheadline": "The agent engine is open source and free forever. Deploy on your infrastructure or let us handle it.",
+    "openSource": {
+      "title": "Open Source",
+      "description": "Self-host the complete agent engine on your infrastructure. Full control, zero vendor lock-in.",
+      "price": "Free forever",
+      "features": {
+        "engineCore": "Complete agent execution engine",
+        "palCompiler": "PAL parser and compiler",
+        "basicTools": "20+ built-in integrations",
+        "cli": "CLI for GitOps workflows",
+        "selfHost": "Deploy on K8s, Docker, or bare metal",
+        "communitySupport": "Community support via GitHub"
+      },
+      "cta": "View on GitHub"
+    },
+    "cloud": {
+      "title": "Passflow Cloud",
+      "description": "Managed hosting with enterprise features. Focus on building agents, not infrastructure.",
+      "price": "From $99/mo",
+      "features": {
+        "managedHosting": "Fully managed hosting (99.99% SLA)",
+        "advancedUI": "Visual workflow builder & monitoring",
+        "ssoRbac": "SSO / SAML + granular RBAC",
+        "auditCompliance": "Audit logs & compliance reports",
+        "prioritySupport": "Priority support (< 4h response)",
+        "premiumIntegrations": "Premium integrations (Salesforce, SAP, etc.)",
+        "sla": "Custom SLAs and data residency",
+        "dedicatedSuccess": "Dedicated customer success manager"
+      },
+      "cta": "Start free trial"
+    },
+    "note": "The open source version includes everything you need to run production agents. Cloud adds convenience and enterprise features."
+  },
   "Pricing": {
-    "headline": "Pricing that scales with your usage, not your team.",
-    "subheadline": "All plans include full platform access. The difference is capacity, not functionality.",
+    "headline": "Simple pricing. No surprises.",
+    "subheadline": "Start free with open source, or let us handle the infrastructure. Pay only for what you use.",
     "billing": {
       "monthly": "Monthly",
       "annual": "Annual",
       "annualBadge": "2 months free"
     },
     "perMonth": "/month",
+    "customPrice": "Custom",
     "plans": {
-      "free": {
-        "name": "Free",
+      "community": {
+        "name": "Community",
         "price": "$0",
-        "description": "To explore the platform and prototype agents.",
+        "description": "Self-hosted open source. Full engine, your infrastructure.",
         "features": [
-          "Up to 3 agents",
-          "500K tokens/month",
-          "1 workspace",
-          "Basic templates",
+          "Unlimited agents",
+          "Unlimited executions",
+          "PAL compiler & CLI",
+          "20+ integrations",
+          "Self-host anywhere",
           "Community support"
         ],
-        "cta": "Request access",
-        "ctaSubtext": "Access granted first-come, first-served based on capacity."
+        "cta": "Get started",
+        "ctaSubtext": "Deploy on your K8s, Docker, or bare metal."
       },
-      "starter": {
-        "name": "Starter",
+      "pro": {
+        "name": "Pro",
         "price": "$99",
-        "description": "For small teams automating key workflows.",
+        "description": "Managed cloud for small teams getting started.",
         "features": [
-          "Up to 5 agents",
+          "Up to 10 agents",
           "5M tokens/month",
-          "1 workspace",
-          "All templates",
-          "BYOK with 30% token discount",
+          "Visual workflow builder",
+          "Execution dashboard",
+          "BYOK (30% token discount)",
           "Email support",
-          "Audit log"
+          "7-day log retention"
         ],
-        "cta": "Request access"
-      },
-      "growth": {
-        "name": "Growth",
-        "price": "$299",
-        "description": "For growing teams with multiple workflows.",
-        "features": [
-          "Up to 15 agents",
-          "15M tokens/month",
-          "3 workspaces",
-          "Everything in Starter",
-          "Advanced analytics",
-          "Priority support",
-          "Custom webhooks and flows"
-        ],
-        "cta": "Request access",
-        "ctaSubtext": "The most chosen plan by teams of 5-15 people.",
-        "badge": "Recommended"
+        "cta": "Start free trial"
       },
       "business": {
         "name": "Business",
-        "price": "$799",
-        "description": "For organizations with high volume and compliance needs.",
+        "price": "$299",
+        "description": "For teams that need more capacity and control.",
+        "features": [
+          "Up to 50 agents",
+          "20M tokens/month",
+          "5 workspaces",
+          "Advanced analytics",
+          "Priority support",
+          "30-day log retention",
+          "Custom webhooks"
+        ],
+        "cta": "Start free trial",
+        "ctaSubtext": "14-day free trial. No credit card required.",
+        "badge": "Most Popular"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "For organizations with compliance and scale requirements.",
         "features": [
           "Unlimited agents",
-          "40M tokens/month",
-          "10 workspaces",
-          "Everything in Growth",
+          "Custom token volume",
           "SSO / SAML",
           "99.99% SLA",
-          "Dedicated support",
-          "Custom integrations"
+          "Data residency options",
+          "Dedicated success manager",
+          "Custom integrations",
+          "On-premise deployment"
         ],
         "cta": "Contact sales"
       }
