@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jaak-ai/passflow-channels/domain"
-	"github.com/jaak-ai/passflow-channels/trigger"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/trigger"
 )
 
 // noopSlackDispatcher is a safe no-op for Slack handler tests.

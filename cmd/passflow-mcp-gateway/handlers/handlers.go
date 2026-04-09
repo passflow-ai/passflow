@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jaak-ai/passflow-mcp-gateway/mcp"
-	"github.com/jaak-ai/passflow-mcp-gateway/registry"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/mcp"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/registry"
 )
 
 // PublicServerInfo is the external representation of a registered MCP server

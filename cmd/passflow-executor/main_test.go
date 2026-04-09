@@ -7,11 +7,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jaak-ai/passflow-agent-executor/config"
-	"github.com/jaak-ai/passflow-agent-executor/engine"
-	"github.com/jaak-ai/passflow-agent-executor/job"
-	"github.com/jaak-ai/passflow-agent-executor/llm"
-	"github.com/jaak-ai/passflow-agent-executor/pkg/telemetry"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/engine"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/job"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/pkg/telemetry"
 	"go.uber.org/zap"
 )
 

@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jaak-ai/passflow-channels/config"
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 var httpClient = &http.Client{Timeout: 15 * time.Second}

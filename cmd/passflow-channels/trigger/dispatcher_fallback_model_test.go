@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // capturedStreamPayload holds the decoded Redis-stream payload captured by

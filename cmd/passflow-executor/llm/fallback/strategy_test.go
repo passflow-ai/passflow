@@ -3,7 +3,7 @@ package fallback
 import (
 	"testing"
 
-	"github.com/jaak-ai/passflow-agent-executor/llm/secrets"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/secrets"
 )
 
 func TestDefaultStrategy(t *testing.T) {

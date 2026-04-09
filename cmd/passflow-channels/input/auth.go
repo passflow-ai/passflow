@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // AuthVerifier handles authentication verification for incoming webhooks.

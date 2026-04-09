@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // RedactedOutputChannel returns a copy of the output channel with sensitive

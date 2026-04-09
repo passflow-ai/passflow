@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jaak-ai/passflow-channels/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/config"
 )
 
 type roundTripFunc func(*http.Request) (*http.Response, error)

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jaak-ai/passflow-agent-executor/acf/knowledge"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/acf/knowledge"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -3,8 +3,8 @@ package engine
 import (
 	"time"
 
-	"github.com/jaak-ai/passflow-agent-executor/job"
-	"github.com/jaak-ai/passflow-agent-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/job"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
 )
 
 func buildInitialMessages(spec *job.Spec) []llm.Message {

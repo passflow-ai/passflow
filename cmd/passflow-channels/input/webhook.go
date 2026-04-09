@@ -8,7 +8,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // MaxWebhookBodyBytes is the maximum permitted size of a webhook request body.

@@ -9,8 +9,8 @@ import (
 	"github.com/emersion/go-imap/v2"
 	"github.com/emersion/go-imap/v2/imapclient"
 	"github.com/google/uuid"
-	"github.com/jaak-ai/passflow-channels/config"
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // emailDispatcher is the narrow interface EmailPoller needs from the Dispatcher.

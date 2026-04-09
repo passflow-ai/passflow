@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jaak-ai/passflow-agent-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
 )
 
 const apiURL = "https://api.anthropic.com/v1/messages"

@@ -8,7 +8,7 @@ import (
 	"github.com/google/generative-ai-go/genai"
 	"google.golang.org/api/option"
 
-	"github.com/jaak-ai/passflow-agent-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
 )
 
 // Client implements llm.Client using Google Gemini.

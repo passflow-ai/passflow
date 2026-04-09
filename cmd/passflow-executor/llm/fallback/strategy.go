@@ -1,7 +1,7 @@
 package fallback
 
 import (
-	"github.com/jaak-ai/passflow-agent-executor/llm/secrets"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/secrets"
 )
 
 // FallbackAction represents what action to take on error.

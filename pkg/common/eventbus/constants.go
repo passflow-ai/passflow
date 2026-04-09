@@ -3,7 +3,7 @@ package eventbus
 import (
 	"strings"
 
-	"github.com/jaak-ai/passflow-common/eventbus/types"
+	"github.com/passflow-ai/passflow/pkg/common/eventbus/types"
 )
 
 // Stream names for topic-based routing.

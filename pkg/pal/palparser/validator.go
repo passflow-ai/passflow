@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/domain"
 )
 
 // Validation mode constants

@@ -3,7 +3,7 @@ package engine
 import (
 	"time"
 
-	"github.com/jaak-ai/passflow-agent-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
 )
 
 // DecisionLogEntry represents a single decision made by the LLM

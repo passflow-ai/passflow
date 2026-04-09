@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/jaak-ai/passflow-agent-executor/job"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/job"
 )
 
 func TestReportStarted_IncludesTriggerMetadata(t *testing.T) {

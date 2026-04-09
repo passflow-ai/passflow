@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
-	"github.com/jaak-ai/passflow-common/eventbus"
-	"github.com/jaak-ai/passflow-common/eventbus/types"
+	"github.com/passflow-ai/passflow/pkg/common/eventbus"
+	"github.com/passflow-ai/passflow/pkg/common/eventbus/types"
 	"go.uber.org/zap"
 )
 

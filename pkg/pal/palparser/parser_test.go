@@ -3,7 +3,7 @@ package palparser
 import (
 	"testing"
 
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/domain"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

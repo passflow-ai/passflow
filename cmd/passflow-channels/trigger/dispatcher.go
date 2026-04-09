@@ -13,7 +13,7 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // defaultFallbackModelProvider and defaultFallbackModelID are the built-in

@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/jaak-ai/passflow-channels/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/config"
 )
 
 // --- validateWebhookURL tests ---

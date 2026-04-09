@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/jaak-ai/passflow-common/eventbus"
-	"github.com/jaak-ai/passflow-common/eventbus/types"
+	"github.com/passflow-ai/passflow/pkg/common/eventbus"
+	"github.com/passflow-ai/passflow/pkg/common/eventbus/types"
 	"github.com/nats-io/nats.go"
 	
 )

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	agentdomain "github.com/jaak-ai/passflow-api/src/usecase/agent/domain"
-	paldomain "github.com/jaak-ai/passflow-api/src/usecase/pal/domain"
+	agentdomain "github.com/passflow-ai/passflow/pkg/agent/domain"
+	paldomain "github.com/passflow-ai/passflow/pkg/pal/domain"
 	"gopkg.in/yaml.v3"
 )
 

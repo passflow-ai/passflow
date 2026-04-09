@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/jaak-ai/passflow-channels/config"
-	"github.com/jaak-ai/passflow-channels/domain"
-	"github.com/jaak-ai/passflow-channels/trigger"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/trigger"
 )
 
 // recordingDispatcher captures dispatched events for assertion.

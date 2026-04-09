@@ -7,7 +7,7 @@ import (
 
 	openai "github.com/sashabaranov/go-openai"
 
-	"github.com/jaak-ai/passflow-agent-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
 )
 
 // Client implements llm.Client using Azure OpenAI.

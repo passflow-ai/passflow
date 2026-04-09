@@ -16,7 +16,7 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
-const instrumentationName = "github.com/jaak-ai/passflow-agent-executor"
+const instrumentationName = "github.com/passflow-ai/passflow/cmd/passflow-executor"
 
 type ShutdownFunc func(context.Context) error
 

@@ -8,8 +8,8 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
-	"github.com/jaak-ai/passflow-channels/domain"
-	"github.com/jaak-ai/passflow-channels/trigger"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/trigger"
 )
 
 // whatsappDispatcher is the narrow interface WhatsAppHandler needs from the Dispatcher.

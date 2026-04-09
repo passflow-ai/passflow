@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jaak-ai/passflow-common/setup"
+	"github.com/passflow-ai/passflow/pkg/common/setup"
 )
 
 func TestGenerateAccessToken(t *testing.T) {

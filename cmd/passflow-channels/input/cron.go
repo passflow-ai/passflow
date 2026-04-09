@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/jaak-ai/passflow-channels/domain"
-	"github.com/jaak-ai/passflow-channels/trigger"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/trigger"
 	cronlib "github.com/robfig/cron/v3"
 )
 

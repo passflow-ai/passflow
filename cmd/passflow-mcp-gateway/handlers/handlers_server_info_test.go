@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jaak-ai/passflow-mcp-gateway/mcp"
-	"github.com/jaak-ai/passflow-mcp-gateway/registry"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/mcp"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/registry"
 )
 
 // TestListServers_OmitsEndpoint verifies that GET /servers does not expose

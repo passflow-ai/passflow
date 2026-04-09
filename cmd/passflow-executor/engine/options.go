@@ -3,8 +3,8 @@ package engine
 import (
 	"context"
 
-	"github.com/jaak-ai/passflow-agent-executor/llm"
-	"github.com/jaak-ai/passflow-agent-executor/tools"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/tools"
 )
 
 // SystemToolRouter is the interface the ReAct loop uses to route tool calls

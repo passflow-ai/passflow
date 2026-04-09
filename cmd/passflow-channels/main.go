@@ -17,13 +17,13 @@ import (
 	"github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
-	"github.com/jaak-ai/passflow-channels/config"
-	"github.com/jaak-ai/passflow-channels/domain"
-	"github.com/jaak-ai/passflow-channels/input"
-	"github.com/jaak-ai/passflow-channels/middleware"
-	"github.com/jaak-ai/passflow-channels/output"
-	"github.com/jaak-ai/passflow-channels/store"
-	"github.com/jaak-ai/passflow-channels/trigger"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/input"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/middleware"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/output"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/store"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/trigger"
 )
 
 func main() {

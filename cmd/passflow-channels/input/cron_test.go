@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 	cronlib "github.com/robfig/cron/v3"
 )
 

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // fakeRedis implements a minimal in-memory Redis stub for RuleStore tests,

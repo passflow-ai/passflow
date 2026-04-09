@@ -8,7 +8,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/jaak-ai/passflow-common/setup"
+	"github.com/passflow-ai/passflow/pkg/common/setup"
 )
 
 // Session represents the authenticated user session.

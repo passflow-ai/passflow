@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	agentdomain "github.com/jaak-ai/passflow-api/src/usecase/agent/domain"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palctrl"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palrouter"
+	agentdomain "github.com/passflow-ai/passflow/pkg/agent/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/palctrl"
+	"github.com/passflow-ai/passflow/pkg/pal/palrouter"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.mongodb.org/mongo-driver/bson/primitive"

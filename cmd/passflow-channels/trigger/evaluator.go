@@ -6,7 +6,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // Matches returns true if the event satisfies the rule's condition.

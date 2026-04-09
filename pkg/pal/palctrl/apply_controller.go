@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	agentdomain "github.com/jaak-ai/passflow-api/src/usecase/agent/domain"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palparser"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palreq"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palres"
+	agentdomain "github.com/passflow-ai/passflow/pkg/agent/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/palparser"
+	"github.com/passflow-ai/passflow/pkg/pal/palreq"
+	"github.com/passflow-ai/passflow/pkg/pal/palres"
 )
 
 // ApplyController handles PAL content application and agent creation/update.

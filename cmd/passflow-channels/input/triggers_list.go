@@ -2,7 +2,7 @@ package input
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 // TriggerOption represents a simplified trigger for selection in dropdowns.

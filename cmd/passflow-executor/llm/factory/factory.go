@@ -6,15 +6,15 @@ import (
 	"os"
 	"time"
 
-	"github.com/jaak-ai/passflow-agent-executor/config"
-	"github.com/jaak-ai/passflow-agent-executor/llm"
-	"github.com/jaak-ai/passflow-agent-executor/llm/anthropic"
-	"github.com/jaak-ai/passflow-agent-executor/llm/azure"
-	"github.com/jaak-ai/passflow-agent-executor/llm/bedrock"
-	"github.com/jaak-ai/passflow-agent-executor/llm/gemini"
-	"github.com/jaak-ai/passflow-agent-executor/llm/openai"
-	"github.com/jaak-ai/passflow-agent-executor/llm/registry"
-	"github.com/jaak-ai/passflow-agent-executor/llm/secrets"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/anthropic"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/azure"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/bedrock"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/gemini"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/openai"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/registry"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm/secrets"
 )
 
 // Factory creates LLM clients with intelligent fallback support.

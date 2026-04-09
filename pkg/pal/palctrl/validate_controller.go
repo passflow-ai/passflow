@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palparser"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palreq"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palres"
+	"github.com/passflow-ai/passflow/pkg/pal/palparser"
+	"github.com/passflow-ai/passflow/pkg/pal/palreq"
+	"github.com/passflow-ai/passflow/pkg/pal/palres"
 )
 
 // ValidateController handles PAL content validation.

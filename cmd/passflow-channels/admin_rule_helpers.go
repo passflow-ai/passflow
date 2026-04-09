@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/jaak-ai/passflow-channels/domain"
-	"github.com/jaak-ai/passflow-channels/output"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/output"
 )
 
 func mergeRuleForUpdate(incoming domain.TriggerRule, existing *domain.TriggerRule) domain.TriggerRule {

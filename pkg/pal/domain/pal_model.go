@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/jaak-ai/passflow-api/src/usecase/agent/agentenum"
+	"github.com/passflow-ai/passflow/pkg/agent/agentenum"
 )
 
 // Validation errors

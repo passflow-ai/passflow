@@ -2,9 +2,9 @@ package middleware
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/jaak-ai/passflow-channels/domain"
-	"github.com/jaak-ai/passflow-channels/input"
-	"github.com/jaak-ai/passflow-channels/output"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/input"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/output"
 )
 
 // SanitizeRuleForResponse redacts secrets before returning a rule through the

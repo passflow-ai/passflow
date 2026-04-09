@@ -3,7 +3,7 @@ package output
 import (
 	"testing"
 
-	"github.com/jaak-ai/passflow-channels/domain"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/domain"
 )
 
 func TestValidateReplyOutputChannel_RejectsMissingStaticSlackChannel(t *testing.T) {

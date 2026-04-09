@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/jaak-ai/passflow-agent-executor/llm"
-	"github.com/jaak-ai/passflow-agent-executor/tools"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/tools"
 )
 
 // EngineAdapter wraps *ACFContext so that it satisfies the engine.SystemToolRouter

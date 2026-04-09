@@ -3,7 +3,7 @@ package palparser
 import (
 	"errors"
 
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/domain"
 	"gopkg.in/yaml.v3"
 )
 

@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jaak-ai/passflow-cli/internal/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-cli/internal/config"
 )
 
 type Client struct {

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/jaak-ai/passflow-cli/cmd"
+import "github.com/passflow-ai/passflow/cmd/passflow-cli/cmd"
 
 var Version = "dev"
 

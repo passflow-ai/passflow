@@ -3,7 +3,7 @@ package tools
 import (
 	"testing"
 
-	"github.com/jaak-ai/passflow-agent-executor/job"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/job"
 )
 
 // TestCanHandle_KnownTool verifies that CanHandle returns true for a tool

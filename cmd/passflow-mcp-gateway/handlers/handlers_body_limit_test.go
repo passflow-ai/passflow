@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jaak-ai/passflow-mcp-gateway/registry"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/registry"
 )
 
 // TestCallTool_BodySizeLimit_ExceedsLimit verifies that a request body larger

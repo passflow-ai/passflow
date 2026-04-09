@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jaak-ai/passflow-common/logger"
-	"github.com/jaak-ai/passflow-common/security/redactor"
+	"github.com/passflow-ai/passflow/pkg/common/logger"
+	"github.com/passflow-ai/passflow/pkg/common/security/redactor"
 )
 
 // IErrorHandler defines the interface for error handling.

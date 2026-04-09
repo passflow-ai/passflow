@@ -2,8 +2,8 @@ package palrouter
 
 import (
 	"github.com/gofiber/fiber/v2"
-	agentdomain "github.com/jaak-ai/passflow-api/src/usecase/agent/domain"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/palctrl"
+	agentdomain "github.com/passflow-ai/passflow/pkg/agent/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/palctrl"
 )
 
 // PALRouter handles routing for PAL (Passflow Agent Language) endpoints.

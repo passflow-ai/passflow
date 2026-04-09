@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jaak-ai/passflow-agent-executor/engine"
-	"github.com/jaak-ai/passflow-agent-executor/job"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/engine"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/job"
 )
 
 // Reporter sends execution updates back to passflow-api.

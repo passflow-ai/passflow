@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jaak-ai/passflow-mcp-gateway/mcp"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/mcp"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

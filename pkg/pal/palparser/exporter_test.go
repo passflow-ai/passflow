@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	agentdomain "github.com/jaak-ai/passflow-api/src/usecase/agent/domain"
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/domain"
+	agentdomain "github.com/passflow-ai/passflow/pkg/agent/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/domain"
 	"gopkg.in/yaml.v3"
 )
 

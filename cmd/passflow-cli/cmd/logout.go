@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/jaak-ai/passflow-cli/internal/config"
+	"github.com/passflow-ai/passflow/cmd/passflow-cli/internal/config"
 	"github.com/spf13/cobra"
 )
 

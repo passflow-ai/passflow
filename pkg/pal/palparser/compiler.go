@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	agentdomain "github.com/jaak-ai/passflow-api/src/usecase/agent/domain"
-	paldomain "github.com/jaak-ai/passflow-api/src/usecase/pal/domain"
+	agentdomain "github.com/passflow-ai/passflow/pkg/agent/domain"
+	paldomain "github.com/passflow-ai/passflow/pkg/pal/domain"
 )
 
 // resourcePresets maps preset names to their ResourceConfig definitions.

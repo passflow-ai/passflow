@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jaak-ai/passflow-agent-executor/job"
-	"github.com/jaak-ai/passflow-agent-executor/llm"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/job"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/llm"
 )
 
 // Result is the outcome of a tool execution.

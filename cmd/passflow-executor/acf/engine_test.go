@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/jaak-ai/passflow-agent-executor/job"
+	"github.com/passflow-ai/passflow/cmd/passflow-executor/job"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

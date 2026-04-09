@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/jaak-ai/passflow-api/src/usecase/pal/domain"
+	"github.com/passflow-ai/passflow/pkg/pal/domain"
 )
 
 // mockToolValidator implements ToolValidator for testing

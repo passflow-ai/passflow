@@ -2,8 +2,8 @@ package middleware
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/jaak-ai/passflow-channels/input"
-	"github.com/jaak-ai/passflow-channels/store"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/input"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/store"
 )
 
 // AdminHandlers provides admin API handlers for the channels service.

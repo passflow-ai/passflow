@@ -3,7 +3,7 @@ package registry
 import (
 	"testing"
 
-	"github.com/jaak-ai/passflow-mcp-gateway/mcp"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/mcp"
 )
 
 func TestRegistryRegisterAndGet(t *testing.T) {

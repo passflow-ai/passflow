@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jaak-ai/passflow-channels/middleware"
+	"github.com/passflow-ai/passflow/cmd/passflow-channels/middleware"
 )
 
 // newTestApp builds a minimal Fiber app with AdminAuth applied to /admin/v1.

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/jaak-ai/passflow-mcp-gateway/mcp"
+	"github.com/passflow-ai/passflow/cmd/passflow-mcp-gateway/mcp"
 )
 
 // Registry manages MCP server registrations.

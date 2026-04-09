@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jaak-ai/passflow-cli/internal/api"
-	"github.com/jaak-ai/passflow-cli/internal/output"
+	"github.com/passflow-ai/passflow/cmd/passflow-cli/internal/api"
+	"github.com/passflow-ai/passflow/cmd/passflow-cli/internal/output"
 	"github.com/spf13/cobra"
 )
 

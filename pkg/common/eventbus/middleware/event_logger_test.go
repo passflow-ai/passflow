@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jaak-ai/passflow-common/eventbus/types"
+	"github.com/passflow-ai/passflow/pkg/common/eventbus/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
