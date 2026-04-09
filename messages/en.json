@@ -487,6 +487,72 @@
     "humanInTheLoop": "Approval system that pauses execution until a human authorizes the action via Slack, email, or dashboard.",
     "coldStart": "Time from receiving the trigger until the agent pod is executing code."
   },
+  "CLI": {
+    "badge": "Developer Tool",
+    "headline": {
+      "part1": "Agents as code.",
+      "part2": "Managed from your terminal."
+    },
+    "subheadline": "Define, validate, and deploy AI agents using PAL (Passflow Agent Language). GitOps-ready from day one.",
+    "platforms": "macOS, Linux, Windows • Single binary • No dependencies",
+    "features": {
+      "title": "Built for developers who prefer the command line",
+      "fast": {
+        "title": "Lightning fast",
+        "description": "Single Go binary. No runtime dependencies. Instant startup."
+      },
+      "secure": {
+        "title": "Secure by default",
+        "description": "Credentials stored in ~/.passflow with restricted permissions."
+      },
+      "portable": {
+        "title": "Fully portable",
+        "description": "Same commands work on macOS, Linux, and Windows."
+      },
+      "gitops": {
+        "title": "GitOps ready",
+        "description": "Agent configs in YAML. Version control, review, and CI/CD integration."
+      }
+    },
+    "commands": {
+      "title": "Powerful commands, simple syntax",
+      "subtitle": "Everything you need to manage agents from PAL files. Validate before deploy, diff before apply.",
+      "validate": {
+        "description": "Validate PAL file syntax and semantics before applying."
+      },
+      "apply": {
+        "description": "Create or update an agent from a PAL file. Supports dry-run."
+      },
+      "export": {
+        "description": "Export an existing agent configuration as PAL (YAML or JSON)."
+      },
+      "diff": {
+        "description": "Compare an agent's current config with a local PAL file."
+      },
+      "list": {
+        "description": "List all agents in a workspace with status and metadata."
+      },
+      "get": {
+        "description": "Get detailed information about a specific agent."
+      }
+    },
+    "pal": {
+      "title": "PAL: Passflow Agent Language",
+      "description": "Declarative YAML format for defining AI agents. Human-readable, machine-parseable, version-controllable.",
+      "features": {
+        "declarative": "Declarative configuration — describe what, not how",
+        "versionable": "Version controllable — track changes in Git",
+        "validatable": "Validatable — catch errors before deployment",
+        "portable": "Portable — same format for all environments"
+      }
+    },
+    "cta": {
+      "title": "Start managing agents from your terminal",
+      "description": "Install the CLI in seconds and deploy your first agent in minutes.",
+      "github": "View on GitHub",
+      "docs": "Read documentation"
+    }
+  },
   "Docs": {
     "nav": {
       "title": "Documentation",
