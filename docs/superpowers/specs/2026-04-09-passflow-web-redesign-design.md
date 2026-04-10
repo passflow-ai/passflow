@@ -27,12 +27,14 @@ Rediseño completo de la landing page de passflow-web con un enfoque **light-pre
 - Un dashboard de seguridad SOC
 
 ### Somos
-- **Control plane para operaciones de AI workflows**
-- **Sistema operativo de workflows con gobernanza empresarial**
-- **Open source foundation + Enterprise control layer**
+- **The workflow operating system** (categoría pública única)
+- Open source foundation + Enterprise control layer
 
 ### Tagline principal
 > "Operate AI workflows with control, not hope."
+
+### Categoría pública (una sola)
+**"Workflow Operating System"** — no "control plane", no "agent builder", no "automation platform". Esta es la categoría que usamos en hero, navegación y messaging.
 
 ### Use cases objetivo (high-stakes, no triviales)
 - KYC / Onboarding
@@ -95,7 +97,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
 
 | Token | Size | Weight | Line Height | Usage |
 |-------|------|--------|-------------|-------|
-| `--text-hero` | 2.75rem (44px) | 500 | 1.08 | Hero headline |
+| `--text-hero` | 3.5rem (56px) | 600 | 1.05 | Hero headline (dominant) |
 | `--text-h2` | 1.75rem (28px) | 500 | 1.2 | Section titles |
 | `--text-h3` | 1rem (16px) | 500 | 1.4 | Card titles |
 | `--text-body-lg` | 1.05rem (17px) | 400 | 1.7 | Hero description |
@@ -363,11 +365,27 @@ Card titles en violet.
 
 **Trust points:** 3 items con ✦
 
-### 7.8 Footer
+### 7.8 Footer (Enterprise-grade)
 
-Simple, single row:
-- Left: © 2026 Passflow · Apache 2.0
-- Right: Docs | GitHub | Security | Privacy
+**Layout:** 4 columnas + copyright row
+
+**Columnas:**
+1. **Product**: Features, Use Cases, Architecture, Roadmap
+2. **Developers**: Documentation, GitHub, API Reference, Templates
+3. **Company**: About, Blog, Careers, Contact
+4. **Legal**: Privacy, Terms, Security, Compliance
+
+**Copyright row:**
+- Left: Logo pequeño + "© 2026 Passflow"
+- Center: "Open source under Apache 2.0"
+- Right: Social icons (GitHub, Twitter/X, LinkedIn)
+
+**Styles:**
+- Background: `#FFFFFF`
+- Border top: `1px solid #E5E7EB`
+- Padding: `4rem 2rem 2rem`
+- Column titles: `--text-primary`, weight 500
+- Links: `--text-secondary`, hover `--violet-primary`
 
 ---
 
@@ -401,7 +419,7 @@ module.exports = {
         sans: ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['2.75rem', { lineHeight: '1.08', letterSpacing: '-0.03em' }],
+        'hero': ['3.5rem', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '600' }],
         'h2': ['1.75rem', { lineHeight: '1.2', fontWeight: '500' }],
       },
       borderRadius: {
@@ -512,18 +530,43 @@ module.exports = {
 
 ---
 
-## 11. Files to Modify
+## 11. Implementation Priorities
 
-| File | Changes |
-|------|---------|
-| `tailwind.config.ts` | Add custom tokens |
-| `DESIGN-SYSTEM.md` | Replace with new system |
-| `src/app/globals.css` | Update CSS variables |
-| `src/app/[locale]/page.tsx` | Rewrite sections |
-| `src/components/Header.tsx` | New light header |
-| `src/components/Hero.tsx` | Split layout with mockup |
-| `src/components/ProductMockup.tsx` | New component |
-| `src/components/sections/*` | Restructure all sections |
+### P0 — Foundation + Hero (must ship first)
+
+| File | Changes | Acceptance Criteria |
+|------|---------|---------------------|
+| `tailwind.config.ts` | Add all custom tokens | All pf-* classes working |
+| `src/app/globals.css` | Update CSS variables | Variables match spec |
+| `src/components/Header.tsx` | New light translucent header | Sticky, blur, GitHub visible |
+| `src/components/Hero.tsx` | Split layout with mockup | 56px headline, CTAs, mockup right |
+| `src/components/ProductMockup.tsx` | New component | Shows workflow, version, approval state |
+| `src/components/TrustBand.tsx` | 4 trust points | Centered, light bg |
+
+### P1 — Core Sections
+
+| File | Changes | Acceptance Criteria |
+|------|---------|---------------------|
+| `src/components/sections/Problem.tsx` | 3 problem cards | Red titles, white cards |
+| `src/components/sections/ValueProp.tsx` | 4 feature cards | Violet titles |
+| `src/components/sections/GitHub.tsx` | Split with mockup | GitHub mockup dark |
+| `src/components/sections/OpenVsEnterprise.tsx` | 2-column comparison | Enterprise card highlighted |
+| `src/components/sections/FinalCTA.tsx` | Repeat CTAs | Same as hero |
+| `src/components/Footer.tsx` | 4-column enterprise footer | All links, social icons |
+
+### P2 — Polish
+
+| File | Changes | Acceptance Criteria |
+|------|---------|---------------------|
+| `DESIGN-SYSTEM.md` | Replace with new system | Documents new tokens |
+| Responsive breakpoints | Mobile/tablet adjustments | Hero stacks, cards full-width |
+| Microinteractions | Hover states, transitions | Smooth, consistent |
+| `src/app/[locale]/page.tsx` | Wire all sections | Clean composition |
+
+### Execution order
+1. **P0 first, ship as unblocking PR**
+2. P1 can parallelize (sections are independent)
+3. P2 after P0+P1 merged
 
 ---
 
