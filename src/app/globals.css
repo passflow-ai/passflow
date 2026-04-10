@@ -293,8 +293,12 @@ body {
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
   transition: all var(--duration-normal) var(--easing-default);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   text-align: center;
+  text-decoration: none;
   border: none;
   cursor: pointer;
 }
@@ -319,8 +323,12 @@ body {
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
   transition: all var(--duration-normal) var(--easing-default);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -339,8 +347,12 @@ body {
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
   transition: all var(--duration-normal) var(--easing-default);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 

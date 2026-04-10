@@ -65,7 +65,7 @@ const Hero = () => {
           </p>
 
           <div style={{ display: 'flex', gap: '0.6rem', marginBottom: '1.5rem' }}>
-            <a href="/demo" className="btn-primary" style={{ padding: '0.8rem 1.4rem', fontSize: '0.9rem' }}>
+            <a href="https://app.passflow.ai/login?mode=register" className="btn-primary" style={{ padding: '0.8rem 1.4rem', fontSize: '0.9rem' }}>
               Book demo
             </a>
             <a

@@ -41,7 +41,7 @@ const FinalCTA = () => {
         justifyContent: 'center',
         marginBottom: '2rem',
       }}>
-        <a href="/demo" className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1rem' }}>
+        <a href="https://app.passflow.ai/login?mode=register" className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1rem' }}>
           Book demo
         </a>
         <a
