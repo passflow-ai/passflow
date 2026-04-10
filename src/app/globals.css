@@ -175,8 +175,8 @@
   --color-foreground: var(--text-primary);
   --color-primary: var(--accent-primary);
   --color-accent: var(--accent-primary-hover);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains), 'Fira Code', 'Courier New', monospace;
 }
 
 html {
