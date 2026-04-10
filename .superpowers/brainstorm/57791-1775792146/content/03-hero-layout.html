@@ -1,0 +1,74 @@
+<h2>Diseño del Hero</h2>
+<p class="subtitle">El Hero es lo primero que ven. ¿Qué layout prefieres?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Centrado con visual debajo (estilo Claude)</h3>
+      <div class="mockup" style="margin-top: 1rem;">
+        <div class="mockup-body" style="background: #0A0A0F; padding: 2rem; text-align: center;">
+          <p style="color: #00FF87; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">AI Agent Platform</p>
+          <h1 style="color: #E8E8F0; font-size: 2rem; font-weight: 500; line-height: 1.2; margin-bottom: 1rem; font-family: system-ui;">Agentes que actúan.<br><span style="color: #00FF87;">Infraestructura que se gobierna sola.</span></h1>
+          <p style="color: #6B7280; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Despliega agentes de IA que razonan sobre tu stack y ejecutan acciones reales.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+            <button style="background: #00FF87; color: #0A0A0F; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-size: 0.875rem;">Comenzar gratis</button>
+            <button style="background: transparent; color: #E8E8F0; border: 1px solid #3A3A4A; padding: 0.75rem 1.5rem; border-radius: 6px; font-size: 0.875rem;">Ver documentación</button>
+          </div>
+          <div style="background: rgba(0,255,135,0.05); border: 1px solid #1E1E2E; border-radius: 12px; padding: 2rem; margin-top: 1rem;">
+            <div style="color: #6B7280; font-size: 0.75rem;">[Animación/Diagrama del flujo de agentes]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Split: texto izquierda + visual derecha</h3>
+      <div class="mockup" style="margin-top: 1rem;">
+        <div class="mockup-body" style="background: #0A0A0F; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+          <div>
+            <p style="color: #00FF87; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">AI Agent Platform</p>
+            <h1 style="color: #E8E8F0; font-size: 1.75rem; font-weight: 500; line-height: 1.2; margin-bottom: 1rem; font-family: system-ui;">Agentes que actúan. <span style="color: #00FF87;">Infraestructura que se gobierna sola.</span></h1>
+            <p style="color: #6B7280; margin-bottom: 1.5rem; font-size: 0.875rem;">Despliega agentes de IA que razonan sobre tu stack y ejecutan acciones reales.</p>
+            <div style="display: flex; gap: 0.75rem;">
+              <button style="background: #00FF87; color: #0A0A0F; padding: 0.625rem 1.25rem; border: none; border-radius: 6px; font-size: 0.8rem;">Comenzar gratis</button>
+              <button style="background: transparent; color: #E8E8F0; border: 1px solid #3A3A4A; padding: 0.625rem 1.25rem; border-radius: 6px; font-size: 0.8rem;">Ver docs</button>
+            </div>
+          </div>
+          <div style="background: rgba(0,255,135,0.05); border: 1px solid #1E1E2E; border-radius: 12px; padding: 2rem; text-align: center;">
+            <div style="color: #6B7280; font-size: 0.75rem;">[Terminal animado o diagrama]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Texto izquierda + métricas debajo (actual mejorado)</h3>
+      <div class="mockup" style="margin-top: 1rem;">
+        <div class="mockup-body" style="background: #0A0A0F; padding: 2rem;">
+          <div style="max-width: 60%;">
+            <p style="color: #00FF87; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">AI Agent Platform</p>
+            <h1 style="color: #E8E8F0; font-size: 1.75rem; font-weight: 500; line-height: 1.2; margin-bottom: 1rem; font-family: system-ui;">Agentes que actúan. <span style="color: #00FF87;">Infraestructura que se gobierna sola.</span></h1>
+            <p style="color: #6B7280; margin-bottom: 1.5rem; font-size: 0.875rem;">Despliega agentes de IA que razonan sobre tu stack y ejecutan acciones reales.</p>
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 2rem;">
+              <button style="background: #00FF87; color: #0A0A0F; padding: 0.625rem 1.25rem; border: none; border-radius: 6px; font-size: 0.8rem;">Comenzar gratis</button>
+              <button style="background: transparent; color: #E8E8F0; border: 1px solid #3A3A4A; padding: 0.625rem 1.25rem; border-radius: 6px; font-size: 0.8rem;">Ver docs</button>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #1E1E2E;">
+            <div><span style="color: #00FF87; font-size: 1.5rem; font-weight: 600;">&lt;100ms</span><br><span style="color: #6B7280; font-size: 0.7rem;">cold start</span></div>
+            <div><span style="color: #00FF87; font-size: 1.5rem; font-weight: 600;">6</span><br><span style="color: #6B7280; font-size: 0.7rem;">LLM providers</span></div>
+            <div><span style="color: #00FF87; font-size: 1.5rem; font-weight: 600;">27</span><br><span style="color: #6B7280; font-size: 0.7rem;">MCP tools</span></div>
+            <div><span style="color: #00FF87; font-size: 1.5rem; font-weight: 600;">Pods</span><br><span style="color: #6B7280; font-size: 0.7rem;">aislados</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

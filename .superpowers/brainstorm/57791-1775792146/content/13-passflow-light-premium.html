@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+      background: #F6F7FB;
+      color: #121826;
+      line-height: 1.6;
+    }
+    .accent { color: #7C3AED; }
+  </style>
+</head>
+<body>
+
+  <div style="background: #fff; padding: 1.5rem 2rem; border-bottom: 1px solid #D9DFEA; text-align: center;">
+    <h1 style="font-size: 1.4rem; font-weight: 500; margin-bottom: 0.4rem; color: #121826;">Passflow — Light Premium</h1>
+    <p style="color: #5B6475; font-size: 0.85rem;">Landing clara. Producto oscuro. Open source visible.</p>
+  </div>
+
+  <!-- 1. HEADER - Light translucent -->
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.875rem 2rem; background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100;">
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div style="width: 8px; height: 8px; background: #7C3AED; border-radius: 2px;"></div>
+      <span style="font-weight: 600; font-size: 0.95rem; color: #121826;">Passflow</span>
+    </div>
+    <div style="display: flex; gap: 1.75rem; color: #5B6475; font-size: 0.8rem;">
+      <span>Product</span>
+      <span>Use Cases</span>
+      <span>Architecture</span>
+      <span>Security</span>
+      <span>Pricing</span>
+      <span>Docs</span>
+    </div>
+    <div style="display: flex; gap: 0.6rem; align-items: center;">
+      <a href="#" style="color: #121826; text-decoration: none; font-size: 0.8rem; display: flex; align-items: center; gap: 0.35rem; padding: 0.5rem 0.75rem; border: 1px solid #D9DFEA; border-radius: 6px; background: #fff;">
+        <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <button style="background: #7C3AED; color: white; padding: 0.5rem 1rem; border: none; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Book demo</button>
+    </div>
+  </div>
+
+  <!-- 2. HERO - Light left, dark product right -->
+  <div style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 4rem; padding: 5rem 2rem 4rem; background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%); align-items: center; max-width: 1300px; margin: 0 auto;">
+
+    <!-- Left: Copy on light -->
+    <div>
+      <div style="color: #5B6475; font-size: 0.8rem; margin-bottom: 1.25rem; letter-spacing: 0.01em;">
+        Open-source workflow runtime · Enterprise control plane
+      </div>
+
+      <h1 style="font-size: 2.75rem; font-weight: 500; line-height: 1.08; margin-bottom: 1.25rem; letter-spacing: -0.03em; color: #121826;">
+        Operate AI workflows with <span class="accent">control, not hope.</span>
+      </h1>
+
+      <p style="color: #5B6475; font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.7; max-width: 480px;">
+        Design, version, deploy, and govern AI workflows with GitHub-based delivery, approval gates, audit trails, and isolated execution.
+      </p>
+
+      <div style="display: flex; gap: 0.6rem; margin-bottom: 1.5rem;">
+        <button style="background: #7C3AED; color: white; padding: 0.8rem 1.4rem; border: none; border-radius: 8px; font-size: 0.9rem; cursor: pointer; font-weight: 500;">Book demo</button>
+        <button style="background: #fff; color: #121826; border: 1px solid #D9DFEA; padding: 0.8rem 1.4rem; border-radius: 8px; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
+          <svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Start on GitHub
+        </button>
+      </div>
+
+      <div style="display: flex; gap: 1.25rem; color: #5B6475; font-size: 0.75rem;">
+        <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="color: #16A34A;">✓</span> GitHub-native versioning</span>
+        <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="color: #16A34A;">✓</span> Approval workflows</span>
+        <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="color: #16A34A;">✓</span> Full audit trail</span>
+      </div>
+    </div>
+
+    <!-- Right: Dark product mockup (elevated card) -->
+    <div style="background: #0f1117; border: 1px solid #1e2028; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);">
+      <div style="background: #0a0b0f; padding: 0.6rem 1rem; border-bottom: 1px solid #1e2028; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <span style="width: 10px; height: 10px; background: #ff5f57; border-radius: 50%;"></span>
+          <span style="width: 10px; height: 10px; background: #febc2e; border-radius: 50%;"></span>
+          <span style="width: 10px; height: 10px; background: #28c840; border-radius: 50%;"></span>
+        </div>
+        <span style="color: #4b5563; font-size: 0.65rem;">passflow — kyc-onboarding</span>
+        <div style="display: flex; gap: 0.75rem; font-size: 0.65rem;">
+          <span style="color: #4b5563;">Draft</span>
+          <span style="color: #7C3AED; font-weight: 500;">Reviewed</span>
+          <span style="color: #4b5563;">Released</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 240px; font-size: 0.72rem; color: #e8e8f0;">
+        <!-- Canvas -->
+        <div style="padding: 1rem; border-right: 1px solid #1e2028;">
+          <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+            <div style="background: #161922; border: 1px solid #252a36; border-radius: 5px; padding: 0.5rem 0.7rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span style="color: #7C3AED;">●</span> Trigger: New request
+            </div>
+            <div style="text-align: center; color: #3a3f4a; font-size: 0.6rem;">↓</div>
+            <div style="background: #161922; border: 1px solid #252a36; border-radius: 5px; padding: 0.5rem 0.7rem;">
+              Validate inputs
+            </div>
+            <div style="text-align: center; color: #3a3f4a; font-size: 0.6rem;">↓</div>
+            <div style="background: #161922; border: 1px solid #252a36; border-radius: 5px; padding: 0.5rem 0.7rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span style="color: #D97706;">◆</span> Risk policy
+            </div>
+            <div style="text-align: center; color: #3a3f4a; font-size: 0.6rem;">↓</div>
+            <div style="background: rgba(217,119,6,0.1); border: 1px solid rgba(217,119,6,0.3); border-radius: 5px; padding: 0.5rem 0.7rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span style="color: #D97706;">⏸</span> <strong>Approval gate</strong>
+            </div>
+            <div style="text-align: center; color: #3a3f4a; font-size: 0.6rem;">↓</div>
+            <div style="background: #161922; border: 1px solid #16A34A; border-radius: 5px; padding: 0.5rem 0.7rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span style="color: #16A34A;">✓</span> Execute & log
+            </div>
+          </div>
+        </div>
+
+        <!-- Side panel -->
+        <div style="padding: 0.85rem; background: #0a0b0f; font-size: 0.68rem;">
+          <div style="margin-bottom: 0.85rem;">
+            <div style="color: #4b5563; margin-bottom: 0.3rem; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em;">Run details</div>
+            <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+              <div style="display: flex; justify-content: space-between;"><span style="color: #6b7280;">Version</span><span>v1.4.2</span></div>
+              <div style="display: flex; justify-content: space-between;"><span style="color: #6b7280;">GitHub</span><span style="color: #7C3AED;">9f3a2b1</span></div>
+              <div style="display: flex; justify-content: space-between;"><span style="color: #6b7280;">Env</span><span style="color: #16A34A;">prod</span></div>
+              <div style="display: flex; justify-content: space-between;"><span style="color: #6b7280;">Risk</span><span style="color: #D97706;">High</span></div>
+            </div>
+          </div>
+          <div style="background: rgba(217,119,6,0.1); color: #D97706; padding: 0.35rem 0.5rem; border-radius: 4px; text-align: center; font-size: 0.65rem;">
+            ⏸ Awaiting approval
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats bar -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); padding: 0.6rem 1rem; border-top: 1px solid #1e2028; background: #0a0b0f; font-size: 0.65rem; text-align: center; color: #e8e8f0;">
+        <div><strong>847</strong> <span style="color: #4b5563;">runs</span></div>
+        <div><strong style="color: #16A34A;">99.2%</strong> <span style="color: #4b5563;">success</span></div>
+        <div><strong style="color: #D97706;">3</strong> <span style="color: #4b5563;">pending</span></div>
+        <div><strong>12</strong> <span style="color: #4b5563;">agents</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. TRUST BAND - Light -->
+  <div style="padding: 1.75rem 2rem; background: #fff; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: center; gap: 2.5rem; color: #5B6475; font-size: 0.8rem;">
+      <span>✦ Open-source runtime</span>
+      <span>✦ GitHub-native lifecycle</span>
+      <span>✦ Policy-enforced execution</span>
+      <span>✦ Full auditability</span>
+    </div>
+  </div>
+
+  <!-- 4. PROBLEM -->
+  <div style="padding: 4.5rem 2rem; background: #F6F7FB;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.75rem; font-weight: 500; margin-bottom: 0.75rem; text-align: center; color: #121826;">Most AI workflows break in operations, not in demos.</h2>
+      <p style="color: #5B6475; text-align: center; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Teams wire together agents quickly. What fails is everything around execution: safe releases, approvals, traceability, and accountability.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+        <div style="padding: 1.5rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #fff;">
+          <h3 style="font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem; color: #DC2626;">No governance</h3>
+          <p style="color: #5B6475; font-size: 0.85rem;">Workflow logic changes without review, ownership, or release discipline.</p>
+        </div>
+        <div style="padding: 1.5rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #fff;">
+          <h3 style="font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem; color: #DC2626;">No visibility</h3>
+          <p style="color: #5B6475; font-size: 0.85rem;">Teams can't inspect what ran, who approved it, or where it failed.</p>
+        </div>
+        <div style="padding: 1.5rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #fff;">
+          <h3 style="font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem; color: #DC2626;">No safe path</h3>
+          <p style="color: #5B6475; font-size: 0.85rem;">A workflow that works in a demo becomes a liability in production.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. VALUE PROP -->
+  <div style="padding: 4.5rem 2rem; background: #fff; border-top: 1px solid #E5E7EB;">
+    <div style="max-width: 950px; margin: 0 auto;">
+      <h2 style="font-size: 1.75rem; font-weight: 500; margin-bottom: 0.5rem; text-align: center; color: #121826;">An open foundation with enterprise control.</h2>
+      <p style="color: #5B6475; text-align: center; margin-bottom: 3rem;">Open development practices + operational safeguards for real business workflows.</p>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;">
+        <div style="padding: 1.25rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #FAFBFC;">
+          <div style="color: #7C3AED; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem;">Build openly</div>
+          <p style="color: #5B6475; font-size: 0.8rem;">Create workflows with reusable components and developer-friendly patterns.</p>
+        </div>
+        <div style="padding: 1.25rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #FAFBFC;">
+          <div style="color: #7C3AED; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem;">Version in GitHub</div>
+          <p style="color: #5B6475; font-size: 0.8rem;">Track changes, review logic, manage releases, and promote safely.</p>
+        </div>
+        <div style="padding: 1.25rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #FAFBFC;">
+          <div style="color: #7C3AED; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem;">Run with guardrails</div>
+          <p style="color: #5B6475; font-size: 0.8rem;">Apply policies, approvals, and environment rules before execution.</p>
+        </div>
+        <div style="padding: 1.25rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #FAFBFC;">
+          <div style="color: #7C3AED; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem;">Audit everything</div>
+          <p style="color: #5B6475; font-size: 0.8rem;">Capture logs, approvals, actions, and outcomes in a traceable record.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. GITHUB SECTION -->
+  <div style="padding: 4.5rem 2rem; background: #F6F7FB; border-top: 1px solid #E5E7EB;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1100px; margin: 0 auto; align-items: center;">
+      <div>
+        <h2 style="font-size: 1.75rem; font-weight: 500; margin-bottom: 1rem; color: #121826;">Built for teams that already work in GitHub.</h2>
+        <p style="color: #5B6475; margin-bottom: 1.5rem; line-height: 1.7;">
+          Passflow treats workflows as versioned operational assets. Review changes, track history, and promote workflows with the same discipline as production software.
+        </p>
+        <ul style="color: #5B6475; font-size: 0.9rem; list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><span style="color: #16A34A;">✓</span> Workflow definitions tracked in GitHub</li>
+          <li><span style="color: #16A34A;">✓</span> Pull-request based review for critical changes</li>
+          <li><span style="color: #16A34A;">✓</span> Version history tied to execution records</li>
+          <li><span style="color: #16A34A;">✓</span> Promotion across dev, QA, and production</li>
+        </ul>
+      </div>
+      <!-- GitHub mockup - dark card -->
+      <div style="background: #0f1117; border: 1px solid #1e2028; border-radius: 10px; padding: 1.25rem; font-size: 0.75rem; color: #e8e8f0; box-shadow: 0 15px 40px -10px rgba(0,0,0,0.12);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <svg style="width:16px;height:16px;color:#e8e8f0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>passflow-ai/workflows</span>
+        </div>
+        <div style="background: #161922; border: 1px solid #252a36; border-radius: 6px; padding: 0.75rem; margin-bottom: 0.75rem;">
+          <div style="color: #9ca3af; margin-bottom: 0.2rem;">📄 kyc-onboarding.yaml</div>
+          <div style="color: #4b5563; font-size: 0.68rem;">Updated 2 hours ago</div>
+        </div>
+        <div style="background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.25); border-radius: 6px; padding: 0.75rem; margin-bottom: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
+            <span style="color: #7C3AED;">PR #142</span>
+            <span>Add approval gate</span>
+          </div>
+          <div style="color: #16A34A; font-size: 0.68rem;">✓ Approved · Ready to merge</div>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <span style="background: #16A34A; color: #fff; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.62rem;">v1.4.2</span>
+          <span style="background: #252a36; color: #9ca3af; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.62rem;">production</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. OPEN vs ENTERPRISE -->
+  <div style="padding: 4.5rem 2rem; background: #fff; border-top: 1px solid #E5E7EB;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.75rem; font-weight: 500; margin-bottom: 0.5rem; text-align: center; color: #121826;">Open where transparency matters.<br>Enterprise where control matters.</h2>
+      <p style="color: #5B6475; text-align: center; margin-bottom: 3rem;">Developer trust + business accountability in the same platform.</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div style="padding: 1.75rem; border: 1px solid #E5E7EB; border-radius: 10px; background: #FAFBFC;">
+          <h3 style="font-size: 1rem; font-weight: 500; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; color: #121826;">
+            <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Open source foundation
+          </h3>
+          <ul style="color: #5B6475; font-size: 0.85rem; list-style: none; display: flex; flex-direction: column; gap: 0.4rem;">
+            <li>• Runtime base</li>
+            <li>• SDK and CLI</li>
+            <li>• Workflow spec</li>
+            <li>• Templates & connectors</li>
+            <li>• Local developer tooling</li>
+          </ul>
+        </div>
+        <div style="padding: 1.75rem; border: 2px solid #7C3AED; border-radius: 10px; background: rgba(124,58,237,0.02);">
+          <h3 style="font-size: 1rem; font-weight: 500; margin-bottom: 1rem; color: #7C3AED;">Enterprise control layer</h3>
+          <ul style="color: #5B6475; font-size: 0.85rem; list-style: none; display: flex; flex-direction: column; gap: 0.4rem;">
+            <li>• Control plane</li>
+            <li>• RBAC & approval policies</li>
+            <li>• Audit store & evidence</li>
+            <li>• Isolated execution</li>
+            <li>• SSO / enterprise security</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div style="padding: 5rem 2rem; background: linear-gradient(180deg, #F6F7FB 0%, #EEF1F7 100%); text-align: center; border-top: 1px solid #E5E7EB;">
+    <h2 style="font-size: 2rem; font-weight: 500; margin-bottom: 0.75rem; color: #121826;">Build openly. Operate responsibly.</h2>
+    <p style="color: #5B6475; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto;">Move from experimental AI flows to governed business operations.</p>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2rem;">
+      <button style="background: #7C3AED; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: 500;">Book demo</button>
+      <button style="background: #fff; color: #121826; border: 1px solid #D9DFEA; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+        <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        Start on GitHub
+      </button>
+    </div>
+    <div style="display: flex; gap: 2rem; justify-content: center; color: #5B6475; font-size: 0.85rem;">
+      <span>✦ Open foundation</span>
+      <span>✦ GitHub-native</span>
+      <span>✦ Enterprise control</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="padding: 2rem; background: #fff; border-top: 1px solid #E5E7EB; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #5B6475;">
+    <div>© 2025 Passflow · Open source under Apache 2.0</div>
+    <div style="display: flex; gap: 1.5rem;">
+      <span>Docs</span>
+      <span>GitHub</span>
+      <span>Security</span>
+      <span>Privacy</span>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div style="max-width: 900px; margin: 2rem auto; padding: 2rem; background: #fff; border: 1px solid #E5E7EB; border-radius: 10px;">
+    <h3 style="margin-bottom: 1rem; color: #7C3AED;">Light Premium - Diferencias clave</h3>
+    <ul style="color: #5B6475; line-height: 2; font-size: 0.9rem;">
+      <li><strong style="color: #121826;">Fondo</strong>: #F6F7FB (gris cálido) y #FFFFFF, no negro</li>
+      <li><strong style="color: #121826;">Texto</strong>: #121826 (casi negro) sobre claro = más legible</li>
+      <li><strong style="color: #121826;">Mockup</strong>: Oscuro con sombra suave = contraste elegante</li>
+      <li><strong style="color: #121826;">Violeta</strong>: Solo en CTAs, títulos de cards, estados activos</li>
+      <li><strong style="color: #121826;">Header</strong>: Translúcido claro, no oscuro sólido</li>
+      <li><strong style="color: #121826;">Sensación</strong>: Más abierto, más GitHub-native, menos "security dashboard"</li>
+      <li><strong style="color: #121826;">Balance</strong>: 70% claro, 20% neutro, 10% acento</li>
+    </ul>
+    <p style="color: #5B6475; margin-top: 1.5rem; font-style: italic;">
+      "La marca se ve más premium, más abierta, más GitHub-native, menos SOC dashboard genérico."
+    </p>
+  </div>
+
+</body>
+</html>

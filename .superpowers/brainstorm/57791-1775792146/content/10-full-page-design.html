@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: #f8f8f8; color: #333; line-height: 1.6; }
+    .page { background: white; max-width: 1200px; margin: 2rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .section-label { background: #C46849; color: white; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+  </style>
+</head>
+<body>
+  <div style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: #0f0f0f;">Diseño Completo: Passflow Landing</h1>
+    <p style="color: #666; margin-bottom: 2rem;">Aplicando los principios de Claude Code: conversión, claridad, time-to-first-use.</p>
+  </div>
+
+  <div class="page">
+    <!-- SECTION: HEADER -->
+    <div class="section-label">Header - Mínimo, sin ruido</div>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 1px solid #eee; background: white;">
+      <div style="font-weight: 600; font-size: 1.1rem;">Passflow</div>
+      <div style="display: flex; gap: 2rem; color: #666; font-size: 0.875rem;">
+        <span>Docs</span>
+        <span>Use Cases</span>
+        <span>Pricing</span>
+      </div>
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <a href="#" style="color: #0f0f0f; text-decoration: none; font-size: 0.875rem; display: flex; align-items: center; gap: 0.4rem;">
+          <svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <button style="background: #0f0f0f; color: white; padding: 0.5rem 1rem; border: none; border-radius: 6px; font-size: 0.875rem; cursor: pointer;">Try Passflow</button>
+      </div>
+    </div>
+
+    <!-- SECTION: HERO -->
+    <div class="section-label">Hero - Una promesa brutal + instalación visible</div>
+    <div style="padding: 5rem 2rem; text-align: center; background: white;">
+
+      <!-- OSS Badge -->
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #f5f5f5; border: 1px solid #e5e5e5; padding: 0.5rem 1rem; border-radius: 999px; margin-bottom: 1.5rem;">
+        <span style="font-size: 0.8rem; font-weight: 500;">✦ Open Source</span>
+        <span style="color: #ccc;">•</span>
+        <span style="color: #666; font-size: 0.8rem;">Apache 2.0</span>
+      </div>
+
+      <!-- Headline - UNA promesa -->
+      <h1 style="font-size: 3.25rem; font-weight: 400; line-height: 1.1; margin-bottom: 1.25rem; letter-spacing: -0.03em; max-width: 700px; margin-left: auto; margin-right: auto;">
+        AI agents that run<br><span style="color: #C46849;">your infrastructure</span>
+      </h1>
+
+      <!-- Subheadline - operativa -->
+      <p style="color: #666; font-size: 1.15rem; margin-bottom: 2.5rem; max-width: 550px; margin-left: auto; margin-right: auto;">
+        Deploy agents that reason, act, and self-destruct. Ephemeral K8s pods. No servers to manage.
+      </p>
+
+      <!-- Install command - TIME TO FIRST USE -->
+      <div style="background: #fafafa; border: 1px solid #e5e5e5; border-radius: 10px; padding: 1rem 1.5rem; display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <code style="font-family: 'SF Mono', 'JetBrains Mono', monospace; font-size: 0.9rem;">
+          <span style="color: #999;">$</span> git clone https://github.com/passflow-ai/passflow && cd passflow && make dev
+        </code>
+        <button style="background: #e5e5e5; color: #666; border: none; padding: 0.35rem 0.7rem; border-radius: 4px; font-size: 0.7rem; cursor: pointer;">Copy</button>
+      </div>
+
+      <!-- CTAs -->
+      <div style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem;">
+        <button style="background: #0f0f0f; color: white; padding: 0.75rem 1.25rem; border: none; border-radius: 8px; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+          <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </button>
+        <button style="background: white; color: #0f0f0f; border: 1px solid #e5e5e5; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9rem; cursor: pointer;">
+          Read the docs
+        </button>
+        <button style="background: #C46849; color: white; border: none; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.9rem; cursor: pointer;">
+          Try Cloud →
+        </button>
+      </div>
+
+      <!-- GitHub stats -->
+      <div style="display: flex; gap: 2rem; justify-content: center; color: #999; font-size: 0.85rem;">
+        <span>⭐ <span style="color: #0f0f0f;">1.2k</span></span>
+        <span>🍴 <span style="color: #0f0f0f;">89</span></span>
+        <span>📦 <span style="color: #0f0f0f;">v0.15.0</span></span>
+      </div>
+    </div>
+
+    <!-- SECTION: SOCIAL PROOF CON NÚMEROS -->
+    <div class="section-label">Prueba Social - Números, no solo logos</div>
+    <div style="padding: 3rem 2rem; background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; max-width: 800px; margin: 0 auto;">
+        <div>
+          <div style="font-size: 2rem; font-weight: 600; color: #0f0f0f;">&lt;100ms</div>
+          <div style="color: #888; font-size: 0.8rem;">cold start</div>
+        </div>
+        <div>
+          <div style="font-size: 2rem; font-weight: 600; color: #0f0f0f;">6</div>
+          <div style="color: #888; font-size: 0.8rem;">LLM providers</div>
+        </div>
+        <div>
+          <div style="font-size: 2rem; font-weight: 600; color: #0f0f0f;">27</div>
+          <div style="color: #888; font-size: 0.8rem;">MCP tools</div>
+        </div>
+        <div>
+          <div style="font-size: 2rem; font-weight: 600; color: #0f0f0f;">0</div>
+          <div style="color: #888; font-size: 0.8rem;">idle cost</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: USE CASES POR ICP -->
+    <div class="section-label">Jobs-to-be-done - 3 casos por ICP</div>
+    <div style="padding: 4rem 2rem; background: white;">
+      <h2 style="text-align: center; font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem;">What you can build</h2>
+      <p style="text-align: center; color: #666; margin-bottom: 3rem;">Real patterns, not demos.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <!-- Card 1 -->
+        <div style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 1.5rem; background: white;">
+          <div style="background: #f5f5f5; color: #666; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; display: inline-block; margin-bottom: 1rem;">INFRASTRUCTURE</div>
+          <h3 style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">K8s Self-Healing</h3>
+          <p style="color: #666; font-size: 0.875rem; margin-bottom: 1rem;">Agent monitors Prometheus, detects anomalies, restarts pods. No 3AM pages.</p>
+          <div style="color: #C46849; font-size: 0.8rem;">60-80% faster MTTR →</div>
+        </div>
+        <!-- Card 2 -->
+        <div style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 1.5rem; background: white;">
+          <div style="background: #f5f5f5; color: #666; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; display: inline-block; margin-bottom: 1rem;">SALES</div>
+          <h3 style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Outbound Enrichment</h3>
+          <p style="color: #666; font-size: 0.875rem; margin-bottom: 1rem;">Agent enriches CRM leads, classifies ICP, sends personalized sequences.</p>
+          <div style="color: #C46849; font-size: 0.8rem;">3-5x more prospects →</div>
+        </div>
+        <!-- Card 3 -->
+        <div style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 1.5rem; background: white;">
+          <div style="background: #f5f5f5; color: #666; font-size: 0.7rem; padding: 0.25rem 0.5rem; border-radius: 4px; display: inline-block; margin-bottom: 1rem;">DEVOPS</div>
+          <h3 style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">GitOps Reconciliation</h3>
+          <p style="color: #666; font-size: 0.875rem; margin-bottom: 1rem;">Agent detects drift, generates diff, applies fix or requests approval.</p>
+          <div style="color: #C46849; font-size: 0.8rem;">90% less drift →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: HOW IT WORKS -->
+    <div class="section-label">Cómo funciona - Flujo claro</div>
+    <div style="padding: 4rem 2rem; background: #fafafa; border-top: 1px solid #eee;">
+      <h2 style="text-align: center; font-size: 1.75rem; font-weight: 400; margin-bottom: 2.5rem;">How it works</h2>
+
+      <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
+        <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1rem 1.25rem; text-align: center;">
+          <div style="font-size: 0.7rem; color: #999; margin-bottom: 0.25rem;">1</div>
+          <div style="font-weight: 500;">Trigger</div>
+          <div style="font-size: 0.75rem; color: #666;">Cron, Slack, webhook</div>
+        </div>
+        <div style="color: #ccc;">→</div>
+        <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1rem 1.25rem; text-align: center;">
+          <div style="font-size: 0.7rem; color: #999; margin-bottom: 0.25rem;">2</div>
+          <div style="font-weight: 500;">Queue</div>
+          <div style="font-size: 0.75rem; color: #666;">Redis Stream</div>
+        </div>
+        <div style="color: #ccc;">→</div>
+        <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1rem 1.25rem; text-align: center;">
+          <div style="font-size: 0.7rem; color: #999; margin-bottom: 0.25rem;">3</div>
+          <div style="font-weight: 500;">Pod</div>
+          <div style="font-size: 0.75rem; color: #666;">Ephemeral K8s</div>
+        </div>
+        <div style="color: #ccc;">→</div>
+        <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1rem 1.25rem; text-align: center;">
+          <div style="font-size: 0.7rem; color: #999; margin-bottom: 0.25rem;">4</div>
+          <div style="font-weight: 500;">ReAct</div>
+          <div style="font-size: 0.75rem; color: #666;">Reason + Act loop</div>
+        </div>
+        <div style="color: #ccc;">→</div>
+        <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 1rem 1.25rem; text-align: center;">
+          <div style="font-size: 0.7rem; color: #999; margin-bottom: 0.25rem;">5</div>
+          <div style="font-weight: 500;">Done</div>
+          <div style="font-size: 0.75rem; color: #666;">Pod destroyed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: TRUST/SECURITY -->
+    <div class="section-label">Confianza - Seguridad sin fricción</div>
+    <div style="padding: 4rem 2rem; background: white; border-top: 1px solid #eee;">
+      <h2 style="text-align: center; font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem;">Built for compliance</h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2.5rem;">Your auditor will be happy.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; text-align: center;">
+        <div>
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌎</div>
+          <div style="font-weight: 500; margin-bottom: 0.25rem;">Data Residency</div>
+          <div style="font-size: 0.8rem; color: #666;">OKE, EKS, GKE, on-prem</div>
+        </div>
+        <div>
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔐</div>
+          <div style="font-weight: 500; margin-bottom: 0.25rem;">AES-256</div>
+          <div style="font-size: 0.8rem; color: #666;">Credentials encrypted</div>
+        </div>
+        <div>
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📋</div>
+          <div style="font-weight: 500; margin-bottom: 0.25rem;">Audit Trail</div>
+          <div style="font-size: 0.8rem; color: #666;">Every action logged</div>
+        </div>
+        <div>
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">👤</div>
+          <div style="font-weight: 500; margin-bottom: 0.25rem;">Human-in-the-loop</div>
+          <div style="font-size: 0.8rem; color: #666;">Approval before action</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: PRICING -->
+    <div class="section-label">Pricing - Claro y directo</div>
+    <div style="padding: 4rem 2rem; background: #fafafa; border-top: 1px solid #eee;">
+      <h2 style="text-align: center; font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem;">Pricing</h2>
+      <p style="text-align: center; color: #666; margin-bottom: 2.5rem;">Pay for execution, not seats.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+        <!-- Free -->
+        <div style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 1.5rem; background: white;">
+          <div style="font-weight: 500; margin-bottom: 0.5rem;">Free</div>
+          <div style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">$0<span style="font-size: 0.875rem; font-weight: 400; color: #666;">/mo</span></div>
+          <ul style="list-style: none; font-size: 0.85rem; color: #666; margin-bottom: 1.5rem;">
+            <li style="margin-bottom: 0.5rem;">✓ 3 agents</li>
+            <li style="margin-bottom: 0.5rem;">✓ 500K tokens/mo</li>
+            <li>✓ Community support</li>
+          </ul>
+          <button style="width: 100%; background: white; border: 1px solid #e5e5e5; padding: 0.6rem; border-radius: 6px; cursor: pointer;">Start free</button>
+        </div>
+        <!-- Growth -->
+        <div style="border: 2px solid #C46849; border-radius: 12px; padding: 1.5rem; background: white; position: relative;">
+          <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #C46849; color: white; font-size: 0.65rem; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase;">Popular</div>
+          <div style="font-weight: 500; margin-bottom: 0.5rem;">Growth</div>
+          <div style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">$299<span style="font-size: 0.875rem; font-weight: 400; color: #666;">/mo</span></div>
+          <ul style="list-style: none; font-size: 0.85rem; color: #666; margin-bottom: 1.5rem;">
+            <li style="margin-bottom: 0.5rem;">✓ 15 agents</li>
+            <li style="margin-bottom: 0.5rem;">✓ 15M tokens/mo</li>
+            <li>✓ Priority support</li>
+          </ul>
+          <button style="width: 100%; background: #C46849; color: white; border: none; padding: 0.6rem; border-radius: 6px; cursor: pointer;">Get started</button>
+        </div>
+        <!-- Business -->
+        <div style="border: 1px solid #e5e5e5; border-radius: 12px; padding: 1.5rem; background: white;">
+          <div style="font-weight: 500; margin-bottom: 0.5rem;">Business</div>
+          <div style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">$799<span style="font-size: 0.875rem; font-weight: 400; color: #666;">/mo</span></div>
+          <ul style="list-style: none; font-size: 0.85rem; color: #666; margin-bottom: 1.5rem;">
+            <li style="margin-bottom: 0.5rem;">✓ Unlimited agents</li>
+            <li style="margin-bottom: 0.5rem;">✓ 40M tokens/mo</li>
+            <li>✓ SSO, SLA 99.9%</li>
+          </ul>
+          <button style="width: 100%; background: white; border: 1px solid #e5e5e5; padding: 0.6rem; border-radius: 6px; cursor: pointer;">Contact sales</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: FINAL CTA -->
+    <div class="section-label">CTA Final - Repetir la acción</div>
+    <div style="padding: 4rem 2rem; background: white; border-top: 1px solid #eee; text-align: center;">
+      <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 1rem;">Start building in 5 minutes</h2>
+      <p style="color: #666; margin-bottom: 2rem;">Clone, configure, deploy. No calls, no contracts.</p>
+
+      <!-- Repeat install command -->
+      <div style="background: #fafafa; border: 1px solid #e5e5e5; border-radius: 10px; padding: 1rem 1.5rem; display: inline-flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <code style="font-family: monospace; font-size: 0.9rem;">
+          <span style="color: #999;">$</span> git clone https://github.com/passflow-ai/passflow
+        </code>
+        <button style="background: #e5e5e5; color: #666; border: none; padding: 0.35rem 0.7rem; border-radius: 4px; font-size: 0.7rem;">Copy</button>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: center;">
+        <button style="background: #0f0f0f; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </button>
+        <button style="background: #C46849; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 0.9rem;">
+          Try Cloud free
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="section-label">Footer - Mínimo</div>
+    <div style="padding: 2rem; background: #fafafa; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #666;">
+      <div>© 2025 Passflow. Open source under Apache 2.0.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <span>Docs</span>
+        <span>GitHub</span>
+        <span>Privacy</span>
+        <span>Terms</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width: 900px; margin: 2rem auto; padding: 2rem; background: #fff8f5; border: 1px solid #f0e0d8; border-radius: 8px;">
+    <h3 style="margin-bottom: 1rem; color: #C46849;">Resumen del diseño</h3>
+    <ul style="color: #666; line-height: 1.8;">
+      <li><strong>Header mínimo</strong>: logo, 3 nav items, GitHub + CTA</li>
+      <li><strong>Hero brutal</strong>: badge OSS, una promesa, git clone visible, 3 CTAs, GitHub stats</li>
+      <li><strong>Prueba social con números</strong>: métricas técnicas, no logos vacíos</li>
+      <li><strong>3 use cases por ICP</strong>: Infra, Sales, DevOps con resultados concretos</li>
+      <li><strong>How it works</strong>: flujo visual de 5 pasos</li>
+      <li><strong>Trust/Security</strong>: 4 puntos de compliance</li>
+      <li><strong>Pricing</strong>: 3 planes claros, Growth destacado</li>
+      <li><strong>CTA final</strong>: repite git clone y botones</li>
+      <li><strong>Footer mínimo</strong>: copyright, 4 links</li>
+    </ul>
+  </div>
+
+</body>
+</html>

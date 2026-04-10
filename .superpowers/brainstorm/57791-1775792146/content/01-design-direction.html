@@ -1,0 +1,76 @@
+<h2>Dirección de Diseño</h2>
+<p class="subtitle">La página de Claude Agents tiene un estilo diferente al actual de Passflow. ¿Qué nivel de cambio quieres aplicar?</p>
+
+<div class="section">
+  <h3>Diseño Actual de Passflow</h3>
+  <div class="mockup">
+    <div class="mockup-header">passflow.ai - Estilo actual</div>
+    <div class="mockup-body" style="background: #0A0A0F; padding: 2rem;">
+      <div style="font-family: monospace; color: #00FF87; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">PASSFLOW.AI</div>
+      <h1 style="font-family: 'Playfair Display', serif; color: #E8E8F0; font-size: 2rem; margin-bottom: 1rem;">Agentes que actúan. <span style="color: #00FF87;">Infraestructura que se gobierna sola.</span></h1>
+      <p style="color: #6B7280; margin-bottom: 1.5rem;">Pods efímeros, resultados permanentes.</p>
+      <div style="display: flex; gap: 1rem;">
+        <button style="background: #00FF87; color: #0A0A0F; padding: 0.75rem 1.5rem; border: none; font-family: monospace; text-transform: uppercase; font-size: 0.75rem;">Ver Demo</button>
+        <button style="background: transparent; color: #00FF87; border: 1px solid #00FF87; padding: 0.75rem 1.5rem; font-family: monospace; text-transform: uppercase; font-size: 0.75rem;">Docs</button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #1E1E2E;">
+        <div><span style="color: #00FF87; font-size: 1.25rem; font-family: monospace;">&lt;100ms</span><br><span style="color: #6B7280; font-size: 0.625rem; text-transform: uppercase;">cold start</span></div>
+        <div><span style="color: #00FF87; font-size: 1.25rem; font-family: monospace;">6</span><br><span style="color: #6B7280; font-size: 0.625rem; text-transform: uppercase;">LLM providers</span></div>
+        <div><span style="color: #00FF87; font-size: 1.25rem; font-family: monospace;">27</span><br><span style="color: #6B7280; font-size: 0.625rem; text-transform: uppercase;">MCP tools</span></div>
+        <div><span style="color: #00FF87; font-size: 1.25rem; font-family: monospace;">Pods</span><br><span style="color: #6B7280; font-size: 0.625rem; text-transform: uppercase;">aislados</span></div>
+      </div>
+    </div>
+  </div>
+  <p style="color: #888; font-size: 0.875rem; margin-top: 0.5rem;">Dark theme terminal-style, verde neón (#00FF87), tipografía monospace, estética industrial</p>
+</div>
+
+<div class="section">
+  <h3>Estilo de Claude Agents (referencia)</h3>
+  <div class="mockup">
+    <div class="mockup-header">claude.com/solutions/agents - Estilo de referencia</div>
+    <div class="mockup-body" style="background: linear-gradient(180deg, #1a1a2e 0%, #16161f 100%); padding: 2rem;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 2rem;">
+        <span style="color: #E8E8F0; font-weight: 600;">Claude</span>
+        <div style="display: flex; gap: 2rem; color: #9CA3AF; font-size: 0.875rem;">
+          <span>Products</span><span>Solutions</span><span>Research</span>
+        </div>
+      </div>
+      <h1 style="font-family: system-ui; color: #E8E8F0; font-size: 2.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 1rem;">Build AI agents<br>that work for you</h1>
+      <p style="color: #9CA3AF; font-size: 1.125rem; margin-bottom: 2rem; max-width: 500px;">Automate complex workflows with Claude's powerful reasoning capabilities.</p>
+      <div style="display: flex; gap: 1rem;">
+        <button style="background: #C46849; color: white; padding: 0.875rem 1.5rem; border: none; border-radius: 6px; font-size: 0.875rem;">Start building</button>
+        <button style="background: transparent; color: #E8E8F0; border: 1px solid #3A3A4A; padding: 0.875rem 1.5rem; border-radius: 6px; font-size: 0.875rem;">Contact sales</button>
+      </div>
+      <div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 12px; display: flex; justify-content: center;">
+        <div style="width: 200px; height: 100px; background: linear-gradient(135deg, #C46849 0%, #8B4513 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem;">Lottie Animation</div>
+      </div>
+    </div>
+  </div>
+  <p style="color: #888; font-size: 0.875rem; margin-top: 0.5rem;">Minimalista, tipografía sans-serif limpia, colores cálidos (#C46849), animaciones Lottie, espaciado amplio</p>
+</div>
+
+<h3 style="margin-top: 2rem;">¿Qué nivel de cambio prefieres?</h3>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Adopción completa del estilo Claude</h3>
+      <p>Cambiar paleta de colores, tipografía, y componentes para parecerse a Claude. Abandonar el estilo terminal/industrial actual. Incluir animaciones Lottie y diseño más minimalista.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Estructura de Claude + estética Passflow</h3>
+      <p>Copiar la estructura de secciones, layout y flujo de navegación de Claude, pero mantener los colores verde neón, tipografía monospace y estética técnica de Passflow.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Híbrido: modernizar Passflow inspirándose en Claude</h3>
+      <p>Tomar lo mejor de ambos: estructura limpia de Claude, tipografía más legible (Inter/system), pero conservar el dark theme con acentos verdes. Añadir animaciones sutiles sin Lottie.</p>
+    </div>
+  </div>
+</div>
