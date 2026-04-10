@@ -460,6 +460,36 @@ body {
   padding: var(--space-4);
 }
 
+.mockup-traffic-lights {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.mockup-traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.mockup-node {
+  background: var(--mockup-surface);
+  border: 1px solid var(--mockup-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  color: var(--text-on-dark);
+  font-size: var(--text-xs);
+}
+
+.mockup-node-pending {
+  border-color: var(--color-warning);
+  background: rgba(217, 119, 6, 0.08);
+}
+
+.mockup-node-success {
+  border-color: var(--color-success);
+  background: rgba(22, 163, 74, 0.08);
+}
+
 /* --------------------------------------------------------
    BADGES
    -------------------------------------------------------- */
