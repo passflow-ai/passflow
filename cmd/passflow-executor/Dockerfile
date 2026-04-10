@@ -1,41 +1,31 @@
-FROM golang:1.23-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 ENV GOTOOLCHAIN=auto
-ENV GOPRIVATE=github.com/jaak-ai/*
 
-# Install build dependencies
-RUN apk add --no-cache git ca-certificates openssh-client
+RUN apk add --no-cache git ca-certificates
 
 WORKDIR /app
 
-# Copy go mod files first for better caching
+# Copy entire monorepo for local module resolution
 COPY go.mod go.sum ./
+COPY pkg/ pkg/
+COPY cmd/passflow-executor/ cmd/passflow-executor/
 
-# Configure SSH for private repos (requires GITHUB_TOKEN secret)
-RUN --mount=type=secret,id=github_token \
-    git config --global url."https://oauth2:$(cat /run/secrets/github_token)@github.com".insteadOf "https://github.com"
+# Download dependencies
+RUN go mod download
 
-# Download dependencies with cache mount
-RUN --mount=type=cache,target=/go/pkg/mod \
-    --mount=type=secret,id=github_token \
-    go mod download
-
-# Copy source code
-COPY . .
-
-# Build with cache mount
-RUN --mount=type=cache,target=/go/pkg/mod \
-    --mount=type=cache,target=/root/.cache/go-build \
-    --mount=type=secret,id=github_token \
-    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o passflow-agent-executor .
+# Build the executor
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
+    -ldflags="-w -s" \
+    -o passflow-executor \
+    ./cmd/passflow-executor
 
 # Runtime image
-FROM alpine:3.19
+FROM alpine:3.20
 
 ARG K8SGPT_VERSION=v0.4.26
 
-# Install required tools
-RUN apk --no-cache add ca-certificates git openssh-client curl && \
+RUN apk --no-cache add ca-certificates git curl && \
     curl -LO "https://github.com/k8sgpt-ai/k8sgpt/releases/download/${K8SGPT_VERSION}/k8sgpt_amd64.apk" && \
     apk add --allow-untrusted k8sgpt_amd64.apk && \
     rm -f k8sgpt_amd64.apk && \
@@ -43,10 +33,16 @@ RUN apk --no-cache add ca-certificates git openssh-client curl && \
     chmod +x kubectl && \
     mv kubectl /usr/local/bin/
 
+# Create non-root user
+RUN addgroup -g 1000 passflow && \
+    adduser -u 1000 -G passflow -s /bin/sh -D passflow
+
 WORKDIR /app
 
-COPY --from=builder /app/passflow-agent-executor .
+COPY --from=builder /app/passflow-executor .
 
-RUN mkdir -p /tmp/passflow && chmod 777 /tmp/passflow
+RUN mkdir -p /tmp/passflow && chown passflow:passflow /tmp/passflow
 
-ENTRYPOINT ["./passflow-agent-executor"]
+USER passflow
+
+ENTRYPOINT ["./passflow-executor"]

@@ -1,4 +1,7 @@
-FROM golang:1.25-alpine AS builder
+# =============================================================================
+# PASSFLOW MCP GATEWAY - Multi-stage Dockerfile (Monorepo)
+# =============================================================================
+FROM golang:1.24-alpine AS builder
 
 ENV GOTOOLCHAIN=auto
 
@@ -6,23 +9,38 @@ RUN apk add --no-cache git ca-certificates
 
 WORKDIR /app
 
-# Copy go mod files first for better caching
+# Copy entire monorepo for local module resolution
 COPY go.mod go.sum ./
+COPY pkg/ pkg/
+COPY cmd/passflow-mcp-gateway/ cmd/passflow-mcp-gateway/
 
-# Download dependencies with cache mount
-RUN --mount=type=cache,target=/go/pkg/mod \
-    go mod download
+# Download dependencies
+RUN go mod download
 
-# Copy source code
-COPY . .
+# Build
+RUN CGO_ENABLED=0 GOOS=linux go build \
+    -ldflags="-w -s" \
+    -o /app/passflow-mcp-gateway \
+    ./cmd/passflow-mcp-gateway
 
-# Build with cache mount
-RUN --mount=type=cache,target=/go/pkg/mod \
-    --mount=type=cache,target=/root/.cache/go-build \
-    CGO_ENABLED=0 go build -ldflags="-w -s" -o passflow-mcp-gateway .
+# Runtime
+FROM alpine:3.20
 
-FROM alpine:3.19
 RUN apk --no-cache add ca-certificates
-COPY --from=builder /app/passflow-mcp-gateway /usr/local/bin/
+
+# Create non-root user
+RUN addgroup -g 1000 -S passflow && \
+    adduser -u 1000 -S passflow -G passflow
+
+WORKDIR /app
+
+COPY --from=builder /app/passflow-mcp-gateway /app/passflow-mcp-gateway
+
+USER passflow
+
 EXPOSE 8080
-CMD ["passflow-mcp-gateway"]
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD wget --no-verbose --tries=1 --spider http://localhost:8080/health || exit 1
+
+ENTRYPOINT ["/app/passflow-mcp-gateway"]
