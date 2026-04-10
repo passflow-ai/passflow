@@ -1,6 +1,6 @@
 # Passflow Design System
 
-Dark, industrial-technical aesthetic. Terminal interfaces, not SaaS dashboards.
+Light-premium aesthetic with clear backgrounds, dark mockups, and minimal violet accents. Positioning: "The workflow operating system" with open-source foundation + enterprise control.
 
 ---
 
@@ -12,121 +12,74 @@ Dark, industrial-technical aesthetic. Terminal interfaces, not SaaS dashboards.
      COLORS
      -------------------------------------------------------- */
 
-  /* Backgrounds */
-  --bg-primary:       #0A0A0F;
-  --bg-elevated:      #111118;
-  --bg-surface:       #16161F;
-  --bg-overlay:       rgba(10, 10, 15, 0.85);
+  /* Backgrounds (light-premium: ~65% coverage) */
+  --bg-primary:       #F6F7FB;    /* Main page background (warm gray) */
+  --bg-alternate:     #F1F4FA;    /* Alternate section background */
+  --bg-surface:       #FFFFFF;    /* Cards, overlays, header */
+  --bg-technical:     #0F1117;    /* Dark mockups (product UI) */
 
-  /* Accent: Terminal Green */
-  --accent-primary:       #00FF87;
-  --accent-primary-rgb:   0, 255, 135;
-  --accent-primary-muted: #00CC6A;
-  --accent-primary-dim:   #00994F;
-  --accent-primary-ghost: rgba(0, 255, 135, 0.08);
-  --accent-primary-glow:  rgba(0, 255, 135, 0.25);
-
-  /* Accent: Electric Blue */
-  --accent-secondary:       #0066FF;
-  --accent-secondary-rgb:   0, 102, 255;
-  --accent-secondary-muted: #0052CC;
-  --accent-secondary-dim:   #003D99;
-  --accent-secondary-ghost: rgba(0, 102, 255, 0.08);
-  --accent-secondary-glow:  rgba(0, 102, 255, 0.25);
-
-  /* Text */
-  --text-primary:   #E8E8F0;
-  --text-secondary: #6B7280;
-  --text-tertiary:  #4B5563;
-  --text-disabled:  #374151;
-  --text-inverse:   #0A0A0F;
-  --text-accent:    #00FF87;
+  /* Text colors */
+  --text-primary:     #121826;    /* Titles, main text */
+  --text-secondary:   #5B6475;    /* Descriptions, labels */
+  --text-muted:       #9CA3AF;    /* Metadata, timestamps */
+  --text-on-dark:     #E8E8F0;    /* Text on dark backgrounds */
 
   /* Borders */
-  --border-primary:   #1E1E2E;
-  --border-secondary: #2A2A3A;
-  --border-hover:     #3A3A4A;
-  --border-focus:     #00FF87;
-  --border-error:     #FF3B5C;
+  --border-light:     #E5E7EB;    /* Light subtle borders */
+  --border-dark:      #1E2028;    /* Dark borders in mockups */
 
-  /* Semantic */
-  --color-success:      #00FF87;
-  --color-success-dim:  #00CC6A;
-  --color-error:        #FF3B5C;
-  --color-error-dim:    #CC2F4A;
-  --color-warning:      #FFB800;
-  --color-warning-dim:  #CC9300;
-  --color-info:         #0066FF;
-  --color-info-dim:     #0052CC;
+  /* Accent: Violet (~5% coverage) */
+  --violet-primary:   #7C3AED;    /* CTAs, keywords, active states */
+  --violet-hover:     #6D28D9;    /* Hover on buttons */
+  --violet-subtle:    rgba(124, 58, 237, 0.1);  /* Subtle backgrounds */
 
-  /* Gradients */
-  --gradient-hero:      linear-gradient(180deg, #0A0A0F 0%, #111118 50%, #0A0A0F 100%);
-  --gradient-radial:    radial-gradient(ellipse at center, rgba(0, 255, 135, 0.06) 0%, transparent 70%);
-  --gradient-card:      linear-gradient(135deg, #16161F 0%, #111118 100%);
-  --gradient-accent:    linear-gradient(135deg, #00FF87 0%, #0066FF 100%);
-  --gradient-text:      linear-gradient(135deg, #00FF87 0%, #0066FF 100%);
-  --gradient-scanline:  repeating-linear-gradient(
-                          0deg,
-                          transparent,
-                          transparent 2px,
-                          rgba(0, 255, 135, 0.03) 2px,
-                          rgba(0, 255, 135, 0.03) 4px
-                        );
-  --gradient-noise:     url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  /* Semantic colors */
+  --green-success:    #16A34A;    /* Success, approved, checkmarks */
+  --amber-pending:    #D97706;    /* Pending, awaiting, warning */
+  --red-error:        #DC2626;    /* Error, problems */
 
   /* --------------------------------------------------------
      TYPOGRAPHY
      -------------------------------------------------------- */
 
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: '-apple-system', 'BlinkMacSystemFont', 'Inter', 'system-ui', sans-serif;
   --font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-body:    '-apple-system', 'BlinkMacSystemFont', 'Inter', 'system-ui', sans-serif;
 
-  /* Type Scale (1.25 ratio -- Major Third) */
-  --text-xs:   0.75rem;    /* 12px */
-  --text-sm:   0.875rem;   /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg:   1.125rem;   /* 18px */
-  --text-xl:   1.25rem;    /* 20px */
-  --text-2xl:  1.5rem;     /* 24px */
-  --text-3xl:  1.875rem;   /* 30px */
-  --text-4xl:  2.25rem;    /* 36px */
-  --text-5xl:  3rem;       /* 48px */
-  --text-6xl:  3.75rem;    /* 60px */
-  --text-7xl:  4.5rem;     /* 72px */
+  /* Type Scale (light-premium: primarily Inter) */
+  --text-hero:      3.5rem;      /* 56px - Hero headline */
+  --text-h2:        1.75rem;     /* 28px - Section titles */
+  --text-h3:        1rem;        /* 16px - Card titles */
+  --text-body-lg:   1.05rem;     /* 17px - Hero description */
+  --text-body:      0.9rem;      /* 14px - Body text */
+  --text-sm:        0.85rem;     /* 14px - Secondary text */
+  --text-xs:        0.75rem;     /* 12px - Labels, metadata */
+  --text-xxs:       0.65rem;     /* 10px - Mockup internals */
 
   /* Line Heights */
-  --leading-none:    1;
-  --leading-tight:   1.15;
-  --leading-snug:    1.3;
-  --leading-normal:  1.5;
-  --leading-relaxed: 1.65;
-  --leading-loose:   2;
+  --leading-hero:     1.05;       /* Hero headline (tight) */
+  --leading-heading:  1.2;        /* Section titles */
+  --leading-tight:    1.4;        /* Card titles */
+  --leading-body-lg:  1.7;        /* Hero description */
+  --leading-body:     1.6;        /* Body text */
+  --leading-sm:       1.5;        /* Small text */
 
   /* Letter Spacing */
-  --tracking-tighter: -0.04em;
-  --tracking-tight:   -0.02em;
+  --tracking-hero:    -0.03em;    /* Hero headline */
+  --tracking-heading: -0.01em;    /* Section titles */
   --tracking-normal:   0;
-  --tracking-wide:     0.02em;
-  --tracking-wider:    0.05em;
-  --tracking-widest:   0.1em;
 
   /* Font Weights */
   --weight-regular:  400;
   --weight-medium:   500;
   --weight-semibold: 600;
   --weight-bold:     700;
-  --weight-black:    900;
 
   /* --------------------------------------------------------
-     SPACING (8px base grid)
+     SPACING (4px base grid)
      -------------------------------------------------------- */
 
-  --space-0:   0;
-  --space-px:  1px;
-  --space-0-5: 0.125rem;  /* 2px  */
   --space-1:   0.25rem;   /* 4px  */
-  --space-1-5: 0.375rem;  /* 6px  */
   --space-2:   0.5rem;    /* 8px  */
   --space-3:   0.75rem;   /* 12px */
   --space-4:   1rem;      /* 16px */
@@ -137,44 +90,32 @@ Dark, industrial-technical aesthetic. Terminal interfaces, not SaaS dashboards.
   --space-12:  3rem;      /* 48px */
   --space-16:  4rem;      /* 64px */
   --space-20:  5rem;      /* 80px */
-  --space-24:  6rem;      /* 96px */
-  --space-32:  8rem;      /* 128px */
 
   /* --------------------------------------------------------
      LAYOUT
      -------------------------------------------------------- */
 
-  --max-width-content: 1200px;
-  --max-width-narrow:  800px;
+  --max-width-content: 1300px;
+  --max-width-narrow:  900px;
   --max-width-wide:    1400px;
 
-  --section-padding-y:        var(--space-20);   /* 80px mobile  */
-  --section-padding-y-desktop: var(--space-24);   /* 96px desktop */
-  --container-padding-x:       var(--space-4);    /* 16px mobile  */
-  --container-padding-x-tablet: var(--space-6);   /* 24px tablet  */
-  --container-padding-x-desktop: var(--space-8);  /* 32px desktop */
+  --section-padding-v:  4.5rem;     /* Section vertical padding */
+  --section-padding-h:  2rem;       /* Section horizontal padding */
 
   /* --------------------------------------------------------
      BORDERS & RADII
      -------------------------------------------------------- */
 
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   12px;
-  --radius-xl:   16px;
-  --radius-full: 9999px;
+  --radius-button:  8px;
+  --radius-card:    10px;
+  --radius-mockup:  12px;
 
   /* --------------------------------------------------------
      SHADOWS & EFFECTS
      -------------------------------------------------------- */
 
-  --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-lg:    0 8px 24px rgba(0, 0, 0, 0.6);
-  --shadow-glow-green: 0 0 20px rgba(0, 255, 135, 0.15),
-                       0 0 60px rgba(0, 255, 135, 0.05);
-  --shadow-glow-blue:  0 0 20px rgba(0, 102, 255, 0.15),
-                       0 0 60px rgba(0, 102, 255, 0.05);
+  --shadow-mockup:  0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  --shadow-card:    0 15px 40px -10px rgba(0, 0, 0, 0.12);
 
   /* --------------------------------------------------------
      TRANSITIONS
@@ -183,11 +124,8 @@ Dark, industrial-technical aesthetic. Terminal interfaces, not SaaS dashboards.
   --duration-fast:   150ms;
   --duration-normal: 250ms;
   --duration-slow:   400ms;
-  --duration-slower:  600ms;
   --easing-default:  cubic-bezier(0.4, 0, 0.2, 1);
-  --easing-in:       cubic-bezier(0.4, 0, 1, 1);
   --easing-out:      cubic-bezier(0, 0, 0.2, 1);
-  --easing-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* --------------------------------------------------------
      Z-INDEX SCALE
@@ -207,26 +145,43 @@ Dark, industrial-technical aesthetic. Terminal interfaces, not SaaS dashboards.
 
 ## Color Palette
 
-| Token                  | Hex / Value             | Usage                                  |
-|------------------------|-------------------------|----------------------------------------|
-| `--bg-primary`         | `#0A0A0F`               | Page background, body                  |
-| `--bg-elevated`        | `#111118`               | Cards, raised surfaces                 |
-| `--bg-surface`         | `#16161F`               | Input backgrounds, code blocks         |
-| `--bg-overlay`         | `rgba(10,10,15,0.85)`   | Modal overlays, backdrop               |
-| `--accent-primary`     | `#00FF87`               | CTAs, highlights, active states        |
-| `--accent-secondary`   | `#0066FF`               | Links, secondary actions, info         |
-| `--text-primary`       | `#E8E8F0`               | Headings, body copy                    |
-| `--text-secondary`     | `#6B7280`               | Descriptions, metadata                 |
-| `--text-tertiary`      | `#4B5563`               | Placeholders, captions                 |
-| `--border-primary`     | `#1E1E2E`               | Card borders, dividers                 |
-| `--border-focus`       | `#00FF87`               | Focus rings, active borders            |
+### Foundation Colors
 
-### Semantic Colors
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--bg-primary` | `#F6F7FB` | Main page background (warm gray) |
+| `--bg-alternate` | `#F1F4FA` | Alternate section backgrounds |
+| `--bg-surface` | `#FFFFFF` | Cards, overlays, header |
+| `--bg-technical` | `#0F1117` | Dark product mockups |
+| `--border-light` | `#E5E7EB` | Subtle borders on light backgrounds |
+| `--border-dark` | `#1E2028` | Borders in dark mockups |
 
-- **Success:** `#00FF87` -- shares the terminal green accent.
-- **Error:** `#FF3B5C` -- high contrast red for destructive states.
-- **Warning:** `#FFB800` -- amber for caution indicators.
-- **Info:** `#0066FF` -- shares the electric blue accent.
+### Text Colors
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--text-primary` | `#121826` | Titles, main body text |
+| `--text-secondary` | `#5B6475` | Descriptions, labels |
+| `--text-muted` | `#9CA3AF` | Metadata, timestamps |
+| `--text-on-dark` | `#E8E8F0` | Text on dark backgrounds |
+
+### Accent Colors
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `--violet-primary` | `#7C3AED` | CTAs, keywords, active states |
+| `--violet-hover` | `#6D28D9` | Hover on primary buttons |
+| `--violet-subtle` | `rgba(124,58,237,0.1)` | Subtle backgrounds, highlighted cards |
+| `--green-success` | `#16A34A` | Success, approved, checkmarks |
+| `--amber-pending` | `#D97706` | Pending, awaiting, warning states |
+| `--red-error` | `#DC2626` | Error, problems, destructive |
+
+### Color Distribution Rule
+
+- **65%**: Light backgrounds (`--bg-primary`, `--bg-alternate`)
+- **20%**: White/surface areas (`--bg-surface`)
+- **10%**: Dark mockups (`--bg-technical`)
+- **5%**: Violet accents (`--violet-primary`)
 
 ---
 
@@ -234,483 +189,253 @@ Dark, industrial-technical aesthetic. Terminal interfaces, not SaaS dashboards.
 
 ### Font Stack
 
-| Role          | Family                                       | Load Source    |
-|---------------|----------------------------------------------|----------------|
-| Headlines     | `Playfair Display` (700, 900)                | Google Fonts   |
-| Code / UI     | `JetBrains Mono` (400, 500, 700)             | Google Fonts   |
-| Body          | `Inter` (400, 500, 600, 700)                 | Google Fonts   |
+System-first with Inter as primary:
+```css
+font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+```
+
+| Role        | Family                 | Usage |
+|-------------|------------------------|-------|
+| Body / UI   | Inter (400, 500, 600)  | Headings, body, buttons |
+| Code (opt)  | JetBrains Mono (400)   | Code blocks, terminal mockups |
 
 ### Type Scale
 
-| Element   | Font            | Size         | Weight | Line Height | Letter Spacing | Usage                          |
-|-----------|-----------------|--------------|--------|-------------|----------------|--------------------------------|
-| `h1`      | Playfair Display | `--text-7xl` | 900    | 1.0         | -0.04em        | Hero headline only             |
-| `h2`      | Playfair Display | `--text-5xl` | 700    | 1.15        | -0.02em        | Section titles                 |
-| `h3`      | Inter            | `--text-3xl` | 700    | 1.3         | -0.02em        | Subsection titles              |
-| `h4`      | Inter            | `--text-2xl` | 600    | 1.3         | 0              | Card titles                    |
-| `h5`      | JetBrains Mono   | `--text-lg`  | 500    | 1.5         | 0.02em         | Labels, overlines              |
-| `h6`      | JetBrains Mono   | `--text-sm`  | 500    | 1.5         | 0.1em          | Uppercase labels, tags         |
-| `body`    | Inter            | `--text-lg`  | 400    | 1.65        | 0              | Paragraphs                     |
-| `body-sm` | Inter            | `--text-base`| 400    | 1.5         | 0              | Secondary body copy            |
-| `small`   | Inter            | `--text-sm`  | 400    | 1.5         | 0              | Captions, footnotes            |
-| `code`    | JetBrains Mono   | `--text-sm`  | 400    | 1.65        | 0              | Inline code, terminal output   |
+| Element | Size | Weight | Line Height | Letter Spacing | Usage |
+|---------|------|--------|-------------|----------------|-------|
+| Hero headline | 3.5rem (56px) | 600 | 1.05 | -0.03em | Hero h1 only |
+| Section title (h2) | 1.75rem (28px) | 500 | 1.2 | -0.01em | Section headers |
+| Card title (h3) | 1rem (16px) | 500 | 1.4 | 0 | Card/feature titles |
+| Body large | 1.05rem (17px) | 400 | 1.7 | 0 | Hero description |
+| Body (p) | 0.9rem (14px) | 400 | 1.6 | 0 | Main body text |
+| Small | 0.85rem (14px) | 400 | 1.5 | 0 | Secondary/meta text |
+| Extra small | 0.75rem (12px) | 400 | 1.4 | 0 | Labels, captions |
+| Tiny (mockups) | 0.65rem (10px) | 400 | 1.3 | 0 | Mockup internals |
 
 ### Responsive Scaling
 
 ```
-Mobile  (< 768px):  h1 = 2.25rem,  h2 = 1.875rem
-Tablet  (>= 768px): h1 = 3rem,     h2 = 2.25rem
-Desktop (>= 1024px): h1 = 4.5rem,  h2 = 3rem
+Mobile  (< 640px):  Hero = 2rem,    h2 = 1.25rem
+Tablet  (640-1024): Hero = 2.5rem,  h2 = 1.5rem
+Desktop (> 1024px): Hero = 3.5rem,  h2 = 1.75rem
 ```
 
 ---
 
 ## Spacing System
 
-Base unit: **8px**. All spacing derives from the scale in `--space-*` variables.
+Base unit: **4px**. All spacing derives from the scale in `--space-*` variables.
 
-### Section Layout
+### Spacing Values
 
-| Context          | Mobile    | Tablet    | Desktop   |
-|------------------|-----------|-----------|-----------|
-| Section padding Y | 80px      | 80px      | 96px      |
-| Container padding X | 16px   | 24px      | 32px      |
-| Card padding     | 24px      | 32px      | 32px      |
-| Card gap         | 16px      | 24px      | 24px      |
-| Component gap (vertical) | 12px | 16px   | 16px      |
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--space-1` | 4px | Tiny gaps, inline spacing |
+| `--space-2` | 8px | Icon-text gaps |
+| `--space-3` | 12px | Button padding (vertical) |
+| `--space-4` | 16px | Card padding small |
+| `--space-5` | 20px | Default gap between elements |
+| `--space-6` | 24px | Card padding standard |
+| `--space-8` | 32px | Page horizontal padding |
+| `--space-10` | 40px | Trust band padding |
+| `--space-12` | 48px | Section gap |
+| `--space-16` | 64px | Large spacing |
+| `--space-20` | 80px | Section vertical padding |
+
+### Section Vertical Rhythm
+
+- **Main sections**: `padding: 4.5rem 2rem` (72px vertical, 32px horizontal)
+- **Hero**: `padding: 5rem 2rem 4rem` (80px top, 64px bottom)
+- **Trust band**: `padding: 1.75rem 2rem`
+- **Final CTA**: `padding: 5rem 2rem`
 
 ---
 
 ## Breakpoints
 
-| Name    | Min Width | Target             |
-|---------|-----------|--------------------|
-| Mobile  | 0         | Phones             |
-| Tablet  | 768px     | Tablets, small laptops |
-| Desktop | 1024px    | Laptops and up     |
-| Wide    | 1400px    | Large monitors (optional clamp) |
+| Name | Min Width | Target |
+|------|-----------|--------|
+| Mobile | 0 | Phones (< 640px) |
+| Tablet | 640px | Tablets, small laptops |
+| Desktop | 1024px | Laptops and up |
+| Wide | 1400px | Large monitors |
 
 ---
 
 ## Components
 
-### Card
+### Header
 
-```
-Background: var(--bg-elevated)
-Border: 1px solid var(--border-primary)
-Border radius: var(--radius-lg)            -- 12px
-Padding: var(--space-6) to var(--space-8)  -- 24-32px
-Transition: border-color 250ms, box-shadow 250ms
-
-Hover:
-  border-color: var(--accent-primary-muted)
-  box-shadow: var(--shadow-glow-green)
-```
-
-### Buttons
-
-Three variants. All use `JetBrains Mono` at `--text-sm`, `--weight-semibold`, uppercase, `--tracking-wider`.
-
-**Primary**
-```
-Background: var(--accent-primary)
-Color: var(--text-inverse)                  -- #0A0A0F
-Padding: 14px 32px
-Border radius: var(--radius-md)
-Position: relative; overflow: hidden
-
-Pseudo ::after (scanline effect):
-  content: ""
-  position: absolute; inset: 0
-  background: var(--gradient-scanline)
-  pointer-events: none
-
-Hover:
-  background: var(--accent-primary-muted)
-  box-shadow: var(--shadow-glow-green)
-  transform: translateY(-1px)
-
-Active:
-  transform: translateY(0)
+Sticky, translucent with blur effect:
+```css
+background: rgba(255, 255, 255, 0.85);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border-light);
+position: sticky;
+top: 0;
+z-index: var(--z-sticky);
+padding: 0.875rem 2rem;
 ```
 
-**Secondary**
-```
-Background: transparent
-Color: var(--accent-primary)
-Border: 1px solid var(--accent-primary)
-Padding: 14px 32px
+**Navigation:**
+- Font: `--text-sm`, color: `--text-secondary`
+- Items: Product, Use Cases, Architecture, Security, Pricing, Docs
+- Actions: GitHub button (ghost with border) + Primary CTA
 
-Hover:
-  background: var(--accent-primary-ghost)
-  box-shadow: var(--shadow-glow-green)
-```
+### Button Variants
 
-**Ghost**
-```
-Background: transparent
-Color: var(--text-secondary)
-Padding: 14px 32px
-Border: 1px solid var(--border-primary)
-
-Hover:
-  color: var(--text-primary)
-  border-color: var(--border-hover)
-  background: var(--bg-surface)
+**Primary (filled):**
+```css
+background: var(--violet-primary);
+color: white;
+padding: 0.75rem 1.25rem;
+border-radius: var(--radius-button);
+font-weight: var(--weight-medium);
 ```
 
-### Input
-
-```
-Background: transparent
-Border: none
-Border-bottom: 1px solid var(--border-primary)
-Color: var(--text-primary)
-Font: JetBrains Mono, --text-base
-Padding: var(--space-3) 0
-Transition: border-color 250ms
-
-Focus:
-  border-bottom-color: var(--accent-primary)
-  outline: none
-
-Placeholder:
-  color: var(--text-tertiary)
+**Secondary (ghost with border):**
+```css
+background: var(--bg-surface);
+color: var(--text-primary);
+border: 1px solid #D9DFEA;
+padding: 0.75rem 1.25rem;
+border-radius: var(--radius-button);
 ```
 
-### Tabs (Code Examples)
+### Card Variants
 
-```
-Container:
-  border: 1px solid var(--border-primary)
-  border-radius: var(--radius-lg)
-  overflow: hidden
-
-Tab bar:
-  background: var(--bg-surface)
-  display: flex
-  border-bottom: 1px solid var(--border-primary)
-
-Tab item:
-  font: JetBrains Mono, --text-sm, --weight-medium
-  color: var(--text-secondary)
-  padding: var(--space-3) var(--space-4)
-  border-bottom: 2px solid transparent
-
-Tab item (active):
-  color: var(--accent-primary)
-  border-bottom-color: var(--accent-primary)
-
-Tab content:
-  background: var(--bg-elevated)
-  padding: var(--space-6)
-  font: JetBrains Mono, --text-sm
-  color: var(--text-primary)
-  overflow-x: auto
+**Light card (on light background):**
+```css
+background: var(--bg-surface);
+border: 1px solid var(--border-light);
+border-radius: var(--radius-card);
+padding: 1.5rem;
 ```
 
-### Comparison Table
-
-```
-Table:
-  width: 100%
-  border-collapse: collapse
-
-th:
-  font: JetBrains Mono, --text-xs, --weight-semibold
-  text-transform: uppercase
-  letter-spacing: var(--tracking-widest)
-  color: var(--text-secondary)
-  padding: var(--space-3) var(--space-4)
-  border-bottom: 1px solid var(--border-primary)
-  text-align: left
-
-td:
-  font: Inter, --text-sm
-  color: var(--text-primary)
-  padding: var(--space-4)
-  border-bottom: 1px solid var(--border-primary)
-
-tr:hover td:
-  background: var(--accent-primary-ghost)
-
-Checkmark icon color: var(--accent-primary)
-Cross icon color: var(--text-tertiary)
+**Feature card (subtle background):**
+```css
+background: #FAFBFC;
+border: 1px solid var(--border-light);
+border-radius: var(--radius-card);
+padding: 1.25rem;
 ```
 
-### Pricing Card
-
-```
-Base: same as Card component
-
-Recommended variant (add):
-  border-color: var(--accent-primary)
-  box-shadow: var(--shadow-glow-green)
-  position: relative
-
-Recommended badge:
-  position: absolute
-  top: -12px; left: 50%; transform: translateX(-50%)
-  background: var(--accent-primary)
-  color: var(--text-inverse)
-  font: JetBrains Mono, --text-xs, --weight-semibold
-  text-transform: uppercase
-  letter-spacing: var(--tracking-widest)
-  padding: var(--space-1) var(--space-4)
-  border-radius: var(--radius-full)
-
-Price number:
-  font: Playfair Display, --text-5xl, --weight-bold
-  color: var(--text-primary)
-
-Price period:
-  font: Inter, --text-sm, --weight-regular
-  color: var(--text-secondary)
+**Highlighted card (enterprise):**
+```css
+background: rgba(124, 58, 237, 0.02);
+border: 2px solid var(--violet-primary);
+border-radius: var(--radius-card);
+padding: 1.75rem;
 ```
 
-### Terminal Window
+### Product Mockup (Dark)
 
-```
-Container:
-  border: 1px solid var(--border-primary)
-  border-radius: var(--radius-lg)
-  overflow: hidden
+Dark technical mockup showing workflow with approval states:
 
-Title bar:
-  background: var(--bg-surface)
-  padding: var(--space-3) var(--space-4)
-  display: flex; align-items: center; gap: var(--space-2)
-  border-bottom: 1px solid var(--border-primary)
-
-Traffic lights (3 circles):
-  width: 12px; height: 12px; border-radius: 50%
-  Colors: #FF5F57, #FEBC2E, #28C840
-
-Title text:
-  font: JetBrains Mono, --text-xs
-  color: var(--text-tertiary)
-  margin-left: var(--space-3)
-
-Body:
-  background: var(--bg-primary)
-  padding: var(--space-6)
-  font: JetBrains Mono, --text-sm
-  color: var(--accent-primary)
-  line-height: var(--leading-relaxed)
-  min-height: 300px
-
-Prompt prefix:
-  color: var(--text-secondary)
-  content: "$ " or ">"
-
-Cursor (blinking block):
-  display: inline-block
-  width: 8px; height: 18px
-  background: var(--accent-primary)
-  animation: blink 1s step-end infinite
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
+**Container:**
+```css
+background: var(--bg-technical);
+border: 1px solid var(--border-dark);
+border-radius: var(--radius-mockup);
+box-shadow: var(--shadow-mockup);
+overflow: hidden;
 ```
 
-### Badge / Pill
-
-```
-display: inline-flex; align-items: center
-font: JetBrains Mono, --text-xs, --weight-medium
-text-transform: uppercase
-letter-spacing: var(--tracking-wider)
-padding: var(--space-1) var(--space-3)
-border-radius: var(--radius-full)
-
-Variant "green":
-  background: var(--accent-primary-ghost)
-  color: var(--accent-primary)
-  border: 1px solid rgba(0, 255, 135, 0.2)
-
-Variant "blue":
-  background: var(--accent-secondary-ghost)
-  color: var(--accent-secondary)
-  border: 1px solid rgba(0, 102, 255, 0.2)
-
-Variant "neutral":
-  background: var(--bg-surface)
-  color: var(--text-secondary)
-  border: 1px solid var(--border-primary)
+**Window chrome:**
+```css
+background: #0A0B0F;
+padding: 0.6rem 1rem;
+border-bottom: 1px solid var(--border-dark);
+/* Traffic lights: #FF5F57, #FEBC2E, #28C840 */
 ```
 
-### Sticky Header
-
+**Internal elements (nodes/steps):**
+```css
+background: #161922;
+border: 1px solid #252A36;
+border-radius: 5px;
+padding: 0.5rem 0.7rem;
+font-size: var(--text-xxs);
 ```
-position: fixed; top: 0; left: 0; right: 0
-z-index: var(--z-sticky)
-background: var(--bg-overlay)
-backdrop-filter: blur(12px) saturate(180%)
--webkit-backdrop-filter: blur(12px) saturate(180%)
-border-bottom: 1px solid var(--border-primary)
-padding: var(--space-3) 0
-transition: background 300ms, border-color 300ms
 
-Inner container:
-  max-width: var(--max-width-content)
-  margin: 0 auto
-  padding: 0 var(--container-padding-x)
-  display: flex; align-items: center; justify-content: space-between
-
-Nav links:
-  font: JetBrains Mono, --text-sm, --weight-medium
-  color: var(--text-secondary)
-  transition: color var(--duration-fast)
-
-Nav links hover:
-  color: var(--accent-primary)
-
-Logo text:
-  font: JetBrains Mono, --text-lg, --weight-bold
-  color: var(--text-primary)
+**Highlighted state (pending):**
+```css
+background: rgba(217, 119, 6, 0.1);
+border: 1px solid rgba(217, 119, 6, 0.3);
 ```
+
+**Success state:**
+```css
+border-color: var(--green-success);
+```
+
+**Must display:**
+- Version (e.g., v1.4.2)
+- GitHub ref (e.g., 9f3a2b1)
+- Environment (dev/prod)
+- Approval state
+- Run statistics
+
+### Trust Band
+
+Centered light band with checkmarks:
+```css
+background: var(--bg-surface);
+border-top: 1px solid var(--border-light);
+border-bottom: 1px solid var(--border-light);
+padding: 1.75rem 2rem;
+display: flex;
+justify-content: center;
+gap: 2rem;
+```
+
+Format: `✦ Open-source runtime` (centered items with checkmarks)
 
 ---
 
-## Effects & Animations
+## Interactions & Hover States
 
-### Background Grain Noise
-
-Apply to `body::before` or a fixed overlay element:
+### Button Hover
 
 ```css
-.grain-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.4;
-  background-image: var(--gradient-noise);
-  background-repeat: repeat;
+button:hover {
+  background: var(--violet-hover);
+  transition: background var(--duration-fast) var(--easing-default);
+}
+
+button:focus {
+  outline: 2px solid var(--violet-primary);
+  outline-offset: 2px;
 }
 ```
 
-### Radial Glow
-
-Used behind hero section and accent areas:
+### Card Hover (optional lift)
 
 ```css
-.radial-glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 255, 135, 0.08) 0%,
-    transparent 70%
-  );
-  filter: blur(80px);
-  pointer-events: none;
+.card:hover {
+  border-color: var(--violet-primary);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+  transition: border-color var(--duration-normal),
+              box-shadow var(--duration-normal);
 }
 ```
 
-### Animated Dot Grid (Hero)
+### Link Hover
 
 ```css
-.dot-grid {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    circle,
-    var(--border-primary) 1px,
-    transparent 1px
-  );
-  background-size: 32px 32px;
-  opacity: 0.4;
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-}
-```
-
-### Typewriter Effect (Terminal)
-
-```css
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--accent-primary);
-  animation:
-    typing 3s steps(40) 1s forwards,
-    cursor-blink 0.75s step-end infinite;
-  width: 0;
+a {
+  color: var(--violet-primary);
+  text-decoration: underline;
 }
 
-@keyframes typing {
-  to { width: 100%; }
-}
-
-@keyframes cursor-blink {
-  50% { border-color: transparent; }
-}
-```
-
-### Scroll-Triggered Fade-In
-
-Use Intersection Observer in JS. CSS classes:
-
-```css
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity var(--duration-slow) var(--easing-out),
-              transform var(--duration-slow) var(--easing-out);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-```
-
-### Stagger Animation (Architecture Diagram, Feature Cards)
-
-```css
-.stagger-item {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity var(--duration-slow) var(--easing-out),
-              transform var(--duration-slow) var(--easing-out);
-}
-
-.stagger-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Apply via JS: each child gets delay = index * 100ms */
-.stagger-item:nth-child(1) { transition-delay: 0ms; }
-.stagger-item:nth-child(2) { transition-delay: 100ms; }
-.stagger-item:nth-child(3) { transition-delay: 200ms; }
-.stagger-item:nth-child(4) { transition-delay: 300ms; }
-.stagger-item:nth-child(5) { transition-delay: 400ms; }
-.stagger-item:nth-child(6) { transition-delay: 500ms; }
-```
-
-### Counter Animation (Metrics)
-
-Implement via JS with `requestAnimationFrame`. Duration: 2 seconds. Easing: ease-out. Trigger on scroll into view. Format numbers with locale separators.
-
-### Scanline Button Effect
-
-```css
-.btn-scanline::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-scanline);
-  pointer-events: none;
-  opacity: 0.5;
+a:hover {
+  color: var(--violet-hover);
 }
 ```
 
 ### Reduced Motion
+
+For accessibility, respect user preferences:
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -720,136 +445,149 @@ Implement via JS with `requestAnimationFrame`. Duration: 2 seconds. Easing: ease
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  .typewriter {
-    width: 100%;
-    border-right: none;
-  }
-
-  .reveal,
-  .stagger-item {
-    opacity: 1;
-    transform: none;
   }
 }
 ```
 
 ---
 
-## Layout
+## Layout Patterns
 
-### Container
+### Hero Grid
 
+Two-column layout with copy left, mockup right:
 ```css
-.container {
-  width: 100%;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 4rem;
   max-width: var(--max-width-content);
   margin: 0 auto;
-  padding-left: var(--container-padding-x);
-  padding-right: var(--container-padding-x);
 }
 
-@media (min-width: 768px) {
-  .container {
-    padding-left: var(--container-padding-x-tablet);
-    padding-right: var(--container-padding-x-tablet);
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding-left: var(--container-padding-x-desktop);
-    padding-right: var(--container-padding-x-desktop);
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
   }
 }
 ```
 
-### Section
+### Section Container
 
 ```css
 .section {
-  padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
+  padding: var(--section-padding-v) var(--section-padding-h);
+  background: var(--bg-primary);
 }
 
-@media (min-width: 1024px) {
-  .section {
-    padding-top: var(--section-padding-y-desktop);
-    padding-bottom: var(--section-padding-y-desktop);
-  }
+.section.alternate {
+  background: var(--bg-alternate);
+}
+
+.section-content {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
 }
 ```
 
-### Grid System
+### Card Grid (3 or 4 columns)
 
 ```css
-.grid-2 { display: grid; gap: var(--space-6); }
-.grid-3 { display: grid; gap: var(--space-6); }
-.grid-4 { display: grid; gap: var(--space-6); }
-
-@media (min-width: 768px) {
-  .grid-2 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
 }
 
-@media (min-width: 1024px) {
-  .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
 ```
 
 ### Reading Flow
 
-- **Hero:** Z-pattern -- logo top-left, CTA top-right, headline center, action bottom.
-- **Feature sections:** F-pattern -- heading left-aligned, content scanning left to right.
-- **Alternating rows:** Image-left/text-right, then swap, to maintain engagement.
-- **Final CTA:** Centered, single focal point.
+- **Hero:** Left column (copy, CTAs) → Right column (mockup)
+- **Problem/Value sections:** Cards in 3-column grid
+- **GitHub/OpenVsEnterprise:** 2-column with alt layout
+- **Final CTA:** Centered, full width
 
 ---
 
 ## Font Loading
 
+System fonts are preferred for performance. Optional: load Inter from Google Fonts:
+
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 ```
 
 For Next.js, use `next/font/google`:
 
 ```tsx
-import { JetBrains_Mono, Playfair_Display, Inter } from 'next/font/google';
-
-const jetbrains = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  weight: ['400', '500', '700'],
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-display',
-  weight: ['700', '900'],
-});
+import { Inter } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-body',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
 });
 ```
 
 ---
 
-## Accessibility Notes
+## Accessibility & Contrast
 
-- All text meets WCAG AA contrast on `--bg-primary`. The `--accent-primary` (#00FF87) on `--bg-primary` (#0A0A0F) yields ~11:1 contrast ratio.
-- `--text-secondary` (#6B7280) on `--bg-primary` yields ~5.5:1 -- passes AA for normal text.
-- `--text-tertiary` (#4B5563) on `--bg-primary` yields ~3.8:1 -- use only for large text (18px+) or decorative elements.
-- Focus states use `--border-focus` (#00FF87) with a 2px offset ring.
-- All interactive elements must have visible focus indicators.
-- `prefers-reduced-motion` disables all animations.
-- `prefers-color-scheme` is not applicable (always dark).
+### WCAG AA Compliance
+
+| Text Color | Background | Ratio | Grade |
+|------------|-----------|-------|-------|
+| `--text-primary` (#121826) | `--bg-primary` (#F6F7FB) | 12.4:1 | AAA ✓ |
+| `--text-secondary` (#5B6475) | `--bg-primary` (#F6F7FB) | 6.8:1 | AA ✓ |
+| `--text-muted` (#9CA3AF) | `--bg-primary` (#F6F7FB) | 4.2:1 | AA (for 18px+) |
+| `--violet-primary` (#7C3AED) | `--bg-surface` (#FFFFFF) | 5.8:1 | AA ✓ |
+
+### Focus States
+
+All interactive elements require visible focus:
+```css
+*:focus {
+  outline: 2px solid var(--violet-primary);
+  outline-offset: 2px;
+}
+```
+
+### Minimum Touch Target
+
+Buttons and clickable elements: **44px × 44px** minimum
+
+### Motion Preferences
+
+Respect `prefers-reduced-motion` (see Reduced Motion section)
+
+---
+
+## Violet Usage Rules
+
+**DO use violet for:**
+- Primary CTA buttons
+- Keywords in headlines (wrap with `<span>`)
+- Card feature titles
+- Active/selected states
+- GitHub refs, version numbers
+
+**DON'T use violet for:**
+- Full section backgrounds
+- Large solid bars
+- Icon fills (use black/gray)
+- Borders (except on highlighted cards)
