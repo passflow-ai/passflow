@@ -1194,3 +1194,33 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+/* --------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .text-hero {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-hero {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-hero {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+  }
+}

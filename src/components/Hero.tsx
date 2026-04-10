@@ -21,15 +21,16 @@ const Hero = () => {
       paddingTop: '5rem',
       paddingBottom: '4rem',
     }}>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1.15fr',
-        gap: '4rem',
-        maxWidth: '1300px',
-        margin: '0 auto',
-        padding: '0 2rem',
-        alignItems: 'center',
-      }}>
+      <div
+        className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr]"
+        style={{
+          gap: '4rem',
+          maxWidth: '1300px',
+          margin: '0 auto',
+          padding: '0 2rem',
+          alignItems: 'center',
+        }}
+      >
         {/* Left: Copy */}
         <div>
           <div style={{
